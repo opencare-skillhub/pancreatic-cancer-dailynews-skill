@@ -25,6 +25,10 @@ function isObjectRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null
 }
 
+export function buildWebSearchQuery(input: Pick<PipelineInput, 'date' | 'profile'>): string {
+  return `pancreatic cancer digest ${input.profile} ${input.date}`
+}
+
 export async function collectCoreSources(
   input: { date: string },
   deps: CoreSourceDeps = {},
@@ -46,6 +50,7 @@ export async function collectCoreSources(
 }
 
 export async function runPipeline(input: PipelineInput): Promise<PipelineReport> {
+  void buildWebSearchQuery({ date: input.date, profile: input.profile })
   const sections = groupSections(input.items)
   const markdown = renderMarkdown(input.date, sections)
 

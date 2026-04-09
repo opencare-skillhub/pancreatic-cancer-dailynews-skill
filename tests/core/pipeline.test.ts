@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest'
-import { collectCoreSources, runPipeline } from '../../src/core/pipeline.js'
+import { buildWebSearchQuery, collectCoreSources, runPipeline } from '../../src/core/pipeline.js'
 import type { DigestItem } from '../../src/schema/item.js'
 import { searchWebWithFallback } from '../../src/sources/web_search.js'
 
@@ -116,6 +116,14 @@ describe('pipeline', () => {
     )
 
     expect(items).toEqual([validItem])
+  })
+
+  it('buildWebSearchQuery encodes date and profile for future search wiring', () => {
+    const query = buildWebSearchQuery({ date: '2026-04-09', profile: 'daily-v5' })
+
+    expect(query).toContain('daily-v5')
+    expect(query).toContain('2026-04-09')
+    expect(query).toContain('pancreatic cancer digest')
   })
 
   it('searchWebWithFallback returns secondary result when primary fails', async () => {
