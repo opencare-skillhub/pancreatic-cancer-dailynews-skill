@@ -146,3 +146,53 @@ data/
 2. 数据质量波动：引入 evidence 完整性与来源白名单。
 3. 迁移中断：保留 v4 只读兼容与回滚 profile。
 
+
+## 11. 依赖检查与自动化部署（新增）
+
+### 11.1 目标
+- 检查当前环境中，本项目依赖的 skills / MCP / CLI 是否可用。
+- 对缺失依赖给出明确结果与安装指引。
+- 在用户确认后执行自动化部署，减少新信息源接入的配置成本。
+- 通过 catalog 持续维护新的信息源部署清单。
+
+### 11.2 命令设计
+- `digest doctor`
+- `digest doctor --sources`
+- `digest doctor --skills`
+- `digest doctor --fix`
+- `digest install-source <source-id>`
+- `digest install-deps`
+
+### 11.3 目录与配置
+新增：
+
+```text
+config/deployment/
+  dependency-catalog.json
+  install-profiles/
+    *.json
+```
+
+`dependency-catalog.json` 描述：
+- 依赖类型（skill / npm_mcp / remote_mcp / local_cli）
+- 检查命令
+- 安装命令
+- 启动命令
+- 健康检查
+- fallback 策略
+- 文档来源
+
+### 11.4 交互规则
+- `doctor` 默认只检查。
+- `doctor --fix` 先生成待执行计划，再等待用户确认。
+- 自动化安装完成后必须重新 health check 并输出结果。
+
+### 11.5 架构约束
+- digest 主包先稳定，再逐个远程化数据源型 MCP。
+- source adapter 必须支持 `stub | local | remote_mcp` 三种 transport。
+- 安装/检查逻辑收敛到 deployment catalog，而不是散落在代码中。
+
+### 11.6 ADR
+详细设计见：
+- `docs/superpowers/specs/2026-04-09-mcp-source-deployment-adr.md`
+
