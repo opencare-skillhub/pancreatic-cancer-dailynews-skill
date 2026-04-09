@@ -83,4 +83,37 @@ describe('pipeline', () => {
     expect(pubmedSpy).toHaveBeenCalledWith('2026-04-09')
     expect(items).toEqual([clinicalTrialsItem, pubmedItem])
   })
+
+  it('collectCoreSources filters invalid items and keeps valid ones', async () => {
+    const validItem: DigestItem = {
+      id: 'pmid:valid',
+      title: 'Valid item',
+      sourceType: 'pubmed',
+      sectionHint: 'research_hotspots',
+      sourceUrl: 'https://pubmed.ncbi.nlm.nih.gov/valid/',
+      fetchedAt: '2026-04-09T08:00:00.000Z',
+      evidence: ['pmid:valid'],
+    }
+    const invalidItem = {
+      id: '',
+      title: 'Invalid item',
+      sourceType: 'pubmed',
+      sectionHint: 'research_hotspots',
+      sourceUrl: 'not-a-url',
+      fetchedAt: '2026-04-09',
+      evidence: [],
+    }
+    const clinicalTrialsSpy = vi.fn().mockResolvedValue([invalidItem])
+    const pubmedSpy = vi.fn().mockResolvedValue([validItem])
+
+    const items = await collectCoreSources(
+      { date: '2026-04-09' },
+      {
+        fetchClinicalTrials: clinicalTrialsSpy,
+        fetchPubmed: pubmedSpy,
+      },
+    )
+
+    expect(items).toEqual([validItem])
+  })
 })

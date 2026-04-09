@@ -1,4 +1,4 @@
-import type { DigestItem } from '../schema/item.js'
+import { itemSchema, type DigestItem } from '../schema/item.js'
 import { groupSections } from './sectioning.js'
 import { renderMarkdown } from '../output/markdown.js'
 import { fetchClinicalTrials } from '../sources/clinical_trials.js'
@@ -31,12 +31,18 @@ export async function collectCoreSources(
 ): Promise<DigestItem[]> {
   const clinicalTrialsFetcher = deps.fetchClinicalTrials ?? fetchClinicalTrials
   const pubmedFetcher = deps.fetchPubmed ?? fetchPubmed
+  // Task 5 前保持 fail-fast：Promise.all 任一源失败就直接抛出，不做降级合并。
   const [clinicalTrials, pubmed] = await Promise.all([
     clinicalTrialsFetcher(input.date),
     pubmedFetcher(input.date),
   ])
 
-  return [...clinicalTrials, ...pubmed].filter(isObjectRecord) as DigestItem[]
+  return [...clinicalTrials, ...pubmed]
+    .filter(isObjectRecord)
+    .flatMap((item) => {
+      const parsed = itemSchema.safeParse(item)
+      return parsed.success ? [parsed.data] : []
+    })
 }
 
 export async function runPipeline(input: PipelineInput): Promise<PipelineReport> {
