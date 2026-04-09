@@ -16,6 +16,10 @@ const catalog = dependencyCatalogSchema.parse({
     role: 'web_search_fallback',
     check: { kind: 'skill_exists', skill: 'tavily-search' },
     install: { kind: 'github_skill', command: 'install skill tavily-search' },
+    metadata: {
+      name: 'tavily-search',
+      deploymentStatus: 'cli_present_python_module_missing'
+    }
   },
 })
 
