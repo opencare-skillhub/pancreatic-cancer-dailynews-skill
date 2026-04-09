@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { runPipeline } from '../../src/core/pipeline.js'
+import { collectCoreSources, runPipeline } from '../../src/core/pipeline.js'
 import type { DigestItem } from '../../src/schema/item.js'
 
 describe('pipeline', () => {
@@ -39,5 +39,11 @@ describe('pipeline', () => {
     const report = await runPipeline({ date: '2026-04-09', profile: 'daily-v5', items: [item] })
 
     expect(report.markdown).toContain('暂无更新（已触发fallback）')
+  })
+
+  it('collectCoreSources returns an array', async () => {
+    const items = await collectCoreSources('2026-04-09')
+
+    expect(Array.isArray(items)).toBe(true)
   })
 })
