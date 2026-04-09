@@ -16,13 +16,27 @@ export type PipelineReport = {
   markdown: string
 }
 
-export async function collectCoreSources(input: { date: string }): Promise<DigestItem[]> {
+export type CoreSourceDeps = {
+  fetchClinicalTrials?: typeof fetchClinicalTrials
+  fetchPubmed?: typeof fetchPubmed
+}
+
+function isObjectRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null
+}
+
+export async function collectCoreSources(
+  input: { date: string },
+  deps: CoreSourceDeps = {},
+): Promise<DigestItem[]> {
+  const clinicalTrialsFetcher = deps.fetchClinicalTrials ?? fetchClinicalTrials
+  const pubmedFetcher = deps.fetchPubmed ?? fetchPubmed
   const [clinicalTrials, pubmed] = await Promise.all([
-    fetchClinicalTrials(input.date),
-    fetchPubmed(input.date),
+    clinicalTrialsFetcher(input.date),
+    pubmedFetcher(input.date),
   ])
 
-  return [...clinicalTrials, ...pubmed]
+  return [...clinicalTrials, ...pubmed].filter(isObjectRecord) as DigestItem[]
 }
 
 export async function runPipeline(input: PipelineInput): Promise<PipelineReport> {
