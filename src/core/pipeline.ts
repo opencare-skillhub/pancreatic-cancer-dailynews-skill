@@ -16,8 +16,11 @@ export type PipelineReport = {
   markdown: string
 }
 
-export async function collectCoreSources(date: string): Promise<DigestItem[]> {
-  const [clinicalTrials, pubmed] = await Promise.all([fetchClinicalTrials(date), fetchPubmed(date)])
+export async function collectCoreSources(input: { date: string }): Promise<DigestItem[]> {
+  const [clinicalTrials, pubmed] = await Promise.all([
+    fetchClinicalTrials(input.date),
+    fetchPubmed(input.date),
+  ])
 
   return [...clinicalTrials, ...pubmed]
 }

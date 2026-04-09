@@ -42,7 +42,7 @@ describe('pipeline', () => {
   })
 
   it('collectCoreSources returns an array', async () => {
-    const items = await collectCoreSources('2026-04-09')
+    const items = await collectCoreSources({ date: '2026-04-09' })
 
     expect(Array.isArray(items)).toBe(true)
   })
