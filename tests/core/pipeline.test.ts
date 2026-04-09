@@ -136,4 +136,56 @@ describe('pipeline', () => {
 
     expect(result).toEqual([{ title: 'fallback hit', sourceUrl: 'https://example.com' }])
   })
+
+  it('searchWebWithFallback does not call secondary when primary succeeds', async () => {
+    const primary = vi.fn().mockResolvedValue([
+      { title: 'primary hit', sourceUrl: 'https://primary.example.com' },
+    ])
+    const secondary = vi.fn().mockResolvedValue([
+      { title: 'secondary hit', sourceUrl: 'https://secondary.example.com' },
+    ])
+
+    const result = await searchWebWithFallback('pancreatic cancer trial', {
+      primary,
+      secondary,
+    })
+
+    expect(result).toEqual([
+      { title: 'primary hit', sourceUrl: 'https://primary.example.com' },
+    ])
+    expect(primary).toHaveBeenCalledTimes(1)
+    expect(secondary).not.toHaveBeenCalled()
+  })
+
+  it('searchWebWithFallback propagates secondary failure', async () => {
+    const error = new Error('secondary down')
+
+    await expect(
+      searchWebWithFallback('pancreatic cancer trial', {
+        primary: vi.fn().mockRejectedValue(new Error('primary down')),
+        secondary: vi.fn().mockRejectedValue(error),
+      }),
+    ).rejects.toThrow('secondary down')
+  })
+
+  it('searchWebWithFallback calls provided invoke for both attempts', async () => {
+    const invoke = vi
+      .fn()
+      .mockRejectedValueOnce(new Error('primary down'))
+      .mockResolvedValueOnce([
+        { title: 'fallback via invoke', sourceUrl: 'https://example.com' },
+      ])
+
+    const result = await searchWebWithFallback('pancreatic cancer trial', {
+      primary: vi.fn(),
+      secondary: vi.fn(),
+      invoke,
+    })
+
+    expect(result).toEqual([
+      { title: 'fallback via invoke', sourceUrl: 'https://example.com' },
+    ])
+    expect(invoke).toHaveBeenNthCalledWith(1, 'web_search.primary', { query: 'pancreatic cancer trial' })
+    expect(invoke).toHaveBeenNthCalledWith(2, 'web_search.secondary', { query: 'pancreatic cancer trial' })
+  })
 })

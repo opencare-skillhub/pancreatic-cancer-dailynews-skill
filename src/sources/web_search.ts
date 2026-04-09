@@ -7,27 +7,50 @@ export type WebSearchProvider = (
   query: string,
 ) => Promise<WebSearchResult[]>
 
+export type WebSearchInvoke = (
+  tool: string,
+  payload: unknown,
+) => Promise<WebSearchResult[]>
+
 export type WebSearchFallbackDeps = {
   primary: WebSearchProvider
   secondary: WebSearchProvider
-  invoke?: (tool: string, payload: unknown) => Promise<unknown>
+  invoke?: WebSearchInvoke
+}
+
+function createDefaultInvoke(deps: WebSearchFallbackDeps): WebSearchInvoke {
+  return async (tool, payload) => {
+    const query = (payload as { query: string }).query
+
+    if (tool === 'web_search.primary') {
+      return deps.primary(query)
+    }
+
+    if (tool === 'web_search.secondary') {
+      return deps.secondary(query)
+    }
+
+    throw new Error(`Unsupported web search tool: ${tool}`)
+  }
 }
 
 export async function searchWebWithFallback(
   query: string,
   deps: WebSearchFallbackDeps,
 ): Promise<WebSearchResult[]> {
+  const invoke = deps.invoke ?? createDefaultInvoke(deps)
+
   try {
     return await callMcpTool(
       'web_search.primary',
       { query },
-      async (_toolName, payload) => deps.primary((payload as { query: string }).query),
+      invoke,
     )
   } catch {
     return callMcpTool(
       'web_search.secondary',
       { query },
-      async (_toolName, payload) => deps.secondary((payload as { query: string }).query),
+      invoke,
     )
   }
 }

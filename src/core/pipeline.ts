@@ -50,7 +50,6 @@ export async function collectCoreSources(
 }
 
 export async function runPipeline(input: PipelineInput): Promise<PipelineReport> {
-  void buildWebSearchQuery({ date: input.date, profile: input.profile })
   const sections = groupSections(input.items)
   const markdown = renderMarkdown(input.date, sections)
 
