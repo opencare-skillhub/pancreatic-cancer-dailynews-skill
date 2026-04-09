@@ -1,13 +1,4 @@
-import type { DigestItem } from '../schema/item.js'
-
-export const sectionOrder = [
-  'clinical_trials_and_drug_rnd',
-  'research_hotspots',
-  'disease_management_guides',
-  'nutrition_and_psychology',
-  'community_and_wechat',
-  'daily_encouragement',
-] as const
+import { sectionOrder, type DigestItem } from '../schema/item.js'
 
 export type SectionId = (typeof sectionOrder)[number]
 

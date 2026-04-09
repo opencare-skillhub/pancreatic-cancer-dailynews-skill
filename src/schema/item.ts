@@ -1,13 +1,15 @@
 import { z } from 'zod'
 
-export const sectionIdSchema = z.enum([
+export const sectionOrder = [
   'clinical_trials_and_drug_rnd',
   'research_hotspots',
   'disease_management_guides',
   'nutrition_and_psychology',
   'community_and_wechat',
   'daily_encouragement',
-])
+] as const
+
+export const sectionIdSchema = z.enum(sectionOrder)
 
 export const itemSchema = z.object({
   id: z.string().min(1),
