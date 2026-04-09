@@ -16,7 +16,7 @@ export const itemSchema = z.object({
   sectionHint: sectionIdSchema,
   sourceUrl: z.string().url(),
   fetchedAt: z.string().datetime(),
-  evidence: z.array(z.string()).min(1),
+  evidence: z.array(z.string().trim().min(1)).min(1),
   phase: z.string().optional(),
   scoreBreakdown: z.record(z.string(), z.number()).optional(),
 })
