@@ -14,6 +14,11 @@ describe('cli parseArgs', () => {
     expect(result.profile).toBe('daily-v5')
   })
 
+  it('supports doctor command', () => {
+    const result = parseArgs(['doctor'])
+    expect(result.command).toBe('doctor')
+  })
+
   it('throws when profile is missing a value', () => {
     expect(() => parseArgs(['run', '--profile'])).toThrow('--profile requires a value')
   })

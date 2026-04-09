@@ -9,7 +9,8 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "vitest run",
-    "test:typecheck": "tsc -p tsconfig.test.json"
+    "test:typecheck": "tsc -p tsconfig.test.json",
+    "doctor": "node dist/cli/index.js doctor"
   },
   "devDependencies": {
     "@types/node": "^22.13.10",
