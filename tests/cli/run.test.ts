@@ -14,9 +14,17 @@ describe('cli parseArgs', () => {
     expect(result.profile).toBe('daily-v5')
   })
 
-  it('supports doctor command', () => {
-    const result = parseArgs(['doctor'])
+  it('supports doctor command flags', () => {
+    const result = parseArgs(['doctor', '--skills', '--fix'])
     expect(result.command).toBe('doctor')
+    expect(result.skillsOnly).toBe(true)
+    expect(result.fix).toBe(true)
+  })
+
+  it('supports install-source target', () => {
+    const result = parseArgs(['install-source', 'pubmed_mcp'])
+    expect(result.command).toBe('install-source')
+    expect(result.installSource).toBe('pubmed_mcp')
   })
 
   it('throws when profile is missing a value', () => {

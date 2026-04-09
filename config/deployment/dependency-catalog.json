@@ -1,0 +1,53 @@
+{
+  "clinical_trials_mcp": {
+    "type": "npm_mcp",
+    "required": true,
+    "role": "clinical_trials_primary",
+    "check": {
+      "kind": "command",
+      "command": "npx --version"
+    },
+    "install": {
+      "kind": "npm",
+      "command": "npm install -g @scope/clinical-trials-mcp"
+    },
+    "fallback": "stub",
+    "docs": {
+      "homepage": "https://github.com/example/clinical-trials-mcp"
+    }
+  },
+  "pubmed_mcp": {
+    "type": "npm_mcp",
+    "required": true,
+    "role": "pubmed_primary",
+    "check": {
+      "kind": "command",
+      "command": "npx --version"
+    },
+    "install": {
+      "kind": "npm",
+      "command": "npm install -g @scope/pubmed-mcp"
+    },
+    "fallback": "stub",
+    "docs": {
+      "homepage": "https://github.com/example/pubmed-mcp"
+    }
+  },
+  "tavily_search": {
+    "type": "skill",
+    "required": false,
+    "role": "web_search_fallback",
+    "check": {
+      "kind": "skill_exists",
+      "skill": "tavily-search"
+    },
+    "install": {
+      "kind": "github_skill",
+      "command": "install skill tavily-search"
+    },
+    "fallback": "web_search_stub",
+    "docs": {
+      "homepage": "https://github.com/example/tavily-search-skill"
+    }
+  }
+}
