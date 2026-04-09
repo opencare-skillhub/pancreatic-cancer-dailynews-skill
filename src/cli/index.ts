@@ -1,6 +1,7 @@
 import { pathToFileURL } from 'node:url'
 import { loadDependencyCatalog } from '../config/load_dependency_catalog.js'
 import { formatDoctorReport, runDoctor, type DoctorArgs } from '../output/doctor.js'
+import { formatInstallPlan, resolveInstallPlan } from '../output/install.js'
 
 export type ParsedArgs = DoctorArgs & {
   installSource?: string
@@ -79,6 +80,15 @@ export async function main(argv = process.argv.slice(2)): Promise<void> {
     const report = await runDoctor(parsed, catalog)
     console.log(formatDoctorReport(report, parsed.fix))
     return
+  }
+
+  if (parsed.command === 'install-source') {
+    if (!parsed.installSource) {
+      throw new Error('install-source requires a source id')
+    }
+    const catalog = await loadDependencyCatalog()
+    const plan = resolveInstallPlan(catalog, parsed.installSource)
+    console.log(formatInstallPlan(plan))
   }
 }
 
