@@ -1,0 +1,69 @@
+{
+  "output": {
+    "format": "enhanced",
+    "title_template": "胰腺癌医学日报 {date}",
+    "sections": [
+      {
+        "id": "highlights",
+        "title": "🎯 今日核心要点",
+        "description": "快速浏览今日最重要的3-5条进展，点击链接查看详情",
+        "max_items": 5,
+        "priority_filter": [1],
+        "show_summary": true
+      },
+      {
+        "id": "chictr_trials",
+        "title": "🇨🇳 中国可申请临床试验 (ChiCTR)",
+        "description": "30天内可申请的中国临床试验，优先关注",
+        "max_items": 10,
+        "source_filter": ["chictr"],
+        "show_full_details": true
+      },
+      {
+        "id": "global_trials",
+        "title": "🌍 全球重要临床试验",
+        "description": "Phase 2/3期重要试验，国内外进展",
+        "max_items": 15,
+        "source_filter": ["clinicaltrials"],
+        "priority_filter": [1, 2],
+        "show_full_details": true
+      },
+      {
+        "id": "revolution_medicine",
+        "title": "💊 Revolution Medicine 最新动态",
+        "description": "Revolution Medicine公司胰腺癌管线最新数据与报告",
+        "max_items": 5,
+        "source_filter": ["revolution_medicine"],
+        "priority_filter": [1],
+        "show_summary": true
+      },
+      {
+        "id": "immunotherapy",
+        "title": "⚡ 免疫治疗前沿",
+        "description": "PD-1/PD-L1、CAR-T等免疫治疗最新突破",
+        "max_items": 10,
+        "source_filter": ["immunotherapy"],
+        "show_summary": true
+      },
+      {
+        "id": "new_drugs",
+        "title": "💉 新药与联合治疗",
+        "description": "新药研发、联合治疗方案最新研究",
+        "max_items": 10,
+        "source_filter": ["new_drugs_combinations"],
+        "show_summary": true
+      }
+    ],
+    "chat_summary": {
+      "max_items": 8,
+      "format": "bullet_points",
+      "include_links": true
+    },
+    "styling": {
+      "show_icons": true,
+      "show_tags": true,
+      "highlight_priority_1": true,
+      "show_region_flags": true
+    }
+  }
+}

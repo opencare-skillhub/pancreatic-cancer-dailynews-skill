@@ -1,0 +1,259 @@
+{
+  "version": "4.0",
+  "description": "多企业监控 + 国内创新药企 + RAS靶向全图谱",
+  "sources": {
+    "clinicaltrials": {
+      "enabled": true,
+      "name": "ClinicalTrials.gov (全球)",
+      "type": "mcp",
+      "priority": 1,
+      "config": {
+        "mcp_server": "clinical-trials-mcp",
+        "tool_name": "search_clinical_trials",
+        "condition": "pancreatic cancer",
+        "max_results": 60
+      }
+    },
+    "chictr": {
+      "enabled": false,
+      "name": "ChiCTR (中国临床试验)",
+      "type": "mcp",
+      "priority": 2,
+      "config": {
+        "mcp_server": "chictr-mcp",
+        "tool_name": "search_trials",
+        "keywords": "胰腺癌",
+        "max_results": 30
+      }
+    },
+    "revolution_medicines": {
+      "enabled": false,
+      "name": "Revolution Medicine 企业动态 (web_crawl - 网络超时)",
+      "type": "web_crawl",
+      "priority": 3,
+      "config": {
+        "url": "https://ir.revmed.com/press-releases",
+        "keywords": ["pancreatic cancer", "KRAS", "RMC-6236", "Daraxonrasib"],
+        "max_results": 10,
+        "timeout": 120,
+        "note": "2026-04-09 网络超时，待稳定后启用"
+      }
+    },
+    "remegen": {
+      "enabled": false,
+      "name": "荣昌生物 (Remegen) - RC118 临床试验",
+      "type": "web_search",
+      "priority": 4,
+      "config": {
+        "search_terms": ["荣昌生物 RC118 临床试验 胰腺癌", "Remegen RC118 claudin18.2 ADC", "RC118 胰腺癌 试验结果"],
+        "max_results": 5,
+        "search_engine": "miaoda"
+      }
+    },
+    "akeso": {
+      "enabled": false,
+      "name": "康方生物 (Akeso) - AK104/AK112/AK154 双抗+mRNA 胰腺癌管线",
+      "type": "web_search",
+      "priority": 2,
+      "config": {
+        "search_terms": [
+          "康方生物 AK104 胰腺癌 NCT05859750",
+          "康方生物 AK112 HARMONi-GI 胰腺癌",
+          "康方生物 AK154 mRNA 疫苗 NCT06913218",
+          "Akeso AK104 PD-1 CTLA-4 胰腺癌 临床试验",
+          "Akeso AK112 PD-1 VEGF 胰腺癌 二期"
+        ],
+        "max_results": 8,
+        "search_engine": "miaoda",
+        "note": "康方生物 - 双抗龙头，AK104 (PD-1/CTLA-4) + AK112 (PD-1/VEGF) + AK154 (mRNA疫苗) 三线推进胰腺癌"
+      }
+    },
+    "asemblon": {
+      "enabled": false,
+      "name": "礼新医药 (Asemblon) - LM-302 CLDN18.2 ADC",
+      "type": "web_search",
+      "priority": 5,
+      "config": {
+        "search_terms": ["礼新医药 LM-302 临床试验 胰腺癌", "Asemblon LM-302 CLDN18.2 ADC", "LM-302 康方 胰腺癌"],
+        "max_results": 5,
+        "search_engine": "miaoda"
+      }
+    },
+    "hengrui": {
+      "enabled": false,
+      "name": "恒瑞医药 (Hengrui) - SHR-A1904",
+      "type": "web_search",
+      "priority": 5,
+      "config": {
+        "search_terms": ["SHR-A1904 pancreatic cancer", "恒瑞 SHR-A1904 临床试验", "SHR-A1904 CLDN18.2"],
+        "max_results": 5
+      }
+    },
+    "taidig": {
+      "enabled": false,
+      "name": "泰力甘德 (Taidig) - TSN1611",
+      "type": "web_search",
+      "priority": 6,
+      "config": {
+        "search_terms": ["TSN1611 KRAS G12D", "泰力甘德 TSN1611", "TSN1611 pancreatic cancer"],
+        "max_results": 5
+      }
+    },
+    "jacobio": {
+      "enabled": false,
+      "name": "科思 (Jacobio) - JAB-23E73",
+      "type": "web_search",
+      "priority": 4,
+      "config": {
+        "search_terms": ["Jacobio JAB-23E73", "科思 JAB-23E73 pancreatic cancer", "JAB-23E73 KRAS"],
+        "max_results": 5
+      }
+    },
+    "hbw": {
+      "enabled": false,
+      "name": "海博为 (HBW) - HBW-016",
+      "type": "web_search",
+      "priority": 6,
+      "config": {
+        "search_terms": ["HBW-016 pancreatic cancer", "海博为 HBW-016", "HBW-016 KRAS"],
+        "max_results": 5
+      }
+    },
+    "bridgebio": {
+      "enabled": false,
+      "name": "BridgeBio - BBO-11818",
+      "type": "web_search",
+      "priority": 5,
+      "config": {
+        "search_terms": ["BridgeBio BBO-11818", "BBO-11818 KRAS", "BBO-11818 pancreatic cancer"],
+        "max_results": 5
+      }
+    },
+    "junsec": {
+      "enabled": false,
+      "name": "君赛生物 - GC101/GC203 TIL 疗法",
+      "type": "web_search",
+      "priority": 3,
+      "config": {
+        "search_terms": [
+          "君赛生物 GC203 临床试验 胰腺癌",
+          "君赛生物 GC101 TIL 疗法 最新进展",
+          "GC203 胰腺癌 完全缓解 CR"
+        ],
+        "max_results": 8,
+        "search_engine": "miaoda",
+        "note": "国内TIL领军企业，GC203为首个基因修饰TIL注册试验"
+      }
+    },
+    "shamo": {
+      "enabled": false,
+      "name": "沙砾生物 - GT101/GT201/GT316 TIL 疗法",
+      "type": "web_search",
+      "priority": 4,
+      "config": {
+        "search_terms": [
+          "沙砾生物 GT101 II期临床试验",
+          "沙砾生物 GT201 基因编辑TIL",
+          "沙砾生物 GT316 CRISPR双敲"
+        ],
+        "max_results": 6,
+        "search_engine": "miaoda"
+      }
+    },
+    "huasai": {
+      "enabled": false,
+      "name": "华赛伯曼 - HS-IT101 TIL 疗法",
+      "type": "web_search",
+      "priority": 6,
+      "config": {
+        "search_terms": ["华赛伯曼 HS-IT101 临床试验", "华赛伯曼 TIL 疗法 胰腺癌"],
+        "max_results": 4,
+        "search_engine": "miaoda"
+      }
+    },
+    "vaccine_kangfang": {
+      "enabled": false,
+      "name": "康方生物 - AK129 mRNA 胰腺癌疫苗",
+      "type": "web_search",
+      "priority": 4,
+      "config": {
+        "search_terms": [
+          "康方生物 AK129 胰腺癌 临床试验",
+          "康方生物 mRNA 疫苗 AK129",
+          "AK129 PD-1 CTLA-4 双抗 胰腺癌"
+        ],
+        "max_results": 6,
+        "search_engine": "miaoda"
+      }
+    },
+    "vaccine_cloudtix": {
+      "enabled": false,
+      "name": "云顶新耀 - EVM16/EVM14 mRNA 疫苗",
+      "type": "web_search",
+      "priority": 6,
+      "config": {
+        "search_terms": ["云顶新耀 EVM16 胰腺癌", "云顶新耀 个性化肿瘤疫苗", "EVM14 现货型疫苗"],
+        "max_results": 4,
+        "search_engine": "miaoda"
+      }
+    },
+    "vaccine_jiaochen": {
+      "enabled": false,
+      "name": "嘉晨西海 - JCXH-211 IL-12 mRNA 疫苗",
+      "type": "web_search",
+      "priority": 6,
+      "config": {
+        "search_terms": ["嘉晨西海 JCXH-211 临床试验", "嘉晨西海 IL-12 mRNA 疫苗", "JCXH-211 胰腺癌"],
+        "max_results": 4,
+        "search_engine": "miaoda"
+      }
+    },
+    "vaccine_abio": {
+      "enabled": false,
+      "name": "艾博生物 - ABO2011 IL-12 mRNA 疫苗",
+      "type": "web_search",
+      "priority": 6,
+      "config": {
+        "search_terms": ["艾博生物 ABO2011 临床试验", "ABO2011 IL-12 胰腺癌", "艾博生物 mRNA 疫苗"],
+        "max_results": 4,
+        "search_engine": "miaoda"
+      }
+    },
+    "xijingzhiyuan": {
+      "enabled": false,
+      "name": "新景智源 - TCR-T 细胞疗法 (KRAS G12V)",
+      "type": "web_search",
+      "priority": 3,
+      "config": {
+        "search_terms": [
+          "新景智源 NW-301V TCR-T 胰腺癌",
+          "新景智源 KRAS G12V 临床试验 2025",
+          "Neural-Intelligent NeuraMatrix TCR-T pancreatic cancer",
+          "新景智源 NW-301V ESMO 2025"
+        ],
+        "max_results": 6,
+        "search_engine": "miaoda",
+        "note": "新景智源 - KRAS G12V TCR-T细胞疗法, 2025 ESMO 口头报告, 14例可评估患者 (结直肠癌+胰腺癌)"
+      }
+    }
+  },
+  "ai_processing": {
+    "relevance_threshold": 0.6,
+    "max_highlights": 8,
+    "summary_length": 200,
+    "enable_deduplication": true,
+    "enable_ranking": true
+  },
+  "output": {
+    "max_items": 80,
+    "format": "enhanced_v3",
+    "include_summary": true,
+    "group_by_source": true,
+    "sections": [
+      "international_trials",
+      "domestic_china_trials",
+      "enterprise_news",
+      "academic_highlights"
+    ]
+  }
+}

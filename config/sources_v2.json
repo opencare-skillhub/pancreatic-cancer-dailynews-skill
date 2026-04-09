@@ -1,0 +1,75 @@
+{
+  "sources": {
+    "chictr": {
+      "enabled": false,
+      "name": "ChiCTR (中国临床试验) [MCP待集成]",
+      "type": "web",
+      "priority": 1,
+      "config": {
+        "base_url": "https://www.chictr.org.cn",
+        "search_url": "https://www.chictr.org.cn/searchproj.html",
+        "keywords": "胰腺癌",
+        "date_range_days": 30,
+        "status_filter": "recruiting",
+        "method": "mcp_chictr_server",
+        "max_results": 20
+      }
+    },
+    "clinicaltrials": {
+      "enabled": true,
+      "name": "ClinicalTrials.gov (全球)",
+      "type": "api",
+      "priority": 2,
+      "config": {
+        "condition": "pancreatic cancer",
+        "status": ["RECRUITING", "NOT_YET_RECRUITING"],
+        "date_range_days": 30,
+        "page_size": 50,
+        "sort": "LastUpdatePostDate:desc",
+        "phase_focus": ["PHASE2", "PHASE3", "PHASE2/3"]
+      }
+    },
+    "revolution_medicine": {
+      "enabled": false,
+      "name": "Revolution Medicine 最新报告 [待集成]",
+      "type": "web_search",
+      "priority": 1,
+      "config": {
+        "search_terms": [
+          "Revolution Medicine pancreatic cancer clinical trial data 2026",
+          "Revolution Medicine RMC-4630 pancreatic cancer",
+          "Revolution Medicine immuno-oncology report"
+        ],
+        "date_range_days": 30,
+        "max_results": 10
+      }
+    },
+    "immunotherapy": {
+      "enabled": false,
+      "name": "免疫治疗最新进展 [待集成]",
+      "type": "web_search",
+      "priority": 3,
+      "config": {
+        "search_terms": [
+          "pancreatic cancer immunotherapy new 2026",
+          "PD-1 PD-L1 pancreatic cancer trial results",
+          "CAR-T T-cell therapy pancreatic cancer latest"
+        ],
+        "date_range_days": 30,
+        "max_results": 15
+      }
+    },
+    "new_drugs_combinations": {
+      "enabled": false,
+      "name": "新药与联合治疗 [待集成]",
+      "type": "pubmed",
+      "priority": 3,
+      "config": {
+        "query": "(pancreatic cancer) AND (new drug OR combination therapy OR novel agent)",
+        "date_range_days": 30,
+        "max_results": 20,
+        "filter_types": ["Clinical Trial", "Randomized Controlled Trial"]
+      }
+    }
+  }
+}

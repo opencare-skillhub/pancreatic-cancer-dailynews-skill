@@ -1,0 +1,23 @@
+{
+  "feishu_wiki": {
+    "enabled": true,
+    "space_id": "QtIXwuGf4iAfVskGfj8cjxfYnmf",
+    "parent_node": "",
+    "title_template": "胰腺癌医学日报 {date}",
+    "publish_as_draft": false,
+    "monthly_archive": true
+  },
+  "feishu_chat": {
+    "enabled": true,
+    "chat_id": "oc_8c0644c53e832ebb2c578294686fed96",
+    "chat_name": "微光闪烁-病情互助飞书1群",
+    "max_highlights": 5,
+    "notify_time": "08:15",
+    "include_full_report_link": true
+  },
+  "schedule": {
+    "timezone": "Asia/Shanghai",
+    "daily_time": "08:00",
+    "weekday_only": false
+  }
+}

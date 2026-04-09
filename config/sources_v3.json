@@ -1,0 +1,103 @@
+{
+  "sources": {
+    "chictr": {
+      "enabled": false,
+      "name": "ChiCTR (中国临床试验)",
+      "type": "mcp",
+      "priority": 1,
+      "config": {
+        "mcp_server": "chictr-mcp",
+        "tool_name": "search_trials",
+        "keywords": "胰腺癌",
+        "max_results": 20
+      }
+    },
+    "clinicaltrials": {
+      "enabled": true,
+      "name": "ClinicalTrials.gov (全球)",
+      "type": "mcp",
+      "priority": 2,
+      "config": {
+        "mcp_server": "clinical-trials-mcp",
+        "tool_name": "search_clinical_trials",
+        "keywords": "pancreatic cancer",
+        "condition": "pancreatic cancer",
+        "max_results": 50
+      }
+    },
+    "rss_fda": {
+      "enabled": true,
+      "name": "FDA 肿瘤学 approvals RSS",
+      "type": "rss",
+      "priority": 1,
+      "config": {
+        "url": "https://www.fda.gov/about-fda/fda-news-events/rss-feeds",
+        "keywords": ["pancreatic cancer", "oncology", "approval"],
+        "max_results": 5
+      }
+    },
+    "rss_csco": {
+      "enabled": true,
+      "name": "CSCO 指南更新",
+      "type": "rss",
+      "priority": 2,
+      "config": {
+        "url": "https://www.csco.org.cn/rss/guideline.xml",
+        "keywords": ["胰腺癌", "pancreatic"],
+        "max_results": 5
+      }
+    },
+    "web_revolution": {
+      "enabled": false,
+      "name": "Revolution Medicine 企业动态 (web_crawl)",
+      "type": "web_crawl",
+      "priority": 1,
+      "config": {
+        "url": "https://ir.revmed.com/press-releases",
+        "keywords": ["pancreatic cancer", "KRAS", "RMC-6236", "Daraxonrasib", "RAS", "oncology"],
+        "max_results": 10,
+        "timeout": 90
+      }
+    },
+    "web_revolution_search": {
+      "enabled": false,
+      "name": "Revolution Medicine (Web Search - Pending Tavily)",
+      "type": "web_search",
+      "priority": 2,
+      "config": {
+        "search_terms": [
+          "Revolution Medicine pancreatic cancer 2026",
+          "RMC-6236 daraxonrasib pancreatic cancer trial results",
+          "Revolution Medicine press release pancreatic"
+        ],
+        "max_results": 10
+      }
+    },
+    "web_immunotherapy": {
+      "enabled": false,
+      "name": "免疫治疗最新进展",
+      "type": "web_search",
+      "priority": 3,
+      "config": {
+        "search_terms": [
+          "pancreatic cancer immunotherapy 2026",
+          "PD-1 pancreatic cancer trial results"
+        ],
+        "max_results": 15
+      }
+    }
+  },
+  "ai_processing": {
+    "relevance_threshold": 0.7,
+    "max_highlights": 5,
+    "summary_length": 200,
+    "enable_deduplication": true,
+    "enable_ranking": true
+  },
+  "output": {
+    "max_items": 50,
+    "format": "enhanced_v2",
+    "include_summary": true,
+    "group_by_source": true
+  }
+}

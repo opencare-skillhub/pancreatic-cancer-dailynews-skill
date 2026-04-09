@@ -1,0 +1,31 @@
+{
+  "sources": {
+    "clinicaltrials": {
+      "enabled": true,
+      "condition": "pancreatic cancer",
+      "status": ["RECRUITING", "NOT_YET_RECRUITING", "ENROLLING_BY_INVITATION"],
+      "sort": "LastUpdatePostDate:desc",
+      "page_size": 50,
+      "date_field": "LastUpdatePostDate"
+    },
+    "pubmed": {
+      "enabled": true,
+      "mesh_terms": ["Pancreatic Neoplasms"],
+      "date_range_days": 7,
+      "max_results": 50,
+      "filter_types": ["Clinical Trial", "Meta-Analysis", "Randomized Controlled Trial", "Review"]
+    },
+    "rss_feeds": [
+      {
+        "name": "ClinicalTrials.gov RSS",
+        "url": "https://clinicaltrials.gov/api/rss?cond=pancreatic+cancer&firstPost=2026-01-01_&aggFilters=ages%3Aadult+older%2Cstatus%3Arec&dateField=LastUpdatePostDate",
+        "enabled": true
+      },
+      {
+        "name": "ASCO Pancreatic Cancer",
+        "url": "https://ascopubs.org/action/showFeed?ui=euhb&mi=a938dc&type=search&feed=rss&query=%2526Earliest%253D20251008-20260408%2526content%253DarticlesChapters%2526field1%253DAllField%2526target%253Ddefault%2526text1%253Dpancreatic%252Bcancer",
+        "enabled": false
+      }
+    ]
+  }
+}
