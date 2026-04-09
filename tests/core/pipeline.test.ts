@@ -1,6 +1,7 @@
 import { describe, expect, it, vi } from 'vitest'
 import { collectCoreSources, runPipeline } from '../../src/core/pipeline.js'
 import type { DigestItem } from '../../src/schema/item.js'
+import { searchWebWithFallback } from '../../src/sources/web_search.js'
 
 describe('pipeline', () => {
   const item: DigestItem = {
@@ -115,5 +116,16 @@ describe('pipeline', () => {
     )
 
     expect(items).toEqual([validItem])
+  })
+
+  it('searchWebWithFallback returns secondary result when primary fails', async () => {
+    const result = await searchWebWithFallback('pancreatic cancer trial', {
+      primary: vi.fn().mockRejectedValue(new Error('primary down')),
+      secondary: vi.fn().mockResolvedValue([
+        { title: 'fallback hit', sourceUrl: 'https://example.com' },
+      ]),
+    })
+
+    expect(result).toEqual([{ title: 'fallback hit', sourceUrl: 'https://example.com' }])
   })
 })
