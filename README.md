@@ -251,6 +251,113 @@ ASCO RSS requires specific headers. Currently disabled in config. To enable:
 
 ---
 
+## 🔎 自动部署清单新增：openclaw-grok-search
+
+当前项目已将 `openclaw-grok-search` 纳入 `config/deployment/dependency-catalog.json`，用于后续 `digest doctor --fix` / `digest install-source openclaw_grok_search` 自动生成安装计划。
+
+推荐标准流程：
+
+```text
+检查 -> 报告 -> 互动确认安装依赖技能/MCP/工具 -> 输入 Y 后执行安装 -> 提示配置变量文件
+```
+
+对应命令：
+
+```bash
+digest doctor --fix
+```
+
+当前行为为：
+
+1. 检查环境与依赖
+2. 输出缺失项与待执行动作
+3. 询问 `Continue? [y/N]`
+4. 先展示安装队列（默认按 `skill -> MCP -> 其他工具`）
+5. 输入 `y` 后顺序执行安装命令
+6. 安装结束后提示对应的配置变量文件与必填变量
+7. 若存在 `.example` 模板，会自动复制生成对应 `.local` 文件
+8. 如果安装失败，会给出失败类型提示（命令缺失 / 权限 / 网络或 registry）
+
+### 安装命令
+
+```bash
+npx skills add https://github.com/stemmaker/openclaw-grok-search --skill openclaw-grok-search
+```
+
+### MCP 安装策略更新
+
+当前推荐优先使用 `npx -y` 方式运行 MCP，而不是 `git clone + npm install`。
+
+推荐配置：
+
+```json
+{
+  "mcpServers": {
+    "clinical_trials": {
+      "command": "npx",
+      "args": ["-y", "xiaoyibao-clinical-trials"]
+    },
+    "chictr": {
+      "command": "npx",
+      "args": ["-y", "chictr-mcp-server@latest"]
+    }
+  }
+}
+```
+
+这样更适合：
+
+- `digest doctor --fix`
+- 自动化部署
+- MCP 网关配置
+- 后续版本升级
+
+### 环境变量
+
+已新增示例文件：
+
+```bash
+.env.openclaw-grok-search.example
+```
+
+建议本地复制为：
+
+```bash
+cp .env.openclaw-grok-search.example .env.openclaw-grok-search.local
+```
+
+并填写真实密钥。`.env*.local` 已加入 `.gitignore`，避免提交敏感信息。
+
+### 变量说明
+
+- `GROK_BASE_URL`
+- `GROK_API_KEY`
+- `GROK_MODEL`（可选）
+- `GROK_BACKUP_BASE_URL`
+- `GROK_BACKUP_API_KEY`
+
+### 重要说明
+
+用户给出的主地址是：
+
+```text
+https://grok2api.samfun.asia/v1/chat/completions
+```
+
+但上游 `openclaw-grok-search` 脚本会自行拼接 `/v1/chat/completions`，所以**运行时** `GROK_BASE_URL` 应配置为：
+
+```text
+https://grok2api.samfun.asia
+```
+
+备用地址建议保存为：
+
+```text
+https://ai.huan666.de
+```
+
+---
+
 ## 📁 File Structure
 
 ```
@@ -386,3 +493,30 @@ Check:
 ---
 
 *Built for Pancreatic Cancer Patient Community 2.0 🩺*
+
+---
+
+<!-- generated:sources:start -->
+## 🔌 Sources Registry（自动生成）
+
+以下内容由 `digest sync-sources` 从 `config/sources.registry.yaml` 自动生成。
+
+| ID | 类型 | 角色 | 安装 | 配置文件 |
+| --- | --- | --- | --- | --- |
+| clinical_trials_mcp | npm_mcp | clinical_trials_primary | npx -y xiaoyibao-clinical-trials | - |
+| pubmed_mcp | npm_mcp | pubmed_primary | npm install -g @scope/pubmed-mcp | - |
+| tavily_search | skill | web_search_fallback | npx skills add tavily-search || skillhub install tavily-search | ~/.config/tavily/config.json |
+| wechat_search | skill | community_wechat_search | already built-in | - |
+| chictr_mcp | npm_mcp | china_trials_primary | npx -y chictr-mcp-server@latest | - |
+| metasota_api_mcp | npm_mcp | api_gateway_fallback | git clone https://github.com/PancrePal-xiaoyibao/metasota-API-MCP.git | - |
+| vibe_writer_pro | skill | content_creation_assistant | npx skills add vibe-writer-pro | - |
+| openclaw_grok_search | skill | web_search_primary_candidate | npx skills add https://github.com/stemmaker/openclaw-grok-search --skill openclaw-grok-search | .env.openclaw-grok-search.local |
+
+### 使用方式
+
+1. 修改 `config/sources.registry.yaml`
+2. 运行 `digest sync-sources`
+3. 自动更新 deployment catalog / `.env.*.example` / README
+<!-- generated:sources:end -->
+
+现在 `config/sources.registry.yaml` 已切换为**真正 YAML 语法**，并且已包含当前项目的现有 skills 与 MCP。

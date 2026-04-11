@@ -1,5 +1,5 @@
-import { describe, it, expect } from 'vitest'
-import { parseArgs } from '../../src/cli/index.js'
+import { describe, it, expect, vi } from 'vitest'
+import { main, parseArgs } from '../../src/cli/index.js'
 
 describe('cli parseArgs', () => {
   it('defaults to run with no arguments', () => {
@@ -27,7 +27,41 @@ describe('cli parseArgs', () => {
     expect(result.installSource).toBe('pubmed_mcp')
   })
 
+  it('supports sync-sources command', () => {
+    const result = parseArgs(['sync-sources'])
+    expect(result.command).toBe('sync-sources')
+  })
+
+  it('supports yes flag', () => {
+    const result = parseArgs(['doctor', '--fix', '--yes'])
+    expect(result.yes).toBe(true)
+  })
+
   it('throws when profile is missing a value', () => {
     expect(() => parseArgs(['run', '--profile'])).toThrow('--profile requires a value')
+  })
+
+  it('runs doctor fix installs after confirmation', async () => {
+    const logs: string[] = []
+    const confirm = vi.fn().mockResolvedValue(true)
+    const runInstallCommand = vi.fn().mockImplementation(async (command: string) => ({
+      id: command,
+      command,
+      success: true,
+      exitCode: 0,
+    }))
+
+    await main(['doctor', '--fix', '--skills'], {
+      confirm,
+      runInstallCommand,
+      ensureConfigTemplate: vi.fn().mockResolvedValue('Created config file from template: .env.test.local'),
+      log: (message) => logs.push(message),
+    })
+
+    expect(confirm).toHaveBeenCalled()
+    expect(runInstallCommand).toHaveBeenCalled()
+    expect(logs.join('\n')).toContain('Install queue:')
+    expect(logs.join('\n')).toContain('Install results:')
+    expect(logs.join('\n')).toContain('Config file actions:')
   })
 })

@@ -10,7 +10,8 @@
     "build": "tsc -p tsconfig.json",
     "test": "vitest run",
     "test:typecheck": "tsc -p tsconfig.test.json",
-    "doctor": "node dist/cli/index.js doctor"
+    "doctor": "node dist/cli/index.js doctor",
+    "sync:sources": "node dist/cli/index.js sync-sources"
   },
   "devDependencies": {
     "@types/node": "^22.13.10",

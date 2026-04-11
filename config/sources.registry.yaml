@@ -1,0 +1,242 @@
+sources:
+  - id: clinical_trials_mcp
+    type: npm_mcp
+    required: true
+    enabled: true
+    role: clinical_trials_primary
+    check:
+      kind: command
+      command: "npx --version"
+    install:
+      kind: npx
+      command: "npx -y xiaoyibao-clinical-trials"
+    fallback: stub
+    docs:
+      homepage: "https://github.com/PancrePal-xiaoyibao/xiaoyibao-clinical-trials-mcp-server"
+    metadata:
+      name: "Clinical Trials MCP Server (Community)"
+      repository: "https://github.com/PancrePal-xiaoyibao/xiaoyibao-clinical-trials-mcp-server"
+      deploymentStatus: npx_preferred
+      deploymentNotes:
+        - "推荐直接使用 npx -y xiaoyibao-clinical-trials 运行"
+      installMethods:
+        - "npx -y xiaoyibao-clinical-trials"
+      primaryUseCases:
+        - "ClinicalTrials.gov API v2 封装"
+        - search_clinical_trials
+        - get_trial_details
+        - search_by_location
+    mcp:
+      command: npx
+      args: ["-y", "xiaoyibao-clinical-trials"]
+
+  - id: pubmed_mcp
+    type: npm_mcp
+    required: true
+    enabled: true
+    role: pubmed_primary
+    check:
+      kind: command
+      command: "npx --version"
+    install:
+      kind: npm
+      command: "npm install -g @scope/pubmed-mcp"
+    fallback: stub
+    docs:
+      homepage: "https://github.com/example/pubmed-mcp"
+
+  - id: tavily_search
+    type: skill
+    required: false
+    enabled: true
+    role: web_search_fallback
+    check:
+      kind: file_exists
+      path: "/home/gem/workspace/agent/workspace/.agents/skills/tavily-search/"
+    install:
+      kind: github_skill
+      command: "npx skills add tavily-search || skillhub install tavily-search"
+    fallback: web_search_stub
+    docs:
+      homepage: "/home/gem/workspace/agent/workspace/.agents/skills/tavily-search/"
+    metadata:
+      name: tavily-search
+      localPath: "/home/gem/workspace/agent/workspace/.agents/skills/tavily-search/"
+      deploymentStatus: cli_present_python_module_missing
+      deploymentNotes:
+        - "CLI 存在但 Python 模块缺失（ModuleNotFoundError: No module named 'tavily'）"
+        - "v4.0 暂未启用，使用 miaoda-web-search 替代"
+      installMethods:
+        - "npx skills add tavily-search"
+        - "skillhub install tavily-search"
+      primaryUseCases:
+        - "LLM-optimized 结果"
+        - 内容片段
+        - 相关性评分
+        - domain filtering
+        - 企业监控搜索
+    config:
+      file: "~/.config/tavily/config.json"
+      vars:
+        - TAVILY_API_KEY
+      exampleValues:
+        TAVILY_API_KEY: replace-tavily-api-key
+
+  - id: wechat_search
+    type: skill
+    required: false
+    enabled: true
+    role: community_wechat_search
+    check:
+      kind: file_exists
+      path: "/home/gem/workspace/agent/workspace/.agents/skills/wechat-search/"
+    install:
+      kind: builtin
+      command: "already built-in"
+    fallback: web_search_stub
+    docs:
+      homepage: "/home/gem/workspace/agent/workspace/.agents/skills/wechat-search/"
+    metadata:
+      name: wechat-search
+      version: v1.0.3
+      localPath: "/home/gem/workspace/agent/workspace/.agents/skills/wechat-search/"
+      deploymentStatus: active
+      deploymentNotes:
+        - "已内置，无需额外安装"
+        - "双层策略：site:mp.weixin.qq.com + 直接页面抓取 fallback"
+        - "遵守 robots.txt，速率限制 5 秒延迟"
+      primaryUseCases:
+        - 微信公众号搜索
+        - 病友热点模块
+        - 提取患者讨论话题
+
+  - id: chictr_mcp
+    type: npm_mcp
+    required: false
+    enabled: true
+    role: china_trials_primary
+    check:
+      kind: command
+      command: "npx --version"
+    install:
+      kind: npx
+      command: "npx -y chictr-mcp-server@latest"
+    fallback: stub
+    docs:
+      homepage: "https://github.com/PancrePal-xiaoyibao/chictr-mcp-server"
+    metadata:
+      name: "ChiCTR MCP Server"
+      repository: "https://github.com/PancrePal-xiaoyibao/chictr-mcp-server"
+      deploymentStatus: npx_preferred
+      deploymentNotes:
+        - "推荐直接使用 npx -y chictr-mcp-server@latest 运行"
+        - "内置指纹、延迟、缓存机制，应对滑块验证码"
+      installMethods:
+        - "npx -y chictr-mcp-server@latest"
+      primaryUseCases:
+        - search_trials
+        - get_trial_detail
+        - 中国临床试验数据源
+    mcp:
+      command: npx
+      args: ["-y", "chictr-mcp-server@latest"]
+
+  - id: metasota_api_mcp
+    type: npm_mcp
+    required: false
+    enabled: true
+    role: api_gateway_fallback
+    check:
+      kind: file_exists
+      path: "/home/gem/workspace/agent/workspace/.agents/skills/metasota-API-MCP/"
+    install:
+      kind: git_clone
+      command: "git clone https://github.com/PancrePal-xiaoyibao/metasota-API-MCP.git"
+    fallback: disabled
+    docs:
+      homepage: "https://github.com/PancrePal-xiaoyibao/metasota-API-MCP.git"
+    metadata:
+      name: "Metasota API MCP"
+      repository: "https://github.com/PancrePal-xiaoyibao/metasota-API-MCP.git"
+      localPath: "/home/gem/workspace/agent/workspace/.agents/skills/metasota-API-MCP/"
+      deploymentStatus: configured_waiting_clone
+      deploymentNotes:
+        - "config.json 已创建，等待网络恢复后 git clone"
+        - "预期作为备用搜索通道或其他医学数据库集成"
+      primaryUseCases:
+        - 通用 API 访问
+        - 备用搜索通道
+        - 医学数据库扩展
+
+  - id: vibe_writer_pro
+    type: skill
+    required: false
+    enabled: true
+    role: content_creation_assistant
+    check:
+      kind: file_exists
+      path: "/home/gem/workspace/agent/workspace/.agents/skills/vibe-writer-pro/"
+    install:
+      kind: npx
+      command: "npx skills add vibe-writer-pro"
+    fallback: manual_content_workflow
+    docs:
+      homepage: "https://modelscope.cn/skills/@ma2ong/vibe-writer-pro"
+    metadata:
+      name: "Vibe Writer Pro"
+      version: v1.0
+      localPath: "/home/gem/workspace/agent/workspace/.agents/skills/vibe-writer-pro/"
+      deploymentStatus: installed
+      deploymentNotes:
+        - "已安装到 Universal + CodeBuddy"
+        - "适合深度写作与专业写作流程"
+      installMethods:
+        - "npx skills add vibe-writer-pro"
+      primaryUseCases:
+        - 内容创作
+        - 初稿创作
+        - 多轮审校
+        - 多平台分发
+
+  - id: openclaw_grok_search
+    type: skill
+    required: false
+    enabled: true
+    role: web_search_primary_candidate
+    check:
+      kind: file_exists
+      path: "/home/gem/workspace/agent/workspace/.agents/skills/openclaw-grok-search/"
+    install:
+      kind: github_skill
+      command: "npx skills add https://github.com/stemmaker/openclaw-grok-search --skill openclaw-grok-search"
+    fallback: web_search_stub
+    docs:
+      homepage: "https://github.com/Stemmaker/openclaw-grok-search"
+    metadata:
+      name: openclaw-grok-search
+      repository: "https://github.com/Stemmaker/openclaw-grok-search"
+      localPath: "/home/gem/workspace/agent/workspace/.agents/skills/openclaw-grok-search/"
+      deploymentStatus: catalog_seeded_pending_install
+      deploymentNotes:
+        - "已加入当前项目自动部署清单，暂未实际执行安装"
+        - "上游脚本会自动拼接 /v1/chat/completions，运行时 GROK_BASE_URL 应保存为基础域名而不是完整接口地址"
+        - "建议主地址使用 https://grok2api.samfun.asia，备用地址使用 https://ai.huan666.de"
+      installMethods:
+        - "npx skills add https://github.com/stemmaker/openclaw-grok-search --skill openclaw-grok-search"
+      primaryUseCases:
+        - 实时网页研究与搜索
+        - 版本检查
+        - API/文档校验
+        - 时效性信息补充
+    config:
+      file: ".env.openclaw-grok-search.local"
+      vars:
+        - GROK_BASE_URL
+        - GROK_API_KEY
+        - GROK_BACKUP_BASE_URL
+        - GROK_BACKUP_API_KEY
+      exampleValues:
+        GROK_BASE_URL: "https://grok2api.samfun.asia"
+        GROK_API_KEY: replace-primary-key
+        GROK_BACKUP_BASE_URL: "https://ai.huan666.de"
+        GROK_BACKUP_API_KEY: replace-backup-key

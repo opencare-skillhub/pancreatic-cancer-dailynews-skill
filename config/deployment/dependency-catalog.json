@@ -8,8 +8,8 @@
       "command": "npx --version"
     },
     "install": {
-      "kind": "git_clone",
-      "command": "git clone https://github.com/PancrePal-xiaoyibao/xiaoyibao-clinical-trials-mcp-server && npm install"
+      "kind": "npx",
+      "command": "npx -y xiaoyibao-clinical-trials"
     },
     "fallback": "stub",
     "docs": {
@@ -18,15 +18,12 @@
     "metadata": {
       "name": "Clinical Trials MCP Server (Community)",
       "repository": "https://github.com/PancrePal-xiaoyibao/xiaoyibao-clinical-trials-mcp-server",
-      "localPath": "/home/gem/workspace/agent/workspace/.agents/skills/xiaoyibao-clinical-trials-mcp-server/",
-      "deploymentStatus": "installed_waiting_gateway",
+      "deploymentStatus": "npx_preferred",
       "deploymentNotes": [
-        "npm install 成功，等待 MCP 网关加载",
-        "建议 npx 方式配置为 {\"command\": \"npx\", \"args\": [\"-y\", \"xiaoyibao-clinical-trials\"]}"
+        "推荐直接使用 npx -y xiaoyibao-clinical-trials 运行"
       ],
       "installMethods": [
-        "git clone",
-        "npm install"
+        "npx -y xiaoyibao-clinical-trials"
       ],
       "primaryUseCases": [
         "ClinicalTrials.gov API v2 封装",
@@ -34,8 +31,9 @@
         "get_trial_details",
         "search_by_location"
       ],
+      "apiRequirements": [],
       "callableVia": [
-        "npx -y xiaoyibao-clinical-trials"
+        "{\"command\":\"npx\",\"args\":[\"-y\",\"xiaoyibao-clinical-trials\"]}"
       ]
     }
   },
@@ -54,6 +52,9 @@
     "fallback": "stub",
     "docs": {
       "homepage": "https://github.com/example/pubmed-mcp"
+    },
+    "metadata": {
+      "apiRequirements": []
     }
   },
   "tavily_search": {
@@ -84,10 +85,6 @@
         "npx skills add tavily-search",
         "skillhub install tavily-search"
       ],
-      "apiRequirements": [
-        "Tavily API Key",
-        "配置路径: ~/.config/tavily/config.json"
-      ],
       "primaryUseCases": [
         "LLM-optimized 结果",
         "内容片段",
@@ -95,10 +92,10 @@
         "domain filtering",
         "企业监控搜索"
       ],
-      "callableVia": [
-        "tvly search \"query\" --json"
-      ],
-      "configPath": "~/.config/tavily/config.json"
+      "configPath": "~/.config/tavily/config.json",
+      "apiRequirements": [
+        "TAVILY_API_KEY"
+      ]
     }
   },
   "wechat_search": {
@@ -132,13 +129,7 @@
         "病友热点模块",
         "提取患者讨论话题"
       ],
-      "callableVia": [
-        "query",
-        "--max-results",
-        "--past-week",
-        "--from/--to",
-        "--output json"
-      ]
+      "apiRequirements": []
     }
   },
   "chictr_mcp": {
@@ -146,12 +137,12 @@
     "required": false,
     "role": "china_trials_primary",
     "check": {
-      "kind": "file_exists",
-      "path": "/home/gem/workspace/agent/workspace/.agents/skills/chictr-mcp-server/"
+      "kind": "command",
+      "command": "npx --version"
     },
     "install": {
-      "kind": "git_clone",
-      "command": "git clone https://github.com/PancrePal-xiaoyibao/chictr-mcp-server && npm install && npm run build"
+      "kind": "npx",
+      "command": "npx -y chictr-mcp-server@latest"
     },
     "fallback": "stub",
     "docs": {
@@ -160,21 +151,22 @@
     "metadata": {
       "name": "ChiCTR MCP Server",
       "repository": "https://github.com/PancrePal-xiaoyibao/chictr-mcp-server",
-      "localPath": "/home/gem/workspace/agent/workspace/.agents/skills/chictr-mcp-server/",
-      "deploymentStatus": "installed_built",
+      "deploymentStatus": "npx_preferred",
       "deploymentNotes": [
-        "已克隆、安装、编译（TypeScript -> JavaScript）",
+        "推荐直接使用 npx -y chictr-mcp-server@latest 运行",
         "内置指纹、延迟、缓存机制，应对滑块验证码"
       ],
       "installMethods": [
-        "git clone",
-        "npm install",
-        "npm run build"
+        "npx -y chictr-mcp-server@latest"
       ],
       "primaryUseCases": [
         "search_trials",
         "get_trial_detail",
         "中国临床试验数据源"
+      ],
+      "apiRequirements": [],
+      "callableVia": [
+        "{\"command\":\"npx\",\"args\":[\"-y\",\"chictr-mcp-server@latest\"]}"
       ]
     }
   },
@@ -203,14 +195,12 @@
         "config.json 已创建，等待网络恢复后 git clone",
         "预期作为备用搜索通道或其他医学数据库集成"
       ],
-      "apiRequirements": [
-        "需要已配置的 API Key"
-      ],
       "primaryUseCases": [
         "通用 API 访问",
         "备用搜索通道",
         "医学数据库扩展"
-      ]
+      ],
+      "apiRequirements": []
     }
   },
   "vibe_writer_pro": {
@@ -246,6 +236,51 @@
         "初稿创作",
         "多轮审校",
         "多平台分发"
+      ],
+      "apiRequirements": []
+    }
+  },
+  "openclaw_grok_search": {
+    "type": "skill",
+    "required": false,
+    "role": "web_search_primary_candidate",
+    "check": {
+      "kind": "file_exists",
+      "path": "/home/gem/workspace/agent/workspace/.agents/skills/openclaw-grok-search/"
+    },
+    "install": {
+      "kind": "github_skill",
+      "command": "npx skills add https://github.com/stemmaker/openclaw-grok-search --skill openclaw-grok-search"
+    },
+    "fallback": "web_search_stub",
+    "docs": {
+      "homepage": "https://github.com/Stemmaker/openclaw-grok-search"
+    },
+    "metadata": {
+      "name": "openclaw-grok-search",
+      "repository": "https://github.com/Stemmaker/openclaw-grok-search",
+      "localPath": "/home/gem/workspace/agent/workspace/.agents/skills/openclaw-grok-search/",
+      "deploymentStatus": "catalog_seeded_pending_install",
+      "deploymentNotes": [
+        "已加入当前项目自动部署清单，暂未实际执行安装",
+        "上游脚本会自动拼接 /v1/chat/completions，运行时 GROK_BASE_URL 应保存为基础域名而不是完整接口地址",
+        "建议主地址使用 https://grok2api.samfun.asia，备用地址使用 https://ai.huan666.de"
+      ],
+      "installMethods": [
+        "npx skills add https://github.com/stemmaker/openclaw-grok-search --skill openclaw-grok-search"
+      ],
+      "primaryUseCases": [
+        "实时网页研究与搜索",
+        "版本检查",
+        "API/文档校验",
+        "时效性信息补充"
+      ],
+      "configPath": ".env.openclaw-grok-search.local",
+      "apiRequirements": [
+        "GROK_BASE_URL",
+        "GROK_API_KEY",
+        "GROK_BACKUP_BASE_URL",
+        "GROK_BACKUP_API_KEY"
       ]
     }
   }
