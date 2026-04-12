@@ -33,7 +33,8 @@ describe('pipeline', () => {
     const report = await runPipeline({ date: '2026-04-09', profile: 'daily-v5', items: [item] })
 
     expect(report.markdown).toContain('Phase 3 trial')
-    expect(report.markdown).toContain('https://clinicaltrials.gov/study/NCT123')
+    expect(report.markdown).toContain('来源：clinical_trials')
+    expect(report.markdown).toContain('链接：https://clinicaltrials.gov/study/NCT123')
   })
 
   it('renders fallback for empty sections', async () => {
@@ -42,8 +43,31 @@ describe('pipeline', () => {
     expect(report.markdown).toContain('暂无更新（已触发fallback）')
   })
 
+  it('renders community wechat source label as other公众号 source', async () => {
+    const communityItem: DigestItem = {
+      id: 'wechat:1',
+      title: '社区活动文章',
+      sourceType: 'wechat_search',
+      sectionHint: 'community_and_wechat',
+      sourceUrl: 'https://weixin.sogou.com/link?demo=1',
+      fetchedAt: '2026-04-09T08:00:00.000Z',
+      evidence: ['wechat_source:晓得数字化营销增长实验室'],
+    }
+
+    const report = await runPipeline({ date: '2026-04-09', profile: 'daily-v5', items: [communityItem] })
+    expect(report.markdown).toContain('来源：其它来源公众号')
+    expect(report.markdown).not.toContain('晓得数字化营销增长实验室')
+  })
+
   it('collectCoreSources returns an array', async () => {
-    const items = await collectCoreSources({ date: '2026-04-09' })
+    const items = await collectCoreSources(
+      { date: '2026-04-09' },
+      {
+        fetchClinicalTrials: vi.fn().mockResolvedValue([]),
+        fetchPubmed: vi.fn().mockResolvedValue([]),
+        buildFallbackSectionItems: vi.fn().mockResolvedValue([]),
+      },
+    )
 
     expect(Array.isArray(items)).toBe(true)
   })
@@ -75,6 +99,11 @@ describe('pipeline', () => {
       {
         fetchClinicalTrials: clinicalTrialsSpy,
         fetchPubmed: pubmedSpy,
+        searchAbility: {
+          enabledProviders: [],
+          search: vi.fn().mockResolvedValue([]),
+        },
+        buildFallbackSectionItems: vi.fn().mockResolvedValue([]),
       },
     )
 
@@ -112,6 +141,11 @@ describe('pipeline', () => {
       {
         fetchClinicalTrials: clinicalTrialsSpy,
         fetchPubmed: pubmedSpy,
+        searchAbility: {
+          enabledProviders: [],
+          search: vi.fn().mockResolvedValue([]),
+        },
+        buildFallbackSectionItems: vi.fn().mockResolvedValue([]),
       },
     )
 
@@ -187,5 +221,63 @@ describe('pipeline', () => {
     ])
     expect(invoke).toHaveBeenNthCalledWith(1, 'web_search.primary', { query: 'pancreatic cancer trial' })
     expect(invoke).toHaveBeenNthCalledWith(2, 'web_search.secondary', { query: 'pancreatic cancer trial' })
+  })
+
+  it('collectCoreSources supplements clinical trials from ability when primary sources are empty', async () => {
+    const items = await collectCoreSources(
+      { date: '2026-04-09' },
+      {
+        fetchClinicalTrials: vi.fn().mockResolvedValue([]),
+        fetchPubmed: vi.fn().mockResolvedValue([]),
+        searchAbility: {
+          enabledProviders: ['clinical_trials_mcp'],
+          search: vi.fn().mockImplementation(async (request) => {
+            if (request.sectionHint !== 'clinical_trials_and_drug_rnd') return []
+            return [
+              {
+                title: 'MCP Trial A',
+                summary: 'Phase 2 招募中',
+                sourceUrl: 'https://clinicaltrials.gov/study/NCT0001',
+                sourceType: 'clinical_trials_mcp',
+                evidence: ['nct:NCT0001'],
+              },
+            ]
+          }),
+        },
+        buildFallbackSectionItems: vi.fn().mockResolvedValue([]),
+      },
+    )
+
+    expect(items.some((item) => item.title === 'MCP Trial A')).toBe(true)
+    expect(items.some((item) => item.sectionHint === 'clinical_trials_and_drug_rnd')).toBe(true)
+  })
+
+  it('collectCoreSources reports diagnostics for clinical trials origin', async () => {
+    const diagnostics: Array<{ stage: string; detail: Record<string, unknown> }> = []
+
+    await collectCoreSources(
+      { date: '2026-04-09' },
+      {
+        fetchClinicalTrials: vi.fn().mockResolvedValue([]),
+        fetchPubmed: vi.fn().mockResolvedValue([]),
+        searchAbility: {
+          enabledProviders: ['clinical_trials_mcp'],
+          search: vi.fn().mockResolvedValue([
+            {
+              title: 'Trial from MCP',
+              summary: 'summary',
+              sourceUrl: 'https://clinicaltrials.gov/study/NCTMCP',
+              sourceType: 'clinical_trials_mcp',
+              evidence: ['nct:NCTMCP'],
+            },
+          ]),
+        },
+        buildFallbackSectionItems: vi.fn().mockResolvedValue([]),
+        onDiagnostic: (event) => diagnostics.push(event),
+      },
+    )
+
+    expect(diagnostics.some((event) => event.stage === 'clinical_trials_resolution')).toBe(true)
+    expect(diagnostics.find((event) => event.stage === 'clinical_trials_resolution')?.detail.origin).toBe('mcp_first')
   })
 })

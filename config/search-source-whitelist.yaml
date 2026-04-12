@@ -1,0 +1,28 @@
+clinical_trial_sites:
+  - clinicaltrials.gov
+  - chictr.org.cn
+  - pancan.org
+  - letswinpc.org
+  - asco.org
+  - ascopubs.org
+
+research_sites:
+  - pubmed.ncbi.nlm.nih.gov
+  - asco.org
+  - ascopubs.org
+  - esmoopen.com
+  - annalsofoncology.org
+
+community_sites:
+  - pancan.org
+  - letswinpc.org
+  - mp.weixin.qq.com
+
+browser_required_sites:
+  - esmoopen.com
+
+notes:
+  - "clinical_trial_sites 用于临床试验和药物研发板块的域名优先级控制"
+  - "research_sites 用于研究热点文章检索增强"
+  - "community_sites 用于社区活动与病友内容来源约束"
+  - "browser_required_sites 表示更适合由 Playwright / browser-first 流程处理"

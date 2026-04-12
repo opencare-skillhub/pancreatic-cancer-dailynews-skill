@@ -1,0 +1,2187 @@
+{
+  "version": "2026-04-12",
+  "sources": [
+    "【20260410】签文语料 集合(1).docx",
+    "【20260410】25条 文字版 集合.docx",
+    "心理赋能 语料.xlsx"
+  ],
+  "encouragements": [
+    {
+      "id": "sign-001",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "山河无恙，岁月静好，心定则神安，自得福田。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-002",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "翠柏长青，春风化雨，愿君内心如海，波澜不惊。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-003",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "瑞气萦绕，步履轻盈，平安二字，最是人间厚礼。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-004",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "晨曦微露，万物共生，护佑你此刻，亦护佑你余生。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-005",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "云卷云舒，去留无意，守住一分清静，便是十分平安。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-006",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "门前老树，窗下清茶，心无挂碍时，处处皆是福地。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-007",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "执念放下，宽心而行，任凭风雨掠过，我自泰然。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-008",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "松间明月，石上清泉，清澈见底的心，最难被惊扰。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-009",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "顺应自然，四时调和，心光不灭，则灾厄不侵。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-010",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "祈愿万事顺遂，更愿你此刻心安，平安即是圆满。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-011",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "今天的风很温柔，它在替世界轻声问候你：平安。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-012",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "允许一切发生，相信你当下的力量，足以抵御风浪。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-013",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "平安不是没有风暴，而是内心拥有在风暴中安睡的力量。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-014",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "放松肩膀，深呼吸，平安就在这一吸一呼的节奏里。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-015",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "记得对自己说声辛苦了，此刻的安稳，是最深的福气。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-016",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "像树一样深深扎根，哪怕偶尔叶落，根基依然稳固平安。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-017",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "闭上眼，感受大地的托举，你被这世界稳稳地爱着。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-018",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "慢一点也没关系，方向对了，平安总会如约而至。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-019",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "所有的担忧都还未发生，现在的你，非常安全。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-020",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "平常心，即是平安符，愿你内心始终有一方宁静。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-021",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "枯木逢春，向阳而生，感受体内生机如泉涌。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-022",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "精气神凝，神怡身泰，百脉通达处，自有健康来。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-023",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "顺天之时，随地之性，调理气息，静待花开。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-024",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "借一缕晨光，化满身尘垢，愿你身如琉璃，内外明彻。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-025",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "虚灵不昧，众理具焉，身体的智慧，远超你的想象。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-026",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "静极生动，气血流通，每一个细胞都在为你努力。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-027",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "莫忧病苦，且看青山，山不言语，却有无穷生机。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-028",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "饮食有度，起居有常，简单的规律，即是上好良药。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-029",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "养心为上，养身次之，心若阳光，身体自会回春。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-030",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "慈悲待己，温柔护身，这一生，总有人最懂你。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-031",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "好好吃饭，就是最强的力量。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-032",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "闭目养神，哪怕三分钟，也是身体在充电。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-033",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "饮一汪温水，感受它流经身体，那是生命的洗礼。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-034",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "疼痛是身体在向你呼救，请温柔地给它一个拥抱。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-035",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "每一个安稳的睡眠，都在酝酿奇迹般的修复与重生。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-036",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "动一动手指，向全世界宣告：我依然拥有力量。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-037",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "身体是你的好朋友，多和它说谢谢，它会感受得到。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-038",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "别急着赶路，给身体一点时间，它正在拼命自愈。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-039",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "胃口不错，这本身就是生命给予的最佳奖赏。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-040",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "保持呼吸，感受那股暖流，正带走身体里的紧绷。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-041",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "内心丰盈，草木含情，你所经历的苦，终成生命之光。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-042",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "德润身，富润屋，心中有大爱者，命格自尊贵。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-043",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "万物皆为我所用，非我所有，豁达处，财富自来。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-044",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "一花一世界，一叶一如来。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-045",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "积善之家，必有余庆。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-046",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "守住本心，不随境转，这种定力，即人间至高富贵。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-047",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "经历如金，磨炼如银，你眼里的光，胜过世间珍珠。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-048",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "简朴生活，高尚灵魂，富足不在外物，而在自心。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-049",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "慈悲为怀，喜舍为念，舍得之间，福报悄然而至。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-050",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "生命如画，每一笔坎坷，都是在为圆满着色。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-051",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "内心富贵，就是拥有当下让自己平静下来的能力。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-052",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "你内心的坚韧，赛过任何人间富贵。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-053",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "能感受到阳光的温暖，你就是全宇宙最富有的人。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-054",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "无论身在何处，你仍拥有选择爱与被爱的权利。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-055",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "你的存在，本身就是无可替代的珍宝。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-056",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "你现在拥有的，就是财富。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-057",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "给身边人一个微笑，世界还你一个拥抱。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-058",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "懂得满足，即如国王般富足。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-059",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "每一段回忆都是珍珠，串起来，照亮你的余生。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-060",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "心宽一寸，路宽一丈，从容即是最大的贵气。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-061",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "否极泰来，暗极则明。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-062",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "顺风使帆，逆水行舟。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-063",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "枯木生花，绝处逢生。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-064",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "心念一动，天地皆随。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-065",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "冰封大地，暖流在心。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-066",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "破茧成蝶，向阳而生。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-067",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "昨夜星辰，今日朝阳。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-068",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "境由心转，福自我求。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-069",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "流水不争先，争的是滔滔不绝。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-070",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "莫叹路艰，且看前程。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-071",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "命运总会给努力的人，处处留下馈赠。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-072",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "如果现在觉得很难，那是因为你正在走上坡路。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-073",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "转念一瞬间，连路边的花都在为你加油。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-074",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "运气不是等来的，而是当你开始爱自己时，它才来的。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-075",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "记得把心里的那个窗户打开，让阳光撒进来。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-076",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "你的坚强正在改写命运。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-077",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "转机就永远存在，请务必相信奇迹。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-078",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "暂时的痛苦，是为了让生命变得更厚重。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-079",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "整理一下心情，像清空垃圾桶一样，给好运腾个位。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-080",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "别回头看，好运都在前面，请迈开脚步。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-081",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "举案齐眉，相濡以沫。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-082",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "闲看庭前花，静观天上云。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-083",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "慈母手中线，游子身上衣。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-084",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "感恩生命中每一个温柔。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-085",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "一粥一饭，当思来处。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-086",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "晚霞映红，归鸟入林，心有归处，便是人间极乐。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-087",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "与良友叙，同至亲守。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-088",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "随喜赞叹，见善则迁。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-089",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "岁月无声，真爱有痕，片刻欢愉，已抵万金。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-090",
+      "type": "sign",
+      "style": "traditional",
+      "title": "每日签文",
+      "text": "祈愿天下眷属，皆能执手相看，白首不离，岁岁平安。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-091",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "幸福不是拥有的多，而是计较的少，现在的你很好。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-092",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "听一首喜欢的歌，跟着旋律去想去的地方，很美。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-093",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "拥抱想爱的人，吃想吃的东西，幸福。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-094",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "给自己买一朵花吧，在这个时刻，你值得所有浪漫。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-095",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "别等以后再快乐，就在此刻，给自己一个微笑。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-096",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "幸福藏在生活的琐碎里，只要你愿意去看见。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-097",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "哪怕只有一个眼神，都藏着最甜的糖。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-098",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "有能力去爱，这本身就是极大的幸福。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-099",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "原谅那些不完美，拥抱这个真实的、努力活着的自己。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "sign-100",
+      "type": "sign",
+      "style": "short",
+      "title": "每日签文",
+      "text": "生活不苦，因为你很甜。",
+      "source": "【20260410】签文语料 集合(1).docx"
+    },
+    {
+      "id": "affirmation-001",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我在工作中呈现爱和创造力。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-002",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "当我被允许成为真实的自己时，我乐于付出。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-003",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我的任务就是以自己的方式来过日子。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-004",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "现在我选择活得神采奕奕。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-005",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "活在当下是最棒的。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-006",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "当我请求别人协助的时候，我依然值得被爱。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-007",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "在人际关系中，我能在亲密和自由之间取得平衡。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-008",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我知道我内心总经常充满无私的爱，当我需要时，它会回应我。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-009",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "上天总是帮助我——以我期待或是我意想不到的方式。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-010",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我对自己负责，不为任何事情责怪任何人。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-011",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我的生命是有深度、有规律、而且放松的。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-012",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "今天我有足够的空间去做任何需要做的事情。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-013",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我仔细地挑选我的话语，因为它们会创造真相。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-014",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "每天我都留出时间让自己心境平和，并与内在自我全然合一。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-015",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我带着信心和爱去接近别人。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-016",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我很快乐的分享我的知识和能力，对那些向我敞开心胸的人。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-017",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我愿以崭新的方式来体验每一天。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-018",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我允许自己自由地跨越隔阂。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-019",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我活在当下并使自己充满力量。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-020",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我送给别人的，会很多倍地回到我身上。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-021",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我有权利也有能力去表达我的暴怒、生气及意见，而不会伤害任何人，也不会失去他们对我的爱。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-022",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "每个进入我家的人，都觉得受欢迎，并且极度受宠。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-023",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我的内在财富给我许多乐趣。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-024",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "内心的清洁与明思能疗愈外在的负面表征。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-025",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "这世界是个丰富的地方。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-026",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "在任何情况下，我都是安全的。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-027",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我的意识是光明、清醒并充满爱的。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-028",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我允许我活出真实的自己。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-029",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "上天总是尽其可能地以最好的方式来满足我的需求。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-030",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我跟所有活力充沛的事物合一。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-031",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我由内心来指引我。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-032",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我与创造我的力量有直接连结。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-033",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我愿意把我每件今天发生在我身上的事，当做是生命赋予的礼物。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-034",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "所有我想要的，都会适时来到我身边。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-035",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "了解真实的自我。当我认真了解自己时，觉悟就会发生了。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-036",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "面对心魔是使自己完整，活在光中的不二法门。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-037",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我信任生命，并深信每件事的发生都是神圣完美的。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-038",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我信任我的直觉。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-039",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "每天在生活中出现的新想法协助我跟过去和解。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-040",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我被欢迎进入我丰盈的生命。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-041",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "无论我到何处，我总是被保护也被爱。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-042",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我由衷的感谢所有我需要的事务都有人供应。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-043",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我的家很美。我让每个房间都充满爱与喜悦。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-044",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "绝对没有什么事好担心。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-045",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我注意身体传达给我的讯息。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-046",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "大地供应我们财富与丰盈。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-047",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "每天每件事都很顺遂。目前情况正是如此。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-048",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我身体是我亲密的朋友。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-049",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我享爱居家生活，并把这喜悦跟别人分享。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-050",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我对自己的能力感到赞叹。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-051",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我体贴地抚慰我的身体。它会疗愈自己。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-052",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我喜欢做我做的事，并因此得到金钱的回馈。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-053",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我用轻松的爱来祝福自己。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-054",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我以此慈心对待自己与别人。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-055",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我学习把痛苦当做一个提醒自己去倾听身体智慧的信号。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-056",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我怎么想，就会看见什么。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-057",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "就在当下我创造我的未来。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-058",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我知道思想有创造力。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-059",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我在生命之流里感到绝对安全。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-060",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "划除那些对我没营养的思想。我提醒我觉察对我有帮助的念头。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-061",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我的想法会回到我身上并形成经验。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-062",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "有舍才有得。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-063",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我选择平和的想法。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-064",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "生命就是自我探索的旅程。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-065",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我会从广泛的经验中学习。因此走不同的路是绝对可行的。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-066",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我观照我内在的对话。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-067",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我以宽广的心尊重我头脑的明晰和真诚。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-068",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我越正面地看待自己以及世界，就越吸引正面的人。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-069",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我是独一无二的、别人也是如此。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-070",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我身处绝对安全之中。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-071",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我自由的安排时间休息。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-072",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我可以感受我的情绪而不觉得受到伤害。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-073",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我欢迎所有令我快乐的事情。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-074",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "迎接每一个崭新的日子。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-075",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我肯定我自己。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-076",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我内心充满爱，以此面对生命的改变。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-077",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我总是待在天时、地利、人和之便。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-078",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我真实的知道需要和匮乏之间的区别。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-079",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我很平安。而且一切都很顺遂。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-080",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我是有价值，并且受欢迎的。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-081",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "绝对的平静，常驻我心。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-082",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "该是我为自己设想的时候了。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-083",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "经验对我而言，是不可多得的良师。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-084",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我知道我值得拥有美好的生活。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-085",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我用爱和关心来滋润自己。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-086",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "每一个人都值得感受到爱。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-087",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "世界用爱来疗愈伤口。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-088",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "借着自重，我的世界变得更好。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-089",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我以爱的眼光来看我的伙伴。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-090",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我的目标就是再每个片刻都付出爱。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-091",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我允许自己今天快乐、开心、玩得很快乐。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-092",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我很高兴我有这种新的想法。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-093",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "因为我选择了爱，所以我感觉身处在充满了爱的环境。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-094",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "每个人的都有足够的空间喜悦地表达我们那独一无二的创造力。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-095",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "每个人都值得拥有快乐且充实的生活。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-096",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我很容易适应我周围的人、地方和事物。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-097",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我身体的每个细胞都充满了无限的喜悦能量。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-098",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我原谅自己，始终宽恕自己。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-099",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我喜欢学习、成长和改变。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-100",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "每天我都更爱我自己。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-101",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "被爱是世界上最轻松容易的事，因为那是真实我的本质。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-102",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "被爱是美好的。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-103",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "当我学着自爱的时候，我对自己更有耐心。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-104",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我的伙伴对我而言，他们是可爱的；就我对他们而言，我也是可爱的。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-105",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我敞开心胸去迎接生命中的爱与丰盈。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-106",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我选择去爱及祝福不论什么想法。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-107",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我让爱流入我的世界，祝福我周围每一个人和每件事。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-108",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "在我心深处，充满无限的爱。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-109",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我放下所有的期待，去开启心胸去体验差异带来的无限丰盈。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-110",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我爱他所以他面对我也毫不隐瞒、呈现真实对自己。这是我无私对他原因。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-111",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我接受我一切的所有部分。那都是我的一部份。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-112",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我找寻的宝藏就在我心中。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-113",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "当我把愤怒的能量转变成疗愈的能量。就会产生美好的转变。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-114",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我用爱、力量和智慧，借由肯定生命来展现生活。其中的喜悦、爱、力量与智慧皆增长。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-115",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我的心洋溢着喜悦，因为我的生活中充满了美好的祝福。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-116",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我爱我独一无二而美好的生活。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-117",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "每一天都是特别的也是珍贵的，因为我只能拥有一次。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-118",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我知道我是所有爱的源头。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-119",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "每天早晨我醒来，都喜悦地期待着这一天带给我的礼物。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-120",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "活在当下。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-121",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "玩是我生活中的重要因素。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-122",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "只要我信任我自己，就可以面对任何情况。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-123",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我就是我。我很好。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-124",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我喜欢鼓舞、并激励我周围的人。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-125",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "在我的生命中，我就是发光的太阳。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "affirmation-126",
+      "type": "affirmation",
+      "style": "statement",
+      "title": "心理赋能句",
+      "text": "我用着爱和喜悦来扩展创造力，而达到其极限。",
+      "source": "心理赋能 语料.xlsx"
+    }
+  ],
+  "micro_actions": [
+    {
+      "id": "micro-action-001",
+      "type": "micro_action",
+      "title": "清晨启航",
+      "guide": "新的一天已经到来，允许你的身体在舒适中渐渐苏醒。将双手轻放在胸膛，感受清晨空气的流动。温柔地问问自己：“我今天要如何表现，才能找到最舒适的感觉？” 放下所有的防备，允许答案自然地从心底浮现，带领你开启平静的一天。",
+      "tip": "睡眠与清醒的规律作息对于患者的康复至关重要，充足且高质量的休息能有效缓解癌症相关的疲劳，为身体机能储备能量。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "micro-action-002",
+      "type": "micro_action",
+      "title": "品质呼吸",
+      "guide": "闭上眼睛，允许空气带着力量，渐渐流入你的鼻腔，填满胸腔与腹部。每一次吸气，都让生机在体内流动；每一次呼气，都允许紧张和疲惫离开身体。在呼吸的起落中，轻声问自己：“我想要加强什么？又想要释放什么？”",
+      "tip": "深呼吸与放松等非药物干预实践，能够有效管理焦虑，并协助缓解患者的疼痛与呼吸困难，带来生理上的平静。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "micro-action-003",
+      "type": "micro_action",
+      "title": "慈悲待己",
+      "guide": "此时此刻，允许自己卸下所有的坚强。将目光转向内在，渐渐感受一份慈悲的能量在心间流动。告诉自己，你已经做得很好了。允许自己被这份温暖包裹，如同拥抱一个受伤的孩子，给予自己最深切的宽容与爱。",
+      "tip": "面对疾病与治疗带来的心理与精神困扰，自我慈悲有助于应对脆弱感，心理支持与精神干预可以改善情绪和整体生活质量。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "micro-action-004",
+      "type": "micro_action",
+      "title": "联结万物",
+      "guide": "随着每一次呼吸的流动，允许自己与周围的空间融为一体。渐渐地，你感受到身下的支撑，感受到空气的抚摸。你并不是孤单的，允许这份与万物相连的安心感，缓缓流遍全身，带给你脚踏实地的力量。",
+      "tip": "孤独感、社交隔离及对成为负担的担忧会加剧患者的心理痛苦，建立与外界的联结、寻求社会与情感支持是姑息治疗的重要一环。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "micro-action-005",
+      "type": "micro_action",
+      "title": "意图审视",
+      "guide": "在午间的片刻暂停中，允许头脑的空间渐渐敞开。回忆早晨对自己许下的意图，让那份初衷再次于心头流动。不用评判，只是静静地观察此刻的安心。允许这份觉知，为你下午的时光注入宁静的动力。",
+      "tip": "在日常中定期进行情绪暂停与困扰（Distress）自我评估，有助于及早识别疲劳与心理担忧，从而维持白天的认知与精力状态",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "micro-action-006",
+      "type": "micro_action",
+      "title": "听觉流淌",
+      "guide": "允许你的注意力如清澈的溪水般，轻轻滑向周围的声音。不需要去分辨什么，只是渐渐地聆听它们。让声音穿过你，自由地流动。允许自己融入这片声音的海洋，在倾听中找到那份毫不费力的轻松与自在。",
+      "tip": "音乐疗法与正念放松作为非药物的综合干预手段，被证明能显著减轻患者相关的预期性焦虑、疼痛及疲劳。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "micro-action-007",
+      "type": "micro_action",
+      "title": "视觉定锚",
+      "guide": "静静看着身边一件常用的物品，允许你的视线柔和地停驻在它上面。观察它的形状、颜色和纹理。渐渐地，让自在的专注力在眼眸间流动。允许这个物品成为你此刻的锚点，将你稳稳地安定在当下。",
+      "tip": "视觉集中与正念觉察有助于转移对身体不适的注意力，这种放松技巧可以减少神经系统过度警觉，是缓解恶心与恐慌的辅助方法。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "micro-action-008",
+      "type": "micro_action",
+      "title": "无为一刻",
+      "guide": "给自己一两分钟，什么都不做。允许身体完全放松，渐渐沉入座椅。如果思绪涌现，没关系，允许它们如云朵般自由流动、来去。在这纯粹的无为中，体验存在的本身，享受这片刻的宁静与安详。",
+      "tip": "患者常因疾病与治疗经历极度疲劳与认知困扰。给自己大脑“无为”的休息时间，有助于恢复专注力，缓解精神集中力减退的症状。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "micro-action-009",
+      "type": "micro_action",
+      "title": "放下担忧",
+      "guide": "留意心中那股“总想做点儿什么”的冲动。允许这种感觉升起，不去压抑它，只是渐渐地看着它。让急躁的能量顺着呼吸排出身外，在体内流动出纯粹的平静。允许自己在这一刻，仅仅只是安然存在。",
+      "tip": "强迫性的思维或行为冲动会增加精神内耗，认知行为治疗（CBT）和正念练习能有效降低患者的强迫性焦虑与恐慌发作。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "micro-action-010",
+      "type": "micro_action",
+      "title": "放空头脑",
+      "guide": "当你看到大脑偶尔的分心时，温柔地微笑。允许觉知重新流动回当下，渐渐找回那份持久的安定感。不需要强求专注，允许头脑的空间无限延展，包容一切杂念，在宽广中安然休息。",
+      "tip": "培养心理上的安定感有助于改善睡眠唤醒障碍（如失眠），良好的睡眠恢复不仅能对抗疲劳，还能促进身体的自我修复。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "micro-action-011",
+      "type": "micro_action",
+      "title": "餐前呼吸",
+      "guide": "在进食前，允许自己进行三次深长缓慢的呼吸。渐渐地，仔细闻一闻食物散发的香气，让这份滋养的期待在感官中流动。允许身体平稳地过渡到用餐状态，带着感恩与喜悦，迎接这顿美好的餐食。",
+      "tip": "进食前深呼吸有助于放松副交感神经，减轻治疗引起的焦虑或预期性恶心，平稳过渡可优化患者的进食与消化功能。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "micro-action-012",
+      "type": "micro_action",
+      "title": "饥饿感知",
+      "guide": "允许你的觉知向下沉降，来到腹部。用1到10分，渐渐感受它真实的生理饥饿感。倾听身体微小的声音，而不是头脑的想法。让对身体的尊重在每一次感知中流动，允许身体引导你做出最合适的选择。",
+      "tip": "治疗常改变患者的味觉与食欲。倾听身体真实需求，结合营养师指导，有助于科学应对体重下降与进食变化。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "micro-action-013",
+      "type": "micro_action",
+      "title": "前三口的艺术",
+      "guide": "带着感恩的心，轻轻咬下前三口。允许食物的味道、温度和质地在舌尖渐渐绽放。让味蕾的苏醒带动全身的欢愉，允许这份纯粹的感受在心头流动，完全沉浸在与食物深度的联结中。",
+      "tip": "细嚼慢咽与充分享受食物能促进消化液分泌，这对于缓解因放化疗导致的口腔干燥或消化不良等生理不适具有辅助作用。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "micro-action-014",
+      "type": "micro_action",
+      "title": "倾听喜好",
+      "guide": "倾听身体的偏好，允许自己根据纯粹的喜好来选择食物。不喜欢的，你可以温柔地放下。渐渐地，让自主与自由的感觉在用餐中流动。允许自己被真正渴望的食物所滋养，享受这无负担的一餐。",
+      "tip": "尊重患者纯粹的饮食偏好能提升进食的自主性与愉悦感。在姑息护理中，这有助于减少进食心理压力，改善厌食症状。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "micro-action-015",
+      "type": "micro_action",
+      "title": "平静消化",
+      "guide": "放慢进食的速度，允许每一口食物的味道随着咀嚼渐渐发生变化。感受食物化作能量，在你的胃肠中温暖地流动。允许身体在极度的平静与放松中，慢慢地消化、吸收，将营养转化为生命的活力。",
+      "tip": "放慢进食速度可以显著减轻胃肠道负担，对于缓解治疗相关腹泻、便秘等肠道应激反应，提供积极的生理支持。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "micro-action-016",
+      "type": "micro_action",
+      "title": "安住当下",
+      "guide": "看着显眼处那张舒适的垫子，允许它成为你随时可以停靠的港湾。告诉自己：“我随时都可以放松休息。”渐渐地，让这份被允许的安全感在空气中流动，允许紧绷的神经在这个环境中彻底松弛。",
+      "tip": "创造安全、有支持性的物理环境，有助于降低神经系统的过度警觉，从而缓解由于疾病带来的急性应激或创伤后情绪症状。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "micro-action-017",
+      "type": "micro_action",
+      "title": "撕掉标签",
+      "guide": "允许那些附着在你身上的沉重标签，如落叶般随风飘散。渐渐地，让大脑自由自在地去寻找最纯粹的自我。允许本真的力量在体内重新流动，体会剥离重负后，那份由内而外的轻盈与自由。",
+      "tip": "疾病常带来病耻感与自我价值感的丧失。通过心理疏导重塑自我认同，有助于降低抑郁风险，缓解绝望与社会退缩。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "micro-action-018",
+      "type": "micro_action",
+      "title": "电话铃呼吸",
+      "guide": "当电话铃声响起时，允许自己先深吸一口气。渐渐地，把急躁的快速大脑切换为从容的慢速大脑。告诉自己：“一切都是最好的安排。”允许这份平和在接起电话的那一刻流动，从容地回应外界的呼唤。",
+      "tip": "在外界刺激出现时进行深呼吸，能将身体从“战斗或逃跑”的应激反应平稳切换至副交感神经的放松状态，有效减少生理焦虑。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "micro-action-019",
+      "type": "micro_action",
+      "title": "安定的心",
+      "guide": "早上一醒来的那一刻，允许自己即刻进行一次深长呼吸。渐渐地，感恩这崭新一天的来临。让这份感恩化作温暖的光芒，在胸腔里流动。允许这微小却坚定的触发器，为你的一天注入最安定的基调。",
+      "tip": "建立积极的早晨微习惯和心理锚点，能有效设定全天的情绪基调，减少患者醒来时常见的预期性忧虑与精神疲惫。",
+      "source": "心理赋能 语料.xlsx"
+    },
+    {
+      "id": "micro-action-020",
+      "type": "micro_action",
+      "title": "此处即是家",
+      "guide": "体会此时此刻便是最好。允许这份宁静与感恩的感触，渐渐纳入你的每一个日常活动之中。无论是行走、坐卧还是交谈，让正念如水一般在生活中流动。允许自己，在每一个平凡的瞬间，都活出最圆满的状态。",
+      "tip": "将心理健康干预完全融入日常照护（如协作护理模式），有助于长期管理癌症幸存者的情绪困扰，提升整体的功能状态与生活满意度。",
+      "source": "心理赋能 语料.xlsx"
+    }
+  ],
+  "audio_scripts": [
+    {
+      "id": "audio-script-001",
+      "type": "audio_script",
+      "index": 1,
+      "title": "晨光里的温柔问候·清晨启航",
+      "content": "总时长：约 4 分钟\n适用人群：醒来时感到疲惫、对新一天有预期性焦虑的康复期人群\n第一部分：晨间着陆与感官苏醒 (00:00 - 01:30) (目标：建立安全场域，温柔唤醒身体，打破早晨的焦虑发条) [00:00] [音效：极轻柔的晨曦鸟鸣或舒缓古琴淡入，音量20%] [语调：温暖、惺忪、极慢速。像在唤醒一个沉睡的爱人] 早上好。很高兴，在这个崭新的清晨，你按下了播放键，给了自己这宝贵的 4 分钟。 [停顿3秒]\n如果你现在还觉得有点困，或者身体有些沉重，没关系。允许自己以一个最放松的姿势，待在床上或者椅子上。 不需要立刻“振作起来”。 [停顿5秒] 现在，试着感受一下你的背部和床铺、或者椅背触碰的地方。体会那份稳稳的支撑……大地在托着你。\n第二部分：意图植入与能量流动 (01:30 - 03:00) (目标：利用呼吸带入觉知，设定当天的自我慈悲意图) [01:30] [语速放慢，进入“耳语模式”] 现在，把注意力轻轻地放在你的呼吸上。 用鼻子，缓缓地闻一闻早晨的空气……再用嘴巴，轻轻地吐气。 感受吸气时，胸膛微微的起伏；呼气时，身体渐渐变得更加柔软。 [停顿5秒]\n在下一次呼吸流动时，在心里温柔地对自己说：“每天早晨我醒来，都喜悦地期待着这一天带给我的礼物。” [停顿5秒] 不需要用头脑去寻找答案。允许这份喜悦，像水底的泡泡一样自然地浮现。问问自己：“我今天要如何表现，才能收到最佳效果？”\n第三部分：温柔过渡与启航 (03:00 - 04:00) (目标：将平静的能量带入即将开始的日常，潜意识赋能) [03:00] [语调微微上扬，带入一丝明亮的活力] 不管你的答案是什么，允许它成为你今天的指南针。 现在，试着动一动你的手指……感受指尖的微小力量。 在心里对自己确认：“现在，我选择活得神采奕奕。” 带着这份清晰的觉知，渐渐地睁开眼睛，去看一眼周围的光线。 你准备好了。新的一天，祝你平静、安心。 [03:50] [音效：音乐持续10秒后渐渐淡出]",
+      "source": "【20260410】25条 文字版 集合.docx"
+    },
+    {
+      "id": "audio-script-002",
+      "type": "audio_script",
+      "index": 2,
+      "title": "呼吸的潮汐·品质呼吸",
+      "content": "总时长：约 4 分钟\n适用人群：感到疲乏、精力枯竭、需要快速补充心理能量的人群\n第一部分：安全降落与频率同步 (00:00 - 01:00) (目标：从外界的杂乱中抽离，将注意力锚定在呼吸上) [00:00] [音效：平缓的沙滩海浪声淡入，音量30%] [语调：沉稳、包容、中慢速] 你好。欢迎来到这专属你的 4 分钟。 [停顿3秒] 此刻，允许自己放下手里正在做的事情。找一个舒服的姿势坐好。 把双脚平稳地放在地上，感受脚底与地面的触碰。闭上眼睛，或者柔和地看着前方的某一个点。\n第二部分：潮汐呼吸与视觉化 (01:00 - 03:00) (目标：通过隐喻将呼吸具象化，完成内在力量的置换) [01:00] [语调转为轻柔的耳语，配合海浪的节奏] 现在，去感受你的呼吸。就像你听到的海浪一样，一波……一波…… 每一次吸气，想象你正在吸入纯净的力量。让这股力量，顺着你的鼻腔，渐渐流入胸腔，在你的全身流动。 [停顿5秒] 每一次呼气，允许体内所有的疲惫、疼痛和紧绷，随着气息离开你的身体。\n[02:00] [加入核心暗示] 在这一呼一吸之间，在心里轻轻问自己：“我想要加强什么？”……“我又想要释放什么？” [停顿5秒] 告诉自己：“我选择平和的想法。” 允许呼吸为你做所有的工作。你不需要费力，只要让气息自由地进出。\n第三部分：能量锚定与回归 (03:00 - 04:00) (目标：固化吸收到的能量，平稳回到当下) [03:00] [语速恢复正常，带着温暖的力量感] 非常好。现在的你，身体里已经充满了崭新的空间。 在心里对自己确认：“我在生命之流里感到绝对安全。” 把这份轻松感，储存在你的肩膀和胸腔里。 当你准备好时，渐渐地睁开眼睛。欢迎回来。 [03:50] [音效：海浪声持续10秒后淡出]",
+      "source": "【20260410】25条 文字版 集合.docx"
+    },
+    {
+      "id": "audio-script-003",
+      "type": "audio_script",
+      "index": 3,
+      "title": "拥抱内在的自己·慈悲待己",
+      "content": "总时长：约 4 分钟\n适用人群：容易自我苛责、感到脆弱或因治疗产生病耻感的人群\n第一部分：卸下铠甲 (00:00 - 01:30) (目标：瓦解防御机制，创造一个无评判的包容空间) [00:00] [音效：温暖如流水的钢琴独奏，音量25%] [语调：极度温柔、理解、慢速。像在安慰一个受伤的朋友] 你好。很高兴在这个片刻，我们能一起停下来。 [停顿3秒] 我知道，与疾病抗争，或者仅仅是应付生活的琐碎，就已经耗费了你太多的力气。你习惯了坚强，习惯了忍耐。 但在这 4 分钟里，你不需要再硬撑了。允许自己卸下所有的防备。 轻轻地闭上眼睛。\n第二部分：触觉唤醒与慈悲注入 (01:30 - 03:00) (目标：通过自我抚摸触发催产素分泌，缓解心理痛苦) [01:30] [语速极慢，充满爱意] 现在，请把你的右手，轻轻地放在你的心口上。感受手掌的温度，感受手心和胸膛的触碰。 [停顿5秒] 去体会这份温暖在胸腔里渐渐流动。 在心里，用你听过最温柔的声音对自己说：“我原谅自己，始终宽恕自己。”\n[02:15] [艾瑞克森式暗示] 问问自己：“在艰难的时刻，我如何使自己更加慈悲地对待自己？” 允许这份慈悲的能量包裹住你。 告诉自己：“我用轻松的爱来祝福自己。” 不要去评判那些升起的情绪，只是静静地去看着它们，用手心的温度去安抚它们。\n第三部分：整合与宽慰 (03:00 - 04:00) (目标：将自我慈悲的态度内化为日常的应对机制) [03:00] [语调明朗，带着深深的肯定] 是的，就是这样。这份温柔，一直都在你的手心里，随时为你敞开。 把这股温暖的力量留在心底。 当你准备好的时候，放下手，慢慢地睁开眼睛。 今天，请记得对这个叫作“你自己”的人，再好一点。 [03:50] [音效：钢琴声如水波般荡漾，慢慢淡出]",
+      "source": "【20260410】25条 文字版 集合.docx"
+    },
+    {
+      "id": "audio-script-004",
+      "type": "audio_script",
+      "index": 4,
+      "title": "大地的怀抱·联结万物",
+      "content": "总时长：约 4 分钟\n适用人群：感到孤独、漂浮不定、缺乏安全感的人群\n第一部分：重力感知 (00:00 - 01:30) (目标：利用地球重力作为生理锚点，建立“被承托”的安全感) [00:00] [音效：空灵的颂钵或雨棒声，低频共鸣，音量30%] [语调：深沉、辽阔、慢速] 你好。这 4 分钟，我们将一起感受一种不需要任何努力的安心。 [停顿3秒] 无论你现在是坐着，还是躺着，允许自己完全安顿下来。 闭上眼睛。把注意力，放在身体和下方接触的地方。 感受椅子，或是床垫，正在稳稳地托着你。\n第二部分：空间联结与边界消融 (01:30 - 03:00) (目标：打破生病带来的封闭感，感受与更广阔空间的联结) [01:30] [语速变缓，声音仿佛在空间中回荡] 你不需要用力去支撑自己。渐渐地，把身体的重量，毫无保留地交给大地。大地会接住你所有的疲惫。 现在，感受空气在你的皮肤上流动，轻轻地触碰你的脸颊、你的手臂。 [停顿5秒] 在心里对自己确认：“在任何情况下，我都是安全的。”\n[02:15] [联结暗示] 随着每一次呼吸，允许自己与周围的空间融为一体。 呼气的时候，感觉自己像一棵树，根系深深地扎入泥土；吸气的时候，感觉世界的生机，正顺着根系流入你的体内。 告诉自己：“我跟所有活力充沛的事物合一。” 在这个广阔的网络里，你是被万物温柔拥抱的。\n第三部分：力量收回 (03:00 - 04:00) (目标：带着脚踏实地的力量结束练习) [03:00] [语调逐渐收拢，变得坚定] 在这份深沉的联结中，休息片刻。 [停顿5秒] 现在，渐渐把觉知收回到身体的边缘。动一动肩膀。 当你睁开眼睛去看周围的世界时，记住，大地永远在你的脚下，稳稳地托着你。 [03:50] [音效：颂钵余音袅袅，渐渐淡出]",
+      "source": "【20260410】25条 文字版 集合.docx"
+    },
+    {
+      "id": "audio-script-005",
+      "type": "audio_script",
+      "index": 5,
+      "title": "午间的心灵绿洲·意图审视",
+      "content": "总时长：约 4 分钟\n适用人群：午间精力下降、大脑超速运转、急需情绪重启的人群\n第一部分：切断自动驾驶模式 (00:00 - 01:30) (目标：在忙碌的半天后强制干预，创造“无为”的头脑空间) [00:00] [音效：沉静的大提琴曲或舒缓的白噪音，音量25%] [语调：平静、清透、中速。像一杯午后的清茶] 你好。现在是午间的暂停时刻。 经过了半天的忙碌，你的快速大脑可能还在超速运转。现在，是我们按下“暂停键”的时候了。 [停顿3秒] 轻轻闭上眼睛，或者将视线柔和地落在桌面上。 正如《心灵训练的三要素》所说，这不是为了打发时间，而是为了将觉醒的熟悉感，融入生活。 允许自己什么都不做。就只是坐在这里。\n第二部分：非评判回顾与意图重唤 (01:30 - 03:00) (目标：回顾晨间意图，客观观察情绪变化，不做修改) [01:30] [语调转为好奇、宽容的耳语感] 感受一次深深的吸气……和长长的呼气。 如果在刚才这几秒钟，脑子里冒出了下午的待办事项，没关系。任由它们像云朵一样飘来，又渐渐飘走。 在心里对自己说：“今天我有足够的空间去做任何需要做的事情。” [停顿5秒]\n[02:15] [观察暗示] 现在，试着回忆一下，今天早晨你对自己许下的意图是什么？ 让那份初衷，再次于你的心头流动。 不用去评判上午做得好不好，只是静静地去看、去感受此刻内心的状态。 告诉自己：“活在当下是最棒的。” 一切如其所是。\n第三部分：注入动力与重新出发 (03:00 - 04:00) (目标：带着焕新的觉知，平稳过渡到下午的时光) [03:00] [语调明快、充满力量] 在这片刻的停留中，你已经为大脑创造了足够的空间。 深深地吸气，吸入下午所需的清醒与活力；呼气，把杂念呼出体外。 慢慢地睁开眼睛，伸一个懒腰。 带着这份轻盈，继续你美好的一天吧。 [03:50] [音效：音乐自然收尾淡出]",
+      "source": "【20260410】25条 文字版 集合.docx"
+    },
+    {
+      "id": "audio-script-006",
+      "type": "audio_script",
+      "index": 6,
+      "title": "声音的河流·听觉流淌",
+      "content": "总时长：约 4 分钟\n适用人群：身体有局部疼痛、或因住院/治疗环境嘈杂而心烦意乱的人群\n第一部分：环境接纳与感官切换 (00:00 - 01:30) (目标：不抵抗环境噪音，将其转化为放松的介质) [00:00] [音效：自然的森林白噪音或微风声淡入，音量25%] [语调：轻柔、通透、中速。像在溪边漫步] 你好。欢迎来到这 4 分钟的听觉空间。 [停顿3秒] 此刻，无论你身处何方，周围是安静还是嘈杂，都没关系。 允许自己找一个舒服的姿势。轻轻闭上眼睛，或者微眯着双眼。 感受你的身体和座椅的触碰。渐渐地，把注意力从头脑里的想法，转移到你的耳朵上。\n第二部分：声音流淌与非评判倾听 (01:30 - 03:00) (目标：练习毫不费力的专注，并植入情绪安全的潜意识) [01:30] [语速放慢，声音带有引导的弧度] 现在，试着去倾听周围的声音。 可能是远处的车流、机器的嗡嗡声，或者是走廊里的脚步声。 不需要去分辨它们，也不需要给它们贴上标签。 允许这些声音，从你的左耳进，右耳出。让声音的波纹在你的周围自由地流动。 [停顿5秒]\n[02:15] [解离与肯定暗示] 如果你的身体此刻有任何不舒服，或者隐隐的疼痛，没关系。 在心里对自己温柔地确认：“我可以感受我的情绪，而不觉得受到伤害。” 让声音代替你，去承载那些紧绷的感觉。 告诉自己：“绝对的平静，常驻我心。”\n第三部分：融入与苏醒 (03:00 - 04:00) (目标：固化轻松感，带着通透的感官回到当下) [03:00] [语调微微上扬，带有清新的空气感] 在这片声音的海洋里，你什么都不需要做。你只需要，非常轻松、非常自在地存在着。 现在，深吸一口气，闻一闻空气中的味道。 慢慢地呼气。 当你准备好时，渐渐睁开眼睛，看看四周。带着这份听觉的通透，继续这一天。 [03:50] [音效：风声持续10秒后渐渐淡出]",
+      "source": "【20260410】25条 文字版 集合.docx"
+    },
+    {
+      "id": "audio-script-007",
+      "type": "audio_script",
+      "index": 7,
+      "title": "重拾当下的坐标·视觉定锚",
+      "content": "总时长：约 4 分钟\n适用人群：思绪混乱、感到恐慌、难以闭上眼睛放松的人群\n第一部分：睁眼的宁静 (00:00 - 01:30) (目标：为那些因为焦虑而害怕闭眼的人提供安全感) [00:00] [音效：极简的氛围环境音 (Ambient) 淡入，音量20%] [语调：沉稳、安定、极慢速。像稳固的灯塔] 你好。很高兴你能为自己留出这 4 分钟。 [停顿3秒] 很多人觉得，放松必须要闭上眼睛。但今天，我们换一种方式。 请你保持睁着眼睛。在你的房间里，或者病床边，随意挑选一个特定的物品。 可以是一个水杯，一本书，或者墙上的一个斑点。\n第二部分：视觉探索与锚点建立 (01:30 - 03:00) (目标：用视觉细节填满大脑工作记忆，植入意识清明的暗示) [01:30] [语调转为好奇的耳语感] 现在，请静静地看着它。 把你所有的注意力，渐渐集中到这个物品上。 看看它的颜色……看看边缘的线条……看看光线打在它上面的阴影。 [停顿5秒] 想象你的目光是有温度的，正在轻轻地触碰它的表面。\n[02:15] [包容分心与肯定暗示] 如果你被脑子里的想法分了神，只需极其温柔地，把注意力再次转回这个物品上。 在心里对自己说：“我的意识是光明、清醒并充满爱的。” 允许这个物品成为你的锚。无论头脑里刮起多大的风暴，只要你看着它，你就在当下。 告诉自己：“我身处绝对安全之中。”\n第三部分：力量回收 (03:00 - 04:00) (目标：将外界的锚点转化为内在的安定感) [03:00] [语速恢复正常，带着确定的力量感] 非常好。感受这份从眼睛里流动出来的专注与平静。 现在，你可以将视线从那个物品上移开，柔和地环顾四周。 请记住，只要你愿意，你随时可以通过“看”找回这份持久的安定感。 [03:50] [音效：氛围音自然延续后淡出]",
+      "source": "【20260410】25条 文字版 集合.docx"
+    },
+    {
+      "id": "audio-script-008",
+      "type": "audio_script",
+      "index": 8,
+      "title": "允许一切发生·无为一刻",
+      "content": "总时长：约 4 分钟\n适用人群：精神极度内耗、总觉得自己“表现不好”或“休息就是浪费时间”的人群\n第一部分：按下停止键 (00:00 - 01:00) (目标：正视对“不作为”的恐惧，创造完全免责的空间) [00:00] [音效：完全静音，只在背景垫一层微弱的房间底噪，音量10%] [语调：慵懒、极度宽容、中慢速。像周末午后的闲聊] 你好。回想一下，你上一次安静不动，没有任何你需要思考和解决的事情，是什么时候？ [停顿3秒] 接下来的 4 分钟，我邀请你做一件极其简单的事——什么都不做。 现在，把书合上，把手放到大腿上，轻轻闭上眼睛。\n第二部分：迎接思绪的潮水 (01:00 - 03:00) (目标：打破“静坐必须没杂念”的误区，进行自我身份认同) [01:00] [语速极慢，留出大段空白] 感受你的呼吸自然地进出。不要去控制它。 如果有很多思绪涌现出来……没关系。任由它们来去。 [停顿8秒] 在心里对自己说：“我自由地安排时间休息。” 如果有担忧冒出来……允许它出现。 如果有计划冒出来……允许它流动。\n[02:00] [深层接纳暗示] 你不需要抓住任何一个念头，也不需要赶走它们。 你只是静静地看着头脑里的画面。你没有任何任务，只需体会静坐的感觉。 告诉自己：“我就是我。我很好。”\n第三部分：温柔地唤醒 (03:00 - 04:00) (目标：肯定“无为”的价值，平稳带回现实) [03:00] [语调变得温暖而明亮] 你感觉怎么样？也许你并没有觉得特别放松，这都没关系。 哪怕是什么都不做，你也已经给了大脑一次极其珍贵的休息。 现在，深深地吸气……长长地呼气。 渐渐动一动你的肩膀。当你准备好时，睁开眼睛。 [03:50] [音效：轻柔的一声钟磬音，作为结束]",
+      "source": "【20260410】25条 文字版 集合.docx"
+    },
+    {
+      "id": "audio-script-009",
+      "type": "audio_script",
+      "index": 9,
+      "title": "戒断忙碌·放下成瘾",
+      "content": "总时长：约 4 分钟\n适用人群：无法停歇、静下来就会感到内疚或焦躁的人群\n第一部分：识别冲动 (00:00 - 01:30) (目标：将“急躁感”具象化，并将其与自我身份剥离) [00:00] [音效：舒缓的雨声淡入，音量25%] [语调：理解、耐心、慢速。像在引导解开一个结] 你好。很高兴你在这里。 [停顿3秒] 我们似乎对“做事”和“思考”上了瘾。当你闭上眼睛时，是否经常觉得心里有一种“总想做点儿什么”的冲动？ 这是非常正常的。今天，我们不与它对抗，我们只是去看着它。\n第二部分：与冲动共处 (01:30 - 03:00) (目标：允许能量在体内释放，用肯定语切断无效内耗) [01:30] [语速放缓，进入低沉的引导] 现在，感受一下你的身体。 这份焦躁，藏在身体的哪个部位？ 是紧绷的肩膀，还是忍不住想动的手指？ [停顿5秒] 找到它，去触碰它，然后，允许它在那里。\n[02:15] [化解与肯定暗示] 不要试图压抑。在心里对自己坚定地说：“我划除那些对我没营养的思想，我提醒我觉察对我有帮助的念头。” 想象你的呼吸是一股清凉的水流。 呼气时，允许这股急躁的能量，顺着水流排出体外。 告诉自己：“我的生命是有深度、有规律、而且放松的。” 让纯粹的平静，在体内重新流动。\n第三部分：安然存在 (03:00 - 04:00) (目标：体验脱离强迫行为后的自由) [03:00] [语调变得极其柔软、宽容] 你做得很好。留意到这种欲望，本身就是一种巨大的进步。 在这纯粹的平静中，体会不再被任何冲动驱使的自由。 现在，把注意力带回到手脚的触碰上。 慢慢睁开眼睛。祝你拥有一份不急不缓的从容。 [03:50] [音效：雨声渐渐变小，随后淡出]",
+      "source": "【20260410】25条 文字版 集合.docx"
+    },
+    {
+      "id": "audio-script-010",
+      "type": "audio_script",
+      "index": 10,
+      "title": "心智的留白·头脑空间",
+      "content": "总时长：约 4 分钟\n适用人群：因为过度担忧疾病或未来，大脑经常超速运转、横冲直撞的人群\n第一部分：发现拥挤 (00:00 - 01:30) (目标：意识到头脑的超载状态，停止从一个分心物转向另一个分心物) [00:00] [音效：悠远辽阔的古筝单音，间隔敲击，音量20%] [语调：空灵、宽广、中速。像在一座大殿里说话] 你好。给自己 4 分钟，停下所有的追逐。 [停顿3秒] 在日常中，我们经常从一个分心物转向另一个分心物。直到休息时，才发现有那么多想法在大脑里横冲直撞。 现在，允许自己轻轻闭上眼睛。 深深地吸一口气……缓缓地吐出来。\n第二部分：拉开距离与扩展空间 (01:30 - 03:00) (目标：建立观察者视角，利用肯定语找回头脑的广阔感) [01:30] [语调变得悠长，带有强烈的空间感] 去看看你此刻的大脑。没关系。想象你的头脑，原本是一片广阔无垠的天空。 那些偶尔的分心、担忧，只是天上飘过的云朵。 [停顿5秒] 在心里对自己说：“每天我都留出时间让自己心境平和，并与内在自我全然合一。”\n[02:15] [空间与肯定暗示] 当你看到自己又被某朵云带走时，温柔地微笑一下，松开它。 渐渐地把注意力退回到这片天空本身。 告诉自己：“我以宽广的心尊重我头脑的明晰和真诚。” 允许这片空间无限地延展，体会这份持久的安定感在你的眉心流动。\n第三部分：回归清明 (03:00 - 04:00) (目标：带着更清晰的觉知回到生活) [03:00] [语调明澈、肯定] 在这片宽广中安然休息。 只要你愿意，你随时都可以退后一步，找回属于你的头脑空间。 现在，去闻一闻周围空气的味道。动一动脖子。 慢慢地睁开眼睛，迎接眼前清晰的世界。 [03:50] [音效：最后一声古筝泛音，悠长淡出]",
+      "source": "【20260410】25条 文字版 集合.docx"
+    },
+    {
+      "id": "audio-script-011",
+      "type": "audio_script",
+      "index": 11,
+      "title": "餐桌前的留白·餐前呼吸",
+      "content": "总时长：约 4 分钟\n适用人群：进食前感到焦虑、恶心，或生活节奏过快无法静心吃饭的人群\n第一部分：切断匆忙 (00:00 - 01:30) (目标：打破“从一个任务赶往下一个任务”的惯性，创造缓冲空间) [00:00] [音效：柔和的木吉他独奏或轻缓的自然底噪，音量25%] [语调：沉稳、安抚、中慢速。像邀请客人落座] 你好。我们经常匆匆忙忙地，从一个任务赶向另一个任务。 现在，你已经来到了餐桌前。允许自己在这里，暂时停下来。 [停顿3秒] 不需要立刻拿起餐具。轻轻闭上眼睛，或者柔和地看着前方的桌面。 在心里对自己说：“每天我都留出时间让自己心境平和，并与内在自我全然合一。”\n第二部分：嗅觉定锚与平稳过渡 (01:30 - 03:00) (目标：利用呼吸和平静的觉知，为消化系统做生理准备，植入感恩暗示) [01:30] [语速放慢，进入“耳语模式”] 现在，去感受你的身体与椅子的触碰。 在进食前，允许我们先进行三次深长的呼吸。 去闻一闻面前食物散发出的香气。允许这种滋养的气息在鼻腔里流动。 [停顿5秒] 感受这股气息在你的胸腔和腹部渐渐起伏。 告诉自己：“我由衷地感谢，所有我需要的事务都有人供应。” 允许身体里所有紧绷的发条彻底松开。\n第三部分：带着觉知开餐 (03:00 - 04:00) (目标：将平静的状态带入实际的进食动作中) [03:00] [语调微微上扬，带着温暖的期待] 非常好。你的身体现在已经准备好迎接滋养了。 最后深吸一口气。 当你准备好时，渐渐睁开眼睛，去看着眼前的食物。 带着这份从容与安宁，开始享受你的用餐时光吧。 [03:50] [音效：吉他声持续10秒后渐渐淡出]",
+      "source": "【20260410】25条 文字版 集合.docx"
+    },
+    {
+      "id": "audio-script-012",
+      "type": "audio_script",
+      "index": 12,
+      "title": "身体的真实声音·饥饿感知",
+      "content": "总时长：约 4 分钟\n适用人群：因治疗导致食欲改变，不知饿/不知饱，或者进食充满心理抗拒的人群\n第一部分：放下头脑的评判 (00:00 - 01:30) (目标：剥离“时间到了必须吃”的认知执念，回归生理本能) [00:00] [音效：温暖如水波般的低频脉冲音，音量20%] [语调：温和、包容、极慢速。像在倾听一个微小的声音] 你好。在这 4 分钟里，我们不谈论营养指标。 [停顿3秒] 我们经常因为“到时间了”或者“应该吃”而去进食。 现在，轻轻闭上眼睛。允许自己暂时放下头脑中的想法。 在心里对自己说：“我身体是我亲密的朋友。”\n第二部分：倾听腹部的刻度 (01:30 - 03:00) (目标：精准定位生理饥饿感，重新建立对身体的信任) [01:30] [语调转为好奇的探索] 将你的觉知渐渐带到腹部的生理感受上。 在 1 到 10 分之间，温柔地问问自己：“我现在到底有多饿？” [停顿5秒] 去感受身体发出的真实信号。去触碰那份感觉：是肚子空空的？还是没有食欲？ 告诉自己：“我注意身体传达给我的讯息。” 允许你的注意力在胃部流动，真实地倾听它。\n第三部分：尊重与回应 (03:00 - 04:00) (目标：鼓励患者基于真实感知做出自主的进食决定) [03:00] [语速恢复正常，充满肯定与支持] 无论那个分数是多少，都不去评判它。 渐渐地，把手放在腹部，感谢它的诚实。 慢慢睁开眼睛，去看看四周。带着对这位“亲密朋友”的尊重，去开启这一餐。 [03:50] [音效：低频水波音自然淡出]",
+      "source": "【20260410】25条 文字版 集合.docx"
+    },
+    {
+      "id": "audio-script-013",
+      "type": "audio_script",
+      "index": 13,
+      "title": "初尝的喜悦·前三口的艺术",
+      "content": "总时长：约 4 分钟\n适用人群：吃饭极快、尝不出味道(味觉减退)、失去进食愉悦感的人群\n第一部分：感恩的开启 (00:00 - 01:30) (目标：创造仪式感，将进食升华为一种被滋养的体验) [00:00] [音效：轻快的短笛或竖琴，音量25%] [语调：明亮、愉悦、中速。像在品鉴一件珍贵的礼物] 你好。欢迎来到这专属的品味时光。 [停顿3秒] 去看看你面前的食物。 在动筷子之前，允许我们在心里升起一份小小的喜悦。 轻轻闭上眼睛，深吸一口气。告诉自己：“我的心洋溢着喜悦，因为我的生活中充满了美好的祝福。”\n第二部分：前三口的感官绽放 (01:30 - 03:00) (目标：将全部注意力集中于前三口的质地与味道，植入细胞级暗示) [01:30] [语速极度放慢，强调口腔的每一丝体验] 现在，睁开眼睛。轻轻地咬下第一口。 带着正念，去感受食物的味道在舌尖上渐渐散开。去触碰它的温度。 第二口。去闻一闻随着咀嚼释放出的香气。 第三口。允许这股纯粹的滋味在口腔里自由流动。 [停顿5秒] 在心里对自己确认：“我身体的每个细胞都充满了无限的喜悦能量。”\n第三部分：喜悦的延伸 (03:00 - 04:00) (目标：将前三口的惊艳感转化为持续的进食动力) [03:00] [语调变得温暖而满足] 非常好。感受这份味蕾苏醒带来的欢愉。 渐渐地，让这种能量流向全身。 你可以继续用这种方式，享受接下来的每一口食物。 祝你拥有愉快的一餐。 [03:50] [音效：竖琴声如水波般荡漾，慢慢淡出]",
+      "source": "【20260410】25条 文字版 集合.docx"
+    },
+    {
+      "id": "audio-script-014",
+      "type": "audio_script",
+      "index": 14,
+      "title": "纯粹的偏好·喜好选择",
+      "content": "总时长：约 4 分钟\n适用人群：被各种“饮食禁忌”束缚、因厌食而对吃饭产生逆反心理的人群\n第一部分：卸下“应该”的重担 (00:00 - 01:30) (目标：缓解由于患病而丧失饮食自由带来的心理压力) [00:00] [音效：轻松慵懒的轻音乐淡入，音量20%] [语调：极度宽慰、理解、慢速。像在解开一个沉重的包袱] 你好。生病之后，你可能听过太多“这个应该多吃，那个绝对不能碰”的规矩。 [停顿3秒] 但在接下来的 4 分钟里，允许自己把那些规矩全部留在门外。 深吸一口气，把“我必须吃”的重担，缓缓地吐出去。 在心里对自己说：“我允许我活出真实的自己。”\n第二部分：直觉选择与自由流动 (01:30 - 03:00) (目标：鼓励患者依靠本能的吸引力去进食，夺回控制感) [01:30] [语调转为轻柔的鼓励] 现在，去看看盘子里的食物。哪一样是你现在真正想吃的？ 允许自己只根据纯粹的喜好来做出选择。 [停顿5秒] 去触碰你真正渴望的那份滋养。去闻一闻它。 在心里对自己温柔地确认：“我用爱和关心来滋润自己。” 让自主选择的自由感，在你的心底渐渐流动。\n第三部分：享受滋养 (03:00 - 04:00) (目标：固化“吃饭是一件快乐的事”的积极认知) [03:00] [语速恢复正常，充满力量] 是的，你可以自己做主。 渐渐地，放下那些自责与担忧。 允许这份食物带着你的欢喜，化作最纯粹的能量。 慢慢地去享用它们吧，你值得这份没有任何负担的愉悦。 [03:50] [音效：音乐自然延续后淡出]",
+      "source": "【20260410】25条 文字版 集合.docx"
+    },
+    {
+      "id": "audio-script-015",
+      "type": "audio_script",
+      "index": 15,
+      "title": "温柔地接纳·平静消化",
+      "content": "总时长：约 4 分钟\n适用人群：消化不良、吃完容易胃胀/胃疼，或者进食时处于极度紧张状态的人群\n第一部分：识别紧张 (00:00 - 01:30) (目标：引导身体进入放松模式，为消化创造条件) [00:00] [音效：平缓的自然风声与低沉舒缓的合成器，音量25%] [语调：沉静、安详、极慢速。像秋日的暖阳] 你好。你现在正在进食，或者刚刚吃完。 [停顿3秒] 如果你在紧张的状态下，身体是很难消化并享受食物的。 现在，允许自己彻底慢下来。 让双手轻轻地触碰并停留在你的大腿上。 在心里对自己说：“每天每件事都很顺遂。目前情况正是如此。”\n第二部分：消化空间的展开 (01:30 - 03:00) (目标：通过隐喻和肯定语，暗示消化系统的顺畅运作) [01:30] [声音变得低沉，带领注意力向内走] 继续深长的呼吸。 去感受食物的味道，随着咀嚼正在渐渐发生着变化。 允许你的胃肠道完全松弛下来。 想象有一股温暖的水流，顺着你的食道，在胃部流动。 [停顿5秒] 在心里对自己坚定而温柔地说：“我体贴地抚慰我的身体。它会疗愈自己。” 感受这股宁静的能量，正轻柔地包裹着刚刚吃下的食物。\n第三部分：安然接纳 (03:00 - 04:00) (目标：在极度的平静中结束进食，感谢身体的运作) [03:00] [语调带着深深的感谢与抚慰] 渐渐地，让极度的平静在你全身蔓延。 你不需要费力，身体知道如何最好地去吸收。 深深地吸气，缓缓地呼气。睁开眼睛，去看看眼前安定的世界。 愿你有一个舒适的饭后时光。 [03:50] [音效：轻柔的微风声慢慢淡出]",
+      "source": "【20260410】25条 文字版 集合.docx"
+    },
+    {
+      "id": "audio-script-016",
+      "type": "audio_script",
+      "index": 16,
+      "title": "随时停靠的港湾·环境锚点",
+      "content": "总时长：约 4 分钟\n适用人群：在家中或病房里感到无法放松、时刻处于防御和警觉状态的人群\n第一部分：寻找视觉锚点 (00:00 - 01:30) (目标：将“休息”这个概念具象化，赋予某个特定的物理空间以安全感) [00:00] [音效：舒适、低频的环境氛围音 (Ambient) 淡入，音量20%] [语调：温暖、慵懒、极慢速。像在介绍一个秘密基地] 你好。去看看你的周围。 在你的房间里，是不是有一个你最喜欢的角落？也许是一张舒适的沙发，也许是地上的一个软垫。 [停顿3秒] 现在，把目光停留在那里。允许那个地方，成为你专属的避风港。 在心里对自己温柔地说：“我的家很美。我让每个房间都充满爱与喜悦。”\n第二部分：赋予环境疗愈力 (01:30 - 03:00) (目标：通过自我暗示，把环境变成放松的开关) [01:30] [语速放慢，声音充满包容感] 想象你现在就待在那个角落。 去触碰它柔软的边缘，感受它稳稳地承托着你。 告诉自己：“绝对没有什么事好担心。” [停顿5秒] 你不需要总是保持坚强。 渐渐地，让这份被允许的安全感，在这个空间里自由地流动。\n[02:15] [解脱暗示] 去闻一闻这个角落里安心的味道。 外界的风雨再大，只要你待在这里，所有的要求和评判都进不来。 允许你紧绷的神经，在这个环境中彻底地松弛。\n第三部分：锚点建立与回归 (03:00 - 04:00) (目标：确认触发器已经生效，带着安全感结束) [03:00] [语调变得轻盈、笃定] 非常好。这个锚点已经建立。 以后，无论你在屋子里走动，还是偶尔感到疲惫，只要你看到这个地方，身体就会自动记起现在的放松。 深吸一口气……缓缓呼出。 渐渐睁开眼睛，带着这份随时可以停靠的底气，继续你的生活。 [03:50] [音效：氛围音持续10秒后渐渐淡出]",
+      "source": "【20260410】25条 文字版 集合.docx"
+    },
+    {
+      "id": "audio-script-017",
+      "type": "audio_script",
+      "index": 17,
+      "title": "重塑真我·撕掉标签",
+      "content": "总时长：约 4 分钟\n适用人群：深受“病人”、“拖累者”等负面病耻感标签困扰，自我价值感低落的人群\n第一部分：看见无形的重担 (00:00 - 01:30) (目标：温和地指出患者给自己贴上的负面标签，引发共鸣) [00:00] [音效：空灵、具有漂浮感的合成器音乐，音量25%] [语调：极度理解、悲悯、中慢速。像在卸下冬日的厚重外套] 你好。生病之后，我们不知不觉中，给自己贴上了很多沉重的标签。 “我是一个病人”、“我是一个负担”、“我不够好”…… [停顿3秒] 这些词语，像一件件湿透的衣服，压在你的身上。 现在，轻轻闭上眼睛。允许自己去看看这些无形的标签。\n第二部分：剥离与洗涤 (01:30 - 03:00) (目标：通过视觉和触觉隐喻，结合肯定语，重建自我价值) [01:30] [语调转为轻柔的耳语，带有净化的力量] 感受一次深长的呼吸。 想象你的双手，正温柔地触碰这些标签。然后，轻轻地，把它们撕下来。 看着它们像秋天的落叶一样，随风飘散。 [停顿5秒] 在心里对自己坚定地说：“我是独一无二的、别人也是如此。” 渐渐地，让大脑自由自在地去寻找那个最纯粹、最真实的你。\n[02:15] [身份重塑暗示] 剥离了这些重负，去感受内在的轻盈。 告诉自己：“我是有价值的，并且受欢迎的。” 允许本真的生命力量，在你洁净的体内重新流动。 去闻一闻自由的空气，允许自己安然地存在着。\n第三部分：轻装上阵 (03:00 - 04:00) (目标：巩固内在的自我认同，平稳唤醒) [03:00] [语调变得明亮、充满新生感] 在这份由内而外的轻盈中，体会真我的广阔。 你比任何标签都要丰富。 现在，动一动你的手指，感受这具轻装上阵的身体。 慢慢睁开眼睛，去看这个不被定义的世界。 [03:50] [音效：空灵音乐如光芒般散开，淡出]",
+      "source": "【20260410】25条 文字版 集合.docx"
+    },
+    {
+      "id": "audio-script-018",
+      "type": "audio_script",
+      "index": 18,
+      "title": "转念的艺术·电话铃呼吸",
+      "content": "总时长：约 4 分钟\n适用人群：对外界刺激（如电话、消息、医生查房）容易产生惊跳反应和急性焦虑的人群\n第一部分：识别应激反应 (00:00 - 01:30) (目标：揭示“铃声即焦虑”的条件反射，引入缓冲机制) [00:00] [音效：带有轻柔水滴声的冥想曲，间隔有极其微弱的类似风铃的提示音，音量20%] [语调：清透、稳定、中速。像清澈的泉水] 你好。在生活中，每一次电话铃响，或者每一次门外传来声音，是不是都会让你的心跳突然漏跳一拍？ [停顿3秒] 那是我们的快速大脑在报警。 在接下来的这几分钟，我们要学习一个奇妙的魔法。 轻轻闭上眼睛。去静静地听周围的声音。\n第二部分：植入暂停键与信念 (01:30 - 03:00) (目标：在刺激与反应之间插入深呼吸，用肯定语接管潜意识) [01:30] [语速放缓，强调每一次呼吸的厚度] 下次当铃声响起时，不要急着去接。 允许自己先停留在原地，深深地吸一口气。 去感受空气填满胸膛的张力……然后，长长地呼气。 [停顿5秒] 就在这一呼一吸之间，渐渐地，把你急躁的大脑，切换为从容的模式。 在心里对自己说：“我信任生命，并深信每件事的发生都是神圣完美的。”\n[02:15] [认知重构暗示] 不去预设坏消息，不去担忧未知。 去触碰内心深处的平和，告诉自己：“我很容易适应我周围的人、地方和事物。” 允许这份平和，在接起电话的那一刻，为你护航，在你的言语中流动。\n第三部分：从容应对 (03:00 - 04:00) (目标：将这个触发器固化为日常习惯) [03:00] [语调带着微笑与鼓励] 你掌握了这个开关。在刺激和回应之间，你拥有了一个呼吸的自由空间。 渐渐地，把觉知带回你的肩膀，让它沉下来。 睁开眼睛，去看看四周。 带着这份从容，去回应外界的所有呼唤吧。 [03:50] [音效：水滴声与冥想曲自然结束]",
+      "source": "【20260410】25条 文字版 集合.docx"
+    },
+    {
+      "id": "audio-script-019",
+      "type": "audio_script",
+      "index": 19,
+      "title": "晨光的礼物·入门即定",
+      "content": "总时长：约 4 分钟\n适用人群：早晨醒来时常伴随抑郁感、对新的一天感到畏惧或缺乏动力的人群\n第一部分：拥抱苏醒的瞬间 (00:00 - 01:30) (目标：捕捉从梦境到现实的过渡期，阻断“早晨焦虑”的产生) [00:00] [音效：清新、充满希望的晨风轻吟与极轻的吉他，音量25%] [语调：充满生机、温暖、中慢速。像拉开窗帘透进阳光] 早安。新的一天，正安静地等在你的门外。 [停顿3秒] 很多人在早上睁开眼的那一刻，脑海里就涌入了无数的烦恼。 但今天，在你完全清醒之前，允许我们先设定一个美好的触发器。 去感受你的身体还在被窝里的温度。\n第二部分：注入感恩的基调 (01:30 - 03:00) (目标：用深呼吸结合肯定语，为全天奠定积极的生理和心理基础) [01:30] [语调变得深情且充满力量] 现在，允许自己进行一次深长、饱满的呼吸。 吸气……渐渐地去闻一闻这属于新一天的清新空气。 [停顿5秒] 在心里对自己说：“我愿以崭新的方式来体验每一天。” 呼气……在心里，真诚地感恩这崭新一天的来临。\n[02:15] [能量流动暗示] 去触碰胸口那微小的心跳声。 告诉自己：“每一天都是特别的也是珍贵的，因为我只能拥有一次。” 让这份感恩化作温暖的光芒，在你的胸腔和血液中自由流动。 允许这束光，为你的一天注入最安定的基调。\n第三部分：带着光亮起身 (03:00 - 04:00) (目标：将感恩的能量带入起床的具体动作中) [03:00] [语调明快、充满祝福] 把这份光亮保存在心里。 当你坐起身，双脚去触碰地板的那一刻，告诉自己：我准备好了。 慢慢地睁开眼睛，去看这美好的一天。 愿你今天，充满平静与喜悦。 [03:50] [音效：音乐变得稍微上扬，随后淡出]",
+      "source": "【20260410】25条 文字版 集合.docx"
+    },
+    {
+      "id": "audio-script-020",
+      "type": "audio_script",
+      "index": 20,
+      "title": "正念的涟漪·生活整合",
+      "content": "总时长：约 4 分钟\n适用人群：认为“冥想必须正襟危坐”、在日常生活中容易失去觉知和耐心的人群\n第一部分：打破练习的边界 (00:00 - 01:30) (目标：消除对形式的执念，引导听众意识到生活本身就是道场) [00:00] [音效：舒缓、如水波荡漾的弦乐四重奏，音量20%] [语调：宽广、智慧、慢速。像一位娓娓道来的长者] 你好。我们已经一起度过了许多个专注的时刻。 [停顿3秒] 正如《心灵训练的三要素》所言，冥想并不是要你从生活中逃离，而是要将这份觉知，整合进你的每一天。 不论你现在是在走路、喝水，还是正在休息，允许自己去看看你正在做的事情。\n第二部分：此时此地的圆满 (01:30 - 03:00) (目标：将冥想中的感官觉察泛化到日常，植入爱与当下的暗示) [01:30] [语调转为细致的引导，贴近生活] 去感受你手里的温度，去触碰脚下的地面。 在心里对自己坚定地说：“活在当下。” [停顿5秒] 不需要急着去下一个地方，不需要赶着完成下一个任务。 渐渐地，把你在冥想中体会到的那份从容，纳入你的每一个动作里。\n[02:15] [整合与爱的暗示] 当你行走时，允许正念在你的步伐中流动。 告诉自己：“因为我选择了爱，所以我感觉身处在充满了爱的环境。” 正念并不在于你正在做什么，而在于你做这些事时，心是如何安放的。 让这份温柔的觉知，如水一般，滋养你的每一寸生活。\n第三部分：带着觉知生活 (03:00 - 04:00) (目标：总结全系列，献上最后的祝福) [03:00] [语调充满深邃的爱意与肯定] 允许自己，在每一个平凡的瞬间，都活出最圆满的状态。 深吸一口气，去闻一闻生活的味道。 慢慢呼气。 带着这份无处不在的觉知，去拥抱你的全部生命吧。 [03:50] [音效：弦乐逐渐推向一个温暖的和弦，缓缓结束]",
+      "source": "【20260410】25条 文字版 集合.docx"
+    },
+    {
+      "id": "audio-script-021",
+      "type": "audio_script",
+      "index": 21,
+      "title": "给世界的“静音键”·感官归位",
+      "content": "总时长：约 4 分钟\n适用人群：睡前习惯刷手机、难以从白天的喧闹和信息过载中抽离的人群\n第一部分：切断外界连结 (00:00 - 01:30) (目标：建立睡前仪式感，将白天与黑夜明确划分) [00:00] [音效：极其舒缓的微风或极简白噪音淡入，音量15%] [语调：沉静、慵懒、慢速。像在轻抚一个疲惫的肩膀] 夜深了。忙碌了一天，辛苦了。 [停顿3秒] 就像你每天都会关掉房间的电灯一样，现在，允许我们在心里，也按下一个“静音键”。 去感受周围光线的变暗。去听夜的宁静。 在心里对自己温柔地宣布：“我自由地安排时间休息。”\n第二部分：向内收拢与安顿 (01:30 - 03:00) (目标：剥离社会角色，回归纯粹的身体需要) [01:30] [语速放缓，声音充满包裹感] 那些手机里的信息、明天的担忧，渐渐地，都被留在了门外。 此刻，你不需要回应任何期待。 去触碰你身下柔软的被窝，感受枕头对你头部的承托。 [停顿5秒] 让夜的宁静，在你的周围自由地流动。 去闻一闻被子上熟悉的、安心的味道。 告诉自己：“绝对的平静，常驻我心。”\n第三部分：沉入黑夜 (03:00 - 04:00) (目标：带着安全感进入入睡准备状态) [03:00] [语调逐渐化为气声，音量减小] 在这份静谧中，你什么都不需要做。 渐渐地，随着每一次呼吸，让身体更深地陷进床垫里。 允许自己被黑夜温柔地包裹……安心地，休息吧。 [03:50] [音效：白噪音持续10秒后极缓淡出]",
+      "source": "【20260410】25条 文字版 集合.docx"
+    },
+    {
+      "id": "audio-script-022",
+      "type": "audio_script",
+      "index": 22,
+      "title": "融化的冰淇淋·身体扫描",
+      "content": "总时长：约 4 分钟\n适用人群：身体充满紧绷感、有局部疼痛或由于神经高度警觉难以入眠的人群\n第一部分：引入隐喻 (00:00 - 01:30) (目标：用具象的意象替代抽象的“放松”指令，降低大脑防御) [00:00] [音效：平缓的深海脉冲音 (Deep ocean ambient) 淡入，音量20%] [语调：柔软、温和、极慢速。像在阳光下融化的感觉] 你好。如果你现在躺在床上，却觉得身体硬邦邦的，这很正常。 现在，轻轻闭上眼睛。 想象你的身体，正像一块放在温水上的冰淇淋。 [停顿5秒] 允许它，渐渐地、一点点地融化在床单里。\n第二部分：由下至上的消融与疗愈 (01:30 - 03:00) (目标：引导注意力扫过全身，带走躯体张力并植入自我疗愈的暗示) [01:30] [语速极慢，在每个部位后留出时间感受] 先把注意力放到脚尖。去感受脚部和被子的触碰。 允许温暖的能量从脚底升起，让双腿渐渐融化、下沉…… 在心里对自己说：“我体贴地抚慰我的身体。它会疗愈自己。” 这股暖流继续向上流动，来到你的背部、你的肩膀。 [停顿5秒] 让肩膀也“交出”它的重力，彻底融化。大地在稳稳地托住你。\n第三部分：面部松弛与入眠 (03:00 - 04:00) (目标：彻底解除警觉，在爱的包围中入睡) [03:00] [语调微弱，带有深深的催眠感] 最后，去感受你的面部。 松开紧咬的牙关，抚平眉心的褶皱……允许每一寸肌肉，都化作温暖的水。 在心里对自己说：“被爱是世界上最轻松容易的事，因为那是真实我的本质。” 在这份极致的松软中，渐渐睡去吧。 [03:50] [音效：深海脉冲音随呼吸频率起伏，慢慢淡出]",
+      "source": "【20260410】25条 文字版 集合.docx"
+    },
+    {
+      "id": "audio-script-023",
+      "type": "audio_script",
+      "index": 23,
+      "title": "呼吸的摇篮·呼吸计数",
+      "content": "总时长：约 4 分钟\n适用人群：心跳过快、思绪翻滚导致难以入眠的人群，以及夜间惊醒后需要接觉的人群\n第一部分：寻找节拍 (00:00 - 01:30) (目标：将注意力锚定在单调的节奏上，阻断焦虑思维) [00:00] [音效：带有极轻柔节拍的舒缓冥想曲（每分钟约60拍），音量15%] [语调：平稳、安定、中速。像有规律的钟摆] 当你睡不着的时候，不要去用力抓那只叫“睡眠”的小猫。 现在，我们只需要关注你的呼吸。 [停顿3秒] 去听空气进入鼻腔的微小声音。 允许你的呼吸，变成一个温柔的摇篮。随着摇篮的晃动，我们在心里慢慢地数数。\n第二部分：节律下沉与安全植入 (01:30 - 03:00) (目标：通过延长的呼气激活副交感神经，制造生理困倦感) [01:30] [配合呼吸节奏，声音拉长且富有磁性] 跟着我的声音……吸气……停顿……慢慢地呼气。 [停顿5秒] 在心里对自己温柔地确认：“绝对没有什么事好担心。” 再一次，吸气吸满……停顿……长长地呼出。 感受这缓慢的节奏在你的胸腔里流动。每数一个数字，你就向更深的梦境，渐渐迈进一步。\n第三部分：意识飘散 (03:00 - 04:00) (目标：模糊意识的边界，顺其自然地进入睡眠) [03:00] [声音越来越轻，几乎变成耳语] 告诉自己：“我很平安。而且一切都很顺遂。” 数字越来越小……4……3…… 允许你的意识变得越来越轻……2……1…… 不用去管数到了哪里。渐渐地，跟随着这起伏的摇篮，飘入梦乡。 [03:50] [音效：音乐节拍渐渐模糊，化为微弱的嗡鸣后淡出]",
+      "source": "【20260410】25条 文字版 集合.docx"
+    },
+    {
+      "id": "audio-script-024",
+      "type": "audio_script",
+      "index": 24,
+      "title": "梦中的秘密花园·安全堡垒",
+      "content": "总时长：约 4 分钟\n适用人群：对疾病感到恐惧、缺乏安全感、容易做噩梦或因疼痛而害怕入睡的人群\n第一部分：构建意象空间 (00:00 - 01:30) (目标：创造一个绝对安全的心理避难所) [00:00] [音效：轻柔的竖琴与极其微弱的林间夜鸣，音量20%] [语调：空灵、保护、慢速。像在讲一个美好的睡前童话] 你好。如果今天的现实让你感到有些艰难，没关系。 现在，允许我们在脑海里，为自己盖一座秘密的花园。 [停顿3秒] 去看看那个地方。在那里面，温度刚刚好，光线也刚刚好。 在心里对自己说：“无论我到何处，我总是被保护也被爱。”\n第二部分：感官填充与结界设立 (01:30 - 03:00) (目标：通过多重感官巩固安全感，将病痛和压力阻挡在外) [01:30] [语调转为深情、笃定的抚慰] 去闻一闻花园里散发的淡淡香气。去触碰那里柔软的草地。 [停顿5秒] 让这份宁静在四周流动。 在这里，所有的疼痛、不适和担忧，都被高高的墙挡在了外面。它们进不来。 在这个空间里，你是一个绝对安全的、被保护着的孩子。\n第三部分：卸下防备 (03:00 - 04:00) (目标：在安全感中彻底放弃防御，安心沉睡) [03:00] [声音充满母性的包容] 在心里对自己坚定地确认：“在任何情况下，我都是安全的。” 允许自己在这个秘密花园里，卸下所有的铠甲。你不需要再保持警惕了。 渐渐地，在这份滋养中，安心地闭上眼睛。 睡吧，你是安全的。 [03:50] [音效：竖琴声如水波般渐渐平息，淡出]",
+      "source": "【20260410】25条 文字版 集合.docx"
+    },
+    {
+      "id": "audio-script-025",
+      "type": "audio_script",
+      "index": 25,
+      "title": "随它去的自由·允许失眠",
+      "content": "总时长：约 4 分钟\n适用人群：陷入“越想睡越睡不着”的焦虑循环、对失眠本身感到极度恐惧的人群\n第一部分：放弃对抗 (00:00 - 01:30) (目标：解除对“睡不着”的评判和恐惧，允许现状存在) [00:00] [音效：悠长、空灵的颂钵静音，单次敲击间隔15秒，音量15%] [语调：极度宽容、无所谓、中慢速。像看淡一切的智者] 如果此刻，你依然清醒地躺在床上，翻来覆去。 请你在心里对自己说：“睡不着，也没关系。” [停顿3秒] 不要去强迫自己。当你不再对抗黑暗时，黑暗才会化作温柔的拥抱。 在心里对自己说：“我接受我一切的所有部分。那都是我的一部份。” 允许这份清醒，自然地存在。\n第二部分：无为的观察与深层信任 (01:30 - 03:00) (目标：将意识与焦虑念头解离，建立对生命状态的信任) [01:30] [语速极慢，留出大段空白让患者体验不挣扎的感觉] 如果有很多思绪涌现出来，没关系，任由它们来去。 渐渐地，像坐在电影院里一样，静静地去看着那些着急的念头在脑海中流动。 [停顿8秒] 去感受你的呼吸。 在心里对自己温柔地确认：“我信任生命，并深信每件事的发生都是神圣完美的。” 告诉自己：“即使我现在醒着，只要我躺在这里，身体也正在获得深度的休息。”\n第三部分：温柔的接纳 (03:00 - 04:00) (目标：在极致的松弛和“无所谓”中，等待睡眠自然降临) [03:00] [语调化为极其微弱的耳语] 允许自己，只是安然地躺着。 不用去管几点了，也不用去管明天会怎样。把对睡眠的执念，渐渐松开。 在这份“随它去”的自由里，平静地，度过这个夜晚吧。 [03:50] [音效：颂钵余音袅袅，彻底融入安静]",
+      "source": "【20260410】25条 文字版 集合.docx"
+    }
+  ],
+  "stats": {
+    "encouragements": 226,
+    "micro_actions": 20,
+    "audio_scripts": 25
+  }
+}

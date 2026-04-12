@@ -5,8 +5,8 @@ describe('dependency catalog', () => {
   it('loads seeded third-party skills and mcp entries', async () => {
     const catalog = await loadDependencyCatalog()
 
-    expect(catalog.tavily_search?.metadata?.localPath).toBe('/home/gem/workspace/agent/workspace/.agents/skills/tavily-search/')
-    expect(catalog.wechat_search?.metadata?.version).toBe('v1.0.3')
+    expect(catalog.tavily_search?.metadata?.configPath).toBe('~/.config/tavily/config.json')
+    expect(catalog.wechat_search?.metadata?.name).toBe('wechat-article-search')
     expect(catalog.clinical_trials_mcp?.metadata?.repository).toBe('https://github.com/PancrePal-xiaoyibao/xiaoyibao-clinical-trials-mcp-server')
     expect(catalog.clinical_trials_mcp?.install?.command).toBe('npx -y xiaoyibao-clinical-trials')
     expect(catalog.chictr_mcp?.metadata?.deploymentStatus).toBe('npx_preferred')

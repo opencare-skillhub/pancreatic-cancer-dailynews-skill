@@ -1,9 +1,14 @@
 import { createInterface } from 'node:readline/promises'
 import { spawn } from 'node:child_process'
-import { access, copyFile } from 'node:fs/promises'
+import { access, copyFile, mkdir, writeFile } from 'node:fs/promises'
+import { resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { loadDependencyCatalog } from '../config/load_dependency_catalog.js'
+import { loadProfile } from '../config/load_profile.js'
 import { loadSourcesRegistry } from '../config/load_sources_registry.js'
+import { collectCoreSources, runPipeline } from '../core/pipeline.js'
+import { createSearchAbility } from '../abilities/search_ability.js'
+import { buildFallbackSectionItems } from '../sources/fallback_sections.js'
 import { formatDoctorReport, runDoctor, type DoctorArgs } from '../output/doctor.js'
 import {
   classifyInstallFailure,
@@ -18,6 +23,7 @@ import {
   type InstallResult,
 } from '../output/install.js'
 import { formatSyncSourcesResult, syncSources } from '../output/sync_sources.js'
+import { invokeMcpStdioTool } from '../mcp-client/client.js'
 
 export type ParsedArgs = DoctorArgs & {
   installSource?: string
@@ -28,6 +34,7 @@ export type CliDeps = {
   confirm?: (prompt: string) => Promise<boolean>
   runInstallCommand?: (command: string) => Promise<InstallResult>
   ensureConfigTemplate?: (plan: InstallPlan) => Promise<string | undefined>
+  collectItems?: (input: { date: string }) => Promise<Awaited<ReturnType<typeof collectCoreSources>>>
   log?: (message: string) => void
 }
 
@@ -195,6 +202,71 @@ function resolvePendingPlans(catalog: Awaited<ReturnType<typeof loadDependencyCa
 export async function main(argv = process.argv.slice(2), deps: CliDeps = {}): Promise<void> {
   const parsed = parseArgs(argv)
   const log = deps.log ?? console.log
+
+  if (parsed.command === 'run') {
+    const profileName = parsed.profile ?? 'daily-v5'
+    await loadProfile(profileName)
+    const date = new Date().toISOString().slice(0, 10)
+    let items
+    if (deps.collectItems) {
+      items = await deps.collectItems({ date })
+    } else {
+      let searchAbility = createSearchAbility()
+      try {
+        const registry = await loadSourcesRegistry()
+        const mcpToolToSource = new Map(
+          registry.sources
+            .filter((source) => source.enabled && source.abilities?.search?.adapter === 'mcp_tool' && source.mcp?.command)
+            .map((source) => [source.abilities?.search?.tool, source] as const)
+            .filter((entry): entry is readonly [string, (typeof registry.sources)[number]] => Boolean(entry[0])),
+        )
+
+        searchAbility = createSearchAbility({
+          registry,
+          invokeMcp: async (tool, payload) => {
+            const source = mcpToolToSource.get(tool)
+            if (!source?.mcp?.command) {
+              return []
+            }
+
+            return await invokeMcpStdioTool(
+              {
+                command: source.mcp.command,
+                args: source.mcp.args ?? [],
+              },
+              tool,
+              payload,
+            ) as Awaited<ReturnType<typeof createSearchAbility>> extends { search: (...args: any[]) => Promise<infer T> } ? T : never
+          },
+        })
+      } catch {
+        // ignore and use default ability
+      }
+      items = await collectCoreSources(
+        { date },
+        {
+          searchAbility,
+          buildFallbackSectionItems: (targetDate, existingItems) =>
+            buildFallbackSectionItems(targetDate, existingItems, { ability: searchAbility }),
+        },
+      )
+    }
+    const report = await runPipeline({
+      date,
+      profile: profileName,
+      items,
+    })
+
+    const reportsDir = resolve(process.cwd(), 'data', 'reports')
+    await mkdir(reportsDir, { recursive: true })
+    const filePath = resolve(reportsDir, `digest-${date}.md`)
+    await writeFile(filePath, `${report.markdown}\n`)
+
+    log(`Generated digest: ${filePath}`)
+    log('')
+    log(report.markdown)
+    return
+  }
 
   if (parsed.command === 'xiaoyibao') {
     const catalog = await loadDependencyCatalog()

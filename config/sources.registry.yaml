@@ -29,6 +29,11 @@ sources:
     mcp:
       command: npx
       args: ["-y", "xiaoyibao-clinical-trials"]
+    abilities:
+      search:
+        enabled: true
+        adapter: mcp_tool
+        tool: search_clinical_trials
 
   - id: pubmed_mcp
     type: npm_mcp
@@ -44,6 +49,10 @@ sources:
     fallback: stub
     docs:
       homepage: "https://github.com/example/pubmed-mcp"
+    abilities:
+      search:
+        enabled: true
+        adapter: pubmed_eutils
 
   - id: tavily_search
     type: skill
@@ -51,17 +60,16 @@ sources:
     enabled: true
     role: web_search_fallback
     check:
-      kind: file_exists
-      path: "/home/gem/workspace/agent/workspace/.agents/skills/tavily-search/"
+      kind: skill_exists
+      skill: "tavily-search"
     install:
       kind: github_skill
       command: "npx skills add tavily-search || skillhub install tavily-search"
     fallback: web_search_stub
     docs:
-      homepage: "/home/gem/workspace/agent/workspace/.agents/skills/tavily-search/"
+      homepage: "https://skills.sh/search?q=tavily-search"
     metadata:
       name: tavily-search
-      localPath: "/home/gem/workspace/agent/workspace/.agents/skills/tavily-search/"
       deploymentStatus: cli_present_python_module_missing
       deploymentNotes:
         - "CLI 存在但 Python 模块缺失（ModuleNotFoundError: No module named 'tavily'）"
@@ -81,6 +89,11 @@ sources:
         - TAVILY_API_KEY
       exampleValues:
         TAVILY_API_KEY: replace-tavily-api-key
+    abilities:
+      search:
+        enabled: true
+        adapter: tavily_http
+        endpoint: "https://api.tavily.com/search"
 
   - id: wechat_search
     type: skill
@@ -88,27 +101,32 @@ sources:
     enabled: true
     role: community_wechat_search
     check:
-      kind: file_exists
-      path: "/home/gem/workspace/agent/workspace/.agents/skills/wechat-search/"
+      kind: skill_exists
+      skill: "wechat-article-search"
     install:
-      kind: builtin
-      command: "already built-in"
+      kind: github_skill
+      command: "npx skills add https://github.com/wuchubuzai2018/expert-skills-hub --skill wechat-article-search"
     fallback: web_search_stub
     docs:
-      homepage: "/home/gem/workspace/agent/workspace/.agents/skills/wechat-search/"
+      homepage: "https://skills.sh/wuchubuzai2018/expert-skills-hub/wechat-article-search"
     metadata:
-      name: wechat-search
-      version: v1.0.3
-      localPath: "/home/gem/workspace/agent/workspace/.agents/skills/wechat-search/"
-      deploymentStatus: active
+      name: wechat-article-search
+      deploymentStatus: installable
       deploymentNotes:
-        - "已内置，无需额外安装"
-        - "双层策略：site:mp.weixin.qq.com + 直接页面抓取 fallback"
-        - "遵守 robots.txt，速率限制 5 秒延迟"
+        - "通过搜狗微信搜索获取公众号文章标题、摘要、发布时间、来源与链接"
+        - "实际执行入口为 skill 内脚本 search_wechat.js"
+        - "建议作为 community_and_wechat 模块的主搜索 skill"
+      installMethods:
+        - "npx skills add https://github.com/wuchubuzai2018/expert-skills-hub --skill wechat-article-search"
       primaryUseCases:
         - 微信公众号搜索
         - 病友热点模块
         - 提取患者讨论话题
+    abilities:
+      search:
+        enabled: true
+        adapter: skill_cli
+        command: "node /Users/qinxiaoqiang/.agents/skills/wechat-article-search/scripts/search_wechat.js \"{query}\" -n {limit}"
 
   - id: chictr_mcp
     type: npm_mcp
@@ -140,6 +158,11 @@ sources:
     mcp:
       command: npx
       args: ["-y", "chictr-mcp-server@latest"]
+    abilities:
+      search:
+        enabled: true
+        adapter: mcp_tool
+        tool: search_trials
 
   - id: metasota_api_mcp
     type: npm_mcp
@@ -167,6 +190,11 @@ sources:
         - 通用 API 访问
         - 备用搜索通道
         - 医学数据库扩展
+    abilities:
+      search:
+        enabled: true
+        adapter: mcp_tool
+        tool: search
 
   - id: vibe_writer_pro
     type: skill
@@ -174,8 +202,8 @@ sources:
     enabled: true
     role: content_creation_assistant
     check:
-      kind: file_exists
-      path: "/home/gem/workspace/agent/workspace/.agents/skills/vibe-writer-pro/"
+      kind: skill_exists
+      skill: "vibe-writer-pro"
     install:
       kind: npx
       command: "npx skills add vibe-writer-pro"
@@ -185,7 +213,6 @@ sources:
     metadata:
       name: "Vibe Writer Pro"
       version: v1.0
-      localPath: "/home/gem/workspace/agent/workspace/.agents/skills/vibe-writer-pro/"
       deploymentStatus: installed
       deploymentNotes:
         - "已安装到 Universal + CodeBuddy"
@@ -197,6 +224,11 @@ sources:
         - 初稿创作
         - 多轮审校
         - 多平台分发
+    abilities:
+      search:
+        enabled: true
+        adapter: skill_cli
+        command: "vibe-writer-pro --query \"{query}\" --limit {limit} --output json"
 
   - id: openclaw_grok_search
     type: skill
@@ -204,8 +236,8 @@ sources:
     enabled: true
     role: web_search_primary_candidate
     check:
-      kind: file_exists
-      path: "/home/gem/workspace/agent/workspace/.agents/skills/openclaw-grok-search/"
+      kind: skill_exists
+      skill: "openclaw-grok-search"
     install:
       kind: github_skill
       command: "npx skills add https://github.com/stemmaker/openclaw-grok-search --skill openclaw-grok-search"
@@ -215,7 +247,6 @@ sources:
     metadata:
       name: openclaw-grok-search
       repository: "https://github.com/Stemmaker/openclaw-grok-search"
-      localPath: "/home/gem/workspace/agent/workspace/.agents/skills/openclaw-grok-search/"
       deploymentStatus: catalog_seeded_pending_install
       deploymentNotes:
         - "已加入当前项目自动部署清单，暂未实际执行安装"
@@ -240,3 +271,48 @@ sources:
         GROK_API_KEY: replace-primary-key
         GROK_BACKUP_BASE_URL: "https://ai.huan666.de"
         GROK_BACKUP_API_KEY: replace-backup-key
+    abilities:
+      search:
+        enabled: true
+        adapter: openclaw_grok_compatible
+        endpoint: "https://grok2api.samfun.asia/v1/chat/completions"
+
+  - id: firecrawl_search
+    type: skill
+    required: false
+    enabled: true
+    role: web_search_fallback
+    check:
+      kind: skill_exists
+      skill: "firecrawl-search"
+    install:
+      kind: github_skill
+      command: "npx skills add https://github.com/firecrawl/cli --skill firecrawl-search"
+    fallback: web_search_stub
+    docs:
+      homepage: "https://github.com/firecrawl/cli"
+    metadata:
+      name: firecrawl-search
+      repository: "https://github.com/firecrawl/cli"
+      deploymentStatus: catalog_seeded_pending_install
+      deploymentNotes:
+        - "通过 firecrawl-search skill + firecrawl CLI 进行网页搜索与抓取"
+        - "建议作为本地 HTTP / CLI 兜底能力，用于 MCP 与主搜索失败后的拖底"
+        - "后续应补充 FIRECRAWL_API_KEY 的 doctor/env 测试"
+      installMethods:
+        - "npx skills add https://github.com/firecrawl/cli --skill firecrawl-search"
+      primaryUseCases:
+        - 实时网页搜索
+        - 搜索结果全文抓取
+        - 本地 CLI 兜底搜索
+    config:
+      file: ".env.firecrawl.local"
+      vars:
+        - FIRECRAWL_API_KEY
+      exampleValues:
+        FIRECRAWL_API_KEY: replace-firecrawl-api-key
+    abilities:
+      search:
+        enabled: true
+        adapter: skill_cli
+        command: "npx firecrawl search \"{query}\" --limit {limit} --scrape --json"

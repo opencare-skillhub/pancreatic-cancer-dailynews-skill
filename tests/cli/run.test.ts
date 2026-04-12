@@ -1,5 +1,10 @@
-import { describe, it, expect, vi } from 'vitest'
+import { afterEach, describe, it, expect, vi } from 'vitest'
+import { rm } from 'node:fs/promises'
 import { main, parseArgs } from '../../src/cli/index.js'
+
+afterEach(async () => {
+  await rm('data/reports', { recursive: true, force: true })
+})
 
 describe('cli parseArgs', () => {
   it('defaults to run with no arguments', () => {
@@ -47,27 +52,25 @@ describe('cli parseArgs', () => {
     expect(() => parseArgs(['run', '--profile'])).toThrow('--profile requires a value')
   })
 
-  it('runs xiaoyibao fix installs after confirmation', async () => {
+  it('runs digest generation and writes markdown report', async () => {
     const logs: string[] = []
-    const confirm = vi.fn().mockResolvedValue(true)
-    const runInstallCommand = vi.fn().mockImplementation(async (command: string) => ({
-      id: command,
-      command,
-      success: true,
-      exitCode: 0,
-    }))
 
-    await main(['xiaoyibao', '--fix', '--skills'], {
-      confirm,
-      runInstallCommand,
-      ensureConfigTemplate: vi.fn().mockResolvedValue('Created config file from template: .env.test.local'),
+    await main(['run', '--profile', 'daily-v5'], {
+      collectItems: vi.fn().mockResolvedValue([
+        {
+          id: 'pmid:1',
+          title: 'Demo paper',
+          sourceType: 'pubmed',
+          sectionHint: 'research_hotspots',
+          sourceUrl: 'https://pubmed.ncbi.nlm.nih.gov/1/',
+          fetchedAt: '2026-04-09T08:00:00.000Z',
+          evidence: ['pmid:1'],
+        },
+      ]),
       log: (message) => logs.push(message),
     })
 
-    expect(confirm).toHaveBeenCalled()
-    expect(runInstallCommand).toHaveBeenCalled()
-    expect(logs.join('\n')).toContain('Install queue:')
-    expect(logs.join('\n')).toContain('Install results:')
-    expect(logs.join('\n')).toContain('Config file actions:')
+    expect(logs.join('\n')).toContain('Generated digest:')
+    expect(logs.join('\n')).toContain('Demo paper')
   })
 })

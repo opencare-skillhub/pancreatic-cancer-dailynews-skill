@@ -1,17 +1,22 @@
-# 小胰宝2.0 胰腺治疗新技术日报
+# 小胰宝 2.0｜胰腺癌高质量日报引擎
 
-每日自动化聚合胰腺癌治疗新技术、临床试验、医学新闻的智能订阅服务。
+每日自动生成胰腺癌相关的：
+
+- 临床试验与药物研发
+- 专业研究热点
+- 病情管理知识
+- 营养与心理
+- 社区活动与公众号文章
+- 每日心理鼓励
+
+项目当前已经升级为 **v5 MCP-first / Ability-first** 架构：  
+优先走注册能力，再按规则降级，而不是在业务代码里写死某一个搜索源。
+
+---
 
 ## ⚡ 3 分钟上手
 
-### 这个项目现在最适合用来做什么
-
-- 管理日报项目的 `skills / MCP / tools`
-- 统一维护 source 配置：`config/sources.registry.yaml`
-- 自动生成部署清单、变量示例、README 区块
-- 通过 `xiaoyibao --fix` 完成检查 → 报告 → 确认安装 → 配置提醒
-
-### 第 1 步：安装
+### 1. 安装
 
 ```bash
 git clone https://github.com/xtra-care-skillhub/pancreatic-cancer-dailynews-skill.git
@@ -20,7 +25,7 @@ npm install
 npm run build
 ```
 
-### 第 2 步：检查环境
+### 2. 检查环境
 
 ```bash
 node dist/cli/index.js xiaoyibao
@@ -33,496 +38,351 @@ node dist/cli/index.js xiaoyibao --skills
 node dist/cli/index.js xiaoyibao --sources
 ```
 
-### 第 3 步：自动安装缺失依赖
+### 3. 自动安装缺失依赖
 
 ```bash
 node dist/cli/index.js xiaoyibao --fix
 ```
 
-你会看到：
-
-1. 当前环境检查结果
-2. 缺失依赖清单
-3. 安装队列
-4. `Continue? [y/N]`
-5. 安装结果
-6. 变量文件提示
-
-无人值守模式：
+无人值守：
 
 ```bash
 node dist/cli/index.js xiaoyibao --fix --yes
 ```
 
-### 第 4 步：配置变量文件
-
-如果项目生成了 `.env.*.example`，复制成 `.local` 再填真实值：
+### 4. 生成日报
 
 ```bash
-cp .env.openclaw-grok-search.example .env.openclaw-grok-search.local
+node dist/cli/index.js run --profile daily-v5
 ```
 
-> `.env*.local` 已被 `.gitignore` 忽略。
+生成结果：
 
-### 第 5 步：新增或修改 source
+```bash
+data/reports/digest-YYYY-MM-DD.md
+```
 
-只改这个文件：
+---
+
+## 当前项目能做什么
+
+- 用 `config/sources.registry.yaml` 统一维护 **skills / MCP / tools**
+- 统一生成部署清单、安装提示、变量示例
+- 通过 `xiaoyibao` 执行：
+  - 检查
+  - 报告
+  - 交互确认安装
+  - 配置提醒
+- 通过能力层路由不同 source
+- 在 source 不可用时自动 fallback
+
+---
+
+## 当前日报结构
+
+1. 病友最关心的临床试验和药物研发
+2. 专业研究发表热点文章
+3. 科普病情管理知识
+4. 营养和心理
+5. 社区活动和公众号优质文章
+6. 每日心理鼓励
+
+其中：
+
+- 第 1 模块当前是 **MCP-first**
+- 第 5 模块已接入 **wechat search**
+- 第 6 模块已接入本地 **psyco_kb**
+
+---
+
+## 核心设计原则
+
+### 1. Ability-first
+
+业务层不直接写死 `tavily` / `duck` / 某个 fetch。
+
+统一走能力层：
+
+- `clinical_trials_mcp`
+- `chictr_mcp`
+- `pubmed_mcp`
+- `openclaw_grok_search`
+- `tavily_search`
+- `firecrawl_search`
+- `wechat_search`
+
+### 2. MCP 和 skill 严格分离
+
+- `skill` 就是 `skill`
+- `mcp` 就是 `mcp`
+- **不允许 type 与 adapter 混用**
+
+### 3. registry 驱动
+
+新增一个 source 的理想动作：
+
+1. 改 `config/sources.registry.yaml`
+2. 同步派生文件
+3. 补配置示例
+4. 补测试
+5. 更新 README
+
+---
+
+## 推荐入口
+
+- `config/sources.registry.yaml`：统一 source 注册表
+- `config/search-source-whitelist.yaml`：监控网站白名单
+- `config/search-seeds.yaml`：重点 seed URLs
+- `config/psyco_kb/daily_encouragement_kb.json`：每日心理鼓励知识库
+- `docs/PROJECT_USAGE_SIMPLE.md`：极简使用说明
+- `docs/PROJECT_USAGE.md`：完整使用手册
+
+---
+
+## 当前纳入监控的网站白名单
+
+### 结构化主来源
+
+- `clinicaltrials.gov`
+- `chictr.org.cn`
+- `pubmed.ncbi.nlm.nih.gov`
+
+### 临床试验 / 药物研发增强来源
+
+- `pancan.org`
+- `letswinpc.org`
+- `asco.org`
+- `ascopubs.org`
+
+### 研究热点增强来源
+
+- `asco.org`
+- `ascopubs.org`
+- `esmoopen.com`
+- `annalsofoncology.org`
+
+### 社区 / 患者支持来源
+
+- `pancan.org`
+- `letswinpc.org`
+- `mp.weixin.qq.com`
+
+### 浏览器优先来源
+
+- `esmoopen.com`
+
+### 当前重点 seed URLs
+
+- `https://letswinpc.org/treatments/finding-a-clinical-trial/`
+- `https://www.esmoopen.com/current`
+- `https://www.esmoopen.com/inpress`
+- `https://www.esmoopen.com/action/doSearch?target=saved&runSaved=120716`
+- `https://www.annalsofoncology.org/`
+
+---
+
+## 当前预置 source 概览
+
+### MCP
+
+- `clinical_trials_mcp`
+- `chictr_mcp`
+- `pubmed_mcp`
+- `metasota_api_mcp`（备用）
+
+### Skills / 搜索能力
+
+- `openclaw_grok_search`
+- `tavily_search`
+- `firecrawl_search`
+- `wechat_search`
+- `vibe_writer_pro`
+
+---
+
+## 运行链路
+
+### 临床试验板块
+
+优先顺序：
+
+1. `clinical_trials_mcp`
+2. `chictr_mcp`
+3. `openclaw_grok_search`
+4. `tavily_search`
+5. `firecrawl_search`
+6. 本地 fallback
+
+### 研究热点板块
+
+优先顺序：
+
+1. `pubmed_mcp`
+2. 学术站点搜索增强
+3. browser-first / firecrawl fallback
+
+### 社区与公众号板块
+
+优先顺序：
+
+1. `wechat_search`
+2. 主题关键词补充搜索
+3. 其它兜底来源
+
+来源展示规则：
+
+- 命中小胰宝助手：`小胰宝助手公众号`
+- 其它公众号：`其它来源公众号`
+
+---
+
+## 常用命令
+
+### 检查环境
+
+```bash
+node dist/cli/index.js xiaoyibao
+```
+
+### 自动安装缺失项
+
+```bash
+node dist/cli/index.js xiaoyibao --fix
+```
+
+### 构建
+
+```bash
+npm run build
+```
+
+### 跑测试
+
+```bash
+npm test
+npm run test:typecheck
+```
+
+### 同步派生配置
+
+```bash
+npm run sync:sources
+```
+
+### 生成日报
+
+```bash
+node dist/cli/index.js run --profile daily-v5
+```
+
+---
+
+## 配置文件说明
+
+### 1. source 注册表
 
 ```bash
 config/sources.registry.yaml
 ```
 
-改完后同步：
+用于定义：
+
+- source 类型
+- check 方式
+- install 命令
+- 能力 adapter
+- MCP command / args
+- 配置变量说明
+
+### 2. 白名单
 
 ```bash
-npm run build
-npm run sync:sources
-node dist/cli/index.js xiaoyibao
+config/search-source-whitelist.yaml
+```
+
+用于维护：
+
+- clinical trial sites
+- research sites
+- community sites
+- browser required sites
+
+### 3. seeds
+
+```bash
+config/search-seeds.yaml
+```
+
+用于维护：
+
+- 临床试验种子页面
+- 学术热点种子页面
+- 社区种子页面
+
+### 4. 本地心理知识库
+
+```bash
+config/psyco_kb/daily_encouragement_kb.json
 ```
 
 ---
 
-## 🎯 核心特性
+## 环境变量
 
-- ✅ **单一声明源** - 用 `config/sources.registry.yaml` 统一维护 MCP / skills / tools
-- ✅ **自动派生** - 自动生成 deployment catalog、`.env.*.example`、README 区块
-- ✅ **交互式安装** - 检查、报告、确认、安装、配置提示一条龙
-- ✅ **多源聚合基础** - ClinicalTrials、PubMed、ChiCTR、微信搜索、网页搜索
-- ✅ **可扩展** - 后续可继续接入更多医学搜索、社区内容与远程 MCP
-
-## 📚 推荐入口
-
-- `docs/PROJECT_USAGE_SIMPLE.md`：极简使用版
-- `docs/PROJECT_USAGE.md`：完整使用手册
-- `config/sources.registry.yaml`：source 配置入口
-- `node dist/cli/index.js xiaoyibao --fix`：最常用安装命令
-
----
-
-## ⏰ Scheduling (Daily Automation)
-
-### Option A: OpenClaw Cron (Recommended)
-
-```bash
-# Add daily cron job (runs at 08:00 AM)
-cron add --action add --job '{
-  "name": "pancreatic-cancer-news-digest-daily",
-  "schedule": {"kind": "cron", "expr": "0 8 * * *", "tz": "Asia/Shanghai"},
-  "payload": {
-    "kind": "agentTurn",
-    "message": "Run pancreatic-cancer-news-digest with --output all",
-    "model": "stepfun/step-3.5-flash"
-  },
-  "sessionTarget": "isolated"
-}'
-```
-
-### Option B: System Crontab
-
-```bash
-crontab -e
-# Add line:
-0 8 * * * cd /home/gem/workspace/agent/workspace/skills/pancreatic-cancer-news-digest && /usr/bin/python3 scripts/fetch.py --output markdown >> data/logs/cron.log 2>&1
-```
-
----
-
-## 📊 Output Structure
-
-### Full Digest (Markdown)
-
-```markdown
-# 胰腺癌医学日报 2026-04-09
-
-**生成时间**: 2026-04-09 08:07 (Asia/Shanghai)
-**数据源**: ClinicalTrials.gov, PubMed, RSS Feeds
-**条目总数**: 79
-
-## 🔬 临床试验更新
-
-### 1. [NCT04858334] APOLLO: BRCA1/2 突变胰腺癌辅助治疗 Olaparib 试验
-- **来源**: ClinicalTrials.gov
-- **阶段**: PHASE2 | **状态**: RECRUITING
-- **入组人数**: 152
-- **链接**: https://clinicaltrials.gov/ct2/show/NCT04858334
-- **标签**: #Phase2 #BRCA
-
-## 📚 最新研究文献
-
-### 1. Hereditary chronic pancreatitis induced plasticity...
-- **作者**: Inamdar et al.
-- **期刊**: Gut
-- **发表日期**: 2026-Apr-07
-- **PMID**: 41419303
-- **链接**: https://pubmed.ncbi.nlm.nih.gov/41419303/
-- **标签**: #KRAS
-```
-
-### Highlights (for Group Chat)
-
-```
-📊 胰腺癌医学日报 · 2026-04-09 · 79条更新
-
-🔬 [NCT04858334] APOLLO: BRCA1/2突变胰腺癌辅助治疗Olaraparib试验
-    Phase 2, RECRUITING, 152人
-    #Phase2 #BRCA
-
-📚 [PMID 41419303] Gut: 遗传性慢性胰腺炎与KRAS突变协同作用
-    发表日期: 2026-04-07
-    #KRAS #基础研究
-
-... 还有 77 条，查看完整报告: [Wiki链接]
-```
-
----
-
-## 🔧 Configuration
-
-### `config/sources.json`
-
-控制数据源开关、查询参数：
-
-```json
-{
-  "sources": {
-    "clinicaltrials": {
-      "enabled": true,
-      "condition": "pancreatic cancer",
-      "status": ["RECRUITING", "NOT_YET_RECRUITING"],
-      "page_size": 50
-    },
-    "pubmed": {
-      "enabled": true,
-      "mesh_terms": ["Pancreatic Neoplasms"],
-      "date_range_days": 7,
-      "max_results": 50
-    },
-    "rss_feeds": [
-      {
-        "name": "ClinicalTrials RSS",
-        "url": "https://clinicaltrials.gov/api/rss?...",
-        "enabled": true
-      }
-    ]
-  }
-}
-```
-
-### `config/output.json`
-
-控制输出目的地：
-
-```json
-{
-  "feishu_wiki": {
-    "enabled": true,
-    "space_id": "QtIXwuGf4iAfVskGfj8cjxfYnmf",
-    "title_template": "胰腺癌医学日报 {date}"
-  },
-  "feishu_chat": {
-    "enabled": true,
-    "chat_id": "oc_8c0644c53e832ebb2c578294686fed96",
-    "max_highlights": 5
-  },
-  "schedule": {
-    "daily_time": "08:00",
-    "timezone": "Asia/Shanghai"
-  }
-}
-```
-
----
-
-## 🛠️ Troubleshooting
-
-### "No new items" but I know there are updates
-
-**Cause**: Already in `data/history.json` (deduplication working)
-
-**Fix**:
-```bash
-./quick-start.sh clean-history  # DANGER: will re-publish all
-./quick-start.sh run
-```
-
-### ClinicalTrials.gov returns 0 results
-
-**Debug**:
-```bash
-curl "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&pageSize=1"
-```
-
-**Fix**: Adjust `config/sources.json` condition to `"pancreatic neoplasm"` or check network.
-
-### Feishu Wiki authorization required
-
-The skill saves locally first. To publish to Wiki:
-
-1. Authorize bot: Use `feishu_oauth` tool (one-time)
-2. Call `feishu_create_doc` with the digest content
-3. Ensure bot has `wiki:write` permission in space settings
-
-### RSS feed empty (ASCO)
-
-ASCO RSS requires specific headers. Currently disabled in config. To enable:
-
-```json
-"rss_feeds": [
-  {
-    "name": "ASCO",
-    "url": "...",
-    "enabled": true,
-    "headers": {"User-Agent": "Mozilla/5.0..."}
-  }
-]
-```
-
----
-
-## 🔎 自动部署清单新增：openclaw-grok-search
-
-当前项目已将 `openclaw-grok-search` 纳入 `config/deployment/dependency-catalog.json`，用于后续 `digest xiaoyibao --fix` / `digest install-source openclaw_grok_search` 自动生成安装计划。
-
-推荐标准流程：
-
-```text
-检查 -> 报告 -> 互动确认安装依赖技能/MCP/工具 -> 输入 Y 后执行安装 -> 提示配置变量文件
-```
-
-对应命令：
-
-```bash
-digest xiaoyibao --fix
-```
-
-当前行为为：
-
-1. 检查环境与依赖
-2. 输出缺失项与待执行动作
-3. 询问 `Continue? [y/N]`
-4. 先展示安装队列（默认按 `skill -> MCP -> 其他工具`）
-5. 输入 `y` 后顺序执行安装命令
-6. 安装结束后提示对应的配置变量文件与必填变量
-7. 若存在 `.example` 模板，会自动复制生成对应 `.local` 文件
-8. 如果安装失败，会给出失败类型提示（命令缺失 / 权限 / 网络或 registry）
-
-### 安装命令
-
-```bash
-npx skills add https://github.com/stemmaker/openclaw-grok-search --skill openclaw-grok-search
-```
-
-### MCP 安装策略更新
-
-当前推荐优先使用 `npx -y` 方式运行 MCP，而不是 `git clone + npm install`。
-
-推荐配置：
-
-```json
-{
-  "mcpServers": {
-    "clinical_trials": {
-      "command": "npx",
-      "args": ["-y", "xiaoyibao-clinical-trials"]
-    },
-    "chictr": {
-      "command": "npx",
-      "args": ["-y", "chictr-mcp-server@latest"]
-    }
-  }
-}
-```
-
-这样更适合：
-
-- `digest xiaoyibao --fix`
-- 自动化部署
-- MCP 网关配置
-- 后续版本升级
-
-### 环境变量
-
-已新增示例文件：
-
-```bash
-.env.openclaw-grok-search.example
-```
-
-建议本地复制为：
+如果项目生成了 `.env.*.example`，复制为 `.local` 再填写真实值：
 
 ```bash
 cp .env.openclaw-grok-search.example .env.openclaw-grok-search.local
 ```
 
-并填写真实密钥。`.env*.local` 已加入 `.gitignore`，避免提交敏感信息。
+`.env*.local` 已加入 `.gitignore`。
 
-### 变量说明
+后续重点会继续补齐：
 
-- `GROK_BASE_URL`
-- `GROK_API_KEY`
-- `GROK_MODEL`（可选）
-- `GROK_BACKUP_BASE_URL`
-- `GROK_BACKUP_API_KEY`
-
-### 重要说明
-
-用户给出的主地址是：
-
-```text
-https://grok2api.samfun.asia/v1/chat/completions
-```
-
-但上游 `openclaw-grok-search` 脚本会自行拼接 `/v1/chat/completions`，所以**运行时** `GROK_BASE_URL` 应配置为：
-
-```text
-https://grok2api.samfun.asia
-```
-
-备用地址建议保存为：
-
-```text
-https://ai.huan666.de
-```
+- `GROK_*`
+- `TAVILY_API_KEY`
+- `FIRECRAWL_API_KEY`
 
 ---
 
-## 📁 File Structure
+## 当前完成度
 
-```
-pancreatic-cancer-news-digest/
-├── SKILL.md               (11 KB) - Skill definition
-├── README.md              (This file)
-├── DEPLOYMENT.md          - Detailed deployment guide
-├── quick-start.sh         - Helper script (6 commands)
-├── requirements.txt       - Dependencies
-├── config/
-│   ├── sources.json       - Data source configs
-│   └── output.json        - Feishu/chat destinations
-├── scripts/
-│   └── fetch.py           - Main script (21 KB)
-├── templates/
-│   └── digest_template.md
-├── tests/
-│   └── test_fetch.py
-└── data/
-    ├── cache/             - API response cache (auto-clean)
-    ├── history.json       - Published item IDs (dedup)
-    ├── reports/           - Daily digests
-    └── logs/              - Execution logs (optional)
-```
+项目已进入 **可用收尾阶段**。
+
+### 已完成
+
+- Ability-first 主架构
+- MCP-first 临床主链路
+- skill / MCP 类型一致性校验
+- 6 个日报板块可生成
+- 本地心理鼓励知识库
+- `xiaoyibao` 检查与自动安装框架
+- 测试、构建、类型检查通过
+
+### 待继续优化
+
+- `xiaoyibao` 检查规则继续与运行态完全对齐
+- Firecrawl / Grok / Tavily 环境 smoke test
+- 白名单 / seed URL 更深接入查询路由
+- README 与使用手册持续打磨
 
 ---
 
-## 📈 Metrics & Monitoring
+## 当前验证状态
 
-### Daily Health Check
+最近一轮本地验证结果：
 
-```bash
-# Check last report exists and has content
-ls -lh data/reports/digest-$(date +%Y-%m-%d).md
-wc -l data/reports/digest-$(date +%Y-%m-%d).md
-
-# Check history size
-wc -l data/history.json
-
-# View latest cache
-ls -lht data/cache/
-```
-
-### Success Metrics
-
-| Metric | Target | Current (2026-04-09) |
-|--------|--------|---------------------|
-| Items fetched/day | ≥ 30 | 79 ✅ |
-| CT.gov trials | ≥ 20 | 50 ✅ |
-| PubMed articles | ≥ 10 | 19 ✅ |
-| Duplicate rate | ≤ 10% | 0% ✅ |
-| Report size | ≥ 100 lines | 421 ✅ |
+- `npm test` ✅
+- `npm run test:typecheck` ✅
+- `npm run build` ✅
+- `node dist/cli/index.js run --profile daily-v5` ✅
 
 ---
 
-## 🔄 Future Enhancements
+## License
 
-### Phase 2 (Next)
-
-- [ ] **ASCO RSS fix** - Add custom headers, debug feed parser
-- [ ] **ChiCTR integration** - Scrape Chinese clinical trials
-- [ ] **LLM summarization** - Replace rule-based summaries with AI
-- [ ] **Feishu auto-publish** - Integrated tool calls in fetch.py
-- [ ] **Weekly/Monthly aggregates** - Additional cron jobs
-
-### Phase 3 (Long-term)
-
-- [ ] **Personalized alerts** - User-defined keyword filters
-- [ ] **Trial matching** - Match trials to patient profile (PII-safe)
-- [ ] **Multi-language** - Bilingual (中文/English) output
-- [ ] **Analytics dashboard** - Trend analysis, charts
-- [ ] **API endpoint** - REST API for external consumption
-- [ ] **Webhook support** - Slack/Telegram/email delivery
-
----
-
-## 🧪 Testing
-
-```bash
-# Dry-run (preview)
-./quick-start.sh test
-
-# Full run (local files only)
-./quick-start.sh run
-
-# Check status
-./quick-start.sh status
-
-# Clean cache (force refresh)
-./quick-start.sh clean-cache
-
-# Run unit tests
-pytest tests/ -v
-```
-
----
-
-## 📝 Maintenance
-
-| Frequency | Task |
-|-----------|------|
-| **Daily** | Check cron execution, verify report generated |
-| **Weekly** | Review source quality, adjust filters, clear cache if needed |
-| **Monthly** | Archive old reports, update dependencies, audit history size |
-
----
-
-## 🎯 Success Criteria
-
-- [x] Fetches ≥30 items/day from ≥2 sources
-- [x] Deduplication works (no repeats within 30 days)
-- [x] Phase 3 trials ranked in top 5
-- [x] Generates valid Markdown with proper sections
-- [ ] Auto-publishes to Feishu Wiki (pending test)
-- [ ] Auto-posts highlights to group chat (pending test)
-- [ ] Daily cron reliability ≥95%
-
----
-
-**Skill ID**: `pancreatic-cancer-news-digest`  
-**Version**: 0.1.0 (MVP)  
-**Maintainer**: sam (技术运维)  
-**Created**: 2026-04-09  
-**Location**: `/home/gem/workspace/agent/workspace/skills/pancreatic-cancer-news-digest/`
-
-## ❓ Need Help?
-
-Check:
-- `docs/PROJECT_USAGE.md` - 项目使用手册（新机器部署 / 新增 source / 更新 source / 常见命令）
-- `docs/PROJECT_USAGE_SIMPLE.md` - 极简使用版（给非技术/低频维护场景）
-- `DEPLOYMENT.md` - Detailed setup & Feishu integration
-- `SKILL.md` - Full skill architecture
-- Logs: `tail -f data/reports/digest-*.md`
-
----
-
-*Built for Pancreatic Cancer Patient Community 2.0 🩺*
+MIT
 
 ---
 
@@ -536,11 +396,12 @@ Check:
 | clinical_trials_mcp | npm_mcp | clinical_trials_primary | npx -y xiaoyibao-clinical-trials | - |
 | pubmed_mcp | npm_mcp | pubmed_primary | npm install -g @scope/pubmed-mcp | - |
 | tavily_search | skill | web_search_fallback | npx skills add tavily-search || skillhub install tavily-search | ~/.config/tavily/config.json |
-| wechat_search | skill | community_wechat_search | already built-in | - |
+| wechat_search | skill | community_wechat_search | npx skills add https://github.com/wuchubuzai2018/expert-skills-hub --skill wechat-article-search | - |
 | chictr_mcp | npm_mcp | china_trials_primary | npx -y chictr-mcp-server@latest | - |
 | metasota_api_mcp | npm_mcp | api_gateway_fallback | git clone https://github.com/PancrePal-xiaoyibao/metasota-API-MCP.git | - |
 | vibe_writer_pro | skill | content_creation_assistant | npx skills add vibe-writer-pro | - |
 | openclaw_grok_search | skill | web_search_primary_candidate | npx skills add https://github.com/stemmaker/openclaw-grok-search --skill openclaw-grok-search | .env.openclaw-grok-search.local |
+| firecrawl_search | skill | web_search_fallback | npx skills add https://github.com/firecrawl/cli --skill firecrawl-search | .env.firecrawl.local |
 
 ### 使用方式
 
@@ -548,5 +409,3 @@ Check:
 2. 运行 `digest sync-sources`
 3. 自动更新 deployment catalog / `.env.*.example` / README
 <!-- generated:sources:end -->
-
-现在 `config/sources.registry.yaml` 已切换为**真正 YAML 语法**，并且已包含当前项目的现有 skills 与 MCP。

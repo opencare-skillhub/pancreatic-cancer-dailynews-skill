@@ -1,0 +1,17 @@
+clinical_trial_seed_urls:
+  - https://letswinpc.org/treatments/finding-a-clinical-trial/
+
+research_seed_urls:
+  - https://www.esmoopen.com/current
+  - https://www.esmoopen.com/inpress
+  - https://www.esmoopen.com/action/doSearch?target=saved&runSaved=120716
+  - https://www.annalsofoncology.org/
+
+community_seed_urls:
+  - https://pancan.org/
+  - https://letswinpc.org/
+
+notes:
+  - "clinical_trial_seed_urls 用于美国临床试验患者视角补充来源"
+  - "research_seed_urls 包含 ESMO Open current / inpress / saved search 与 Annals of Oncology 首页"
+  - "部分种子页存在验证提示，后续应优先交给 Playwright / browser-first 处理"

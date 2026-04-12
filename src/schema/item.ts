@@ -14,6 +14,7 @@ export const sectionIdSchema = z.enum(sectionOrder)
 export const itemSchema = z.object({
   id: z.string().min(1),
   title: z.string().min(1),
+  summary: z.string().min(1).optional(),
   sourceType: z.string().min(1),
   sectionHint: sectionIdSchema,
   sourceUrl: z.string().url(),
