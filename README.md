@@ -486,6 +486,8 @@ pytest tests/ -v
 ## ❓ Need Help?
 
 Check:
+- `docs/PROJECT_USAGE.md` - 项目使用手册（新机器部署 / 新增 source / 更新 source / 常见命令）
+- `docs/PROJECT_USAGE_SIMPLE.md` - 极简使用版（给非技术/低频维护场景）
 - `DEPLOYMENT.md` - Detailed setup & Feishu integration
 - `SKILL.md` - Full skill architecture
 - Logs: `tail -f data/reports/digest-*.md`
