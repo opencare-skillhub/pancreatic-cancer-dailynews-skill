@@ -9,7 +9,7 @@
 - 管理日报项目的 `skills / MCP / tools`
 - 统一维护 source 配置：`config/sources.registry.yaml`
 - 自动生成部署清单、变量示例、README 区块
-- 通过 `doctor --fix` 完成检查 → 报告 → 确认安装 → 配置提醒
+- 通过 `xiaoyibao --fix` 完成检查 → 报告 → 确认安装 → 配置提醒
 
 ### 第 1 步：安装
 
@@ -23,20 +23,20 @@ npm run build
 ### 第 2 步：检查环境
 
 ```bash
-node dist/cli/index.js doctor
+node dist/cli/index.js xiaoyibao
 ```
 
 常用变体：
 
 ```bash
-node dist/cli/index.js doctor --skills
-node dist/cli/index.js doctor --sources
+node dist/cli/index.js xiaoyibao --skills
+node dist/cli/index.js xiaoyibao --sources
 ```
 
 ### 第 3 步：自动安装缺失依赖
 
 ```bash
-node dist/cli/index.js doctor --fix
+node dist/cli/index.js xiaoyibao --fix
 ```
 
 你会看到：
@@ -51,7 +51,7 @@ node dist/cli/index.js doctor --fix
 无人值守模式：
 
 ```bash
-node dist/cli/index.js doctor --fix --yes
+node dist/cli/index.js xiaoyibao --fix --yes
 ```
 
 ### 第 4 步：配置变量文件
@@ -77,7 +77,7 @@ config/sources.registry.yaml
 ```bash
 npm run build
 npm run sync:sources
-node dist/cli/index.js doctor
+node dist/cli/index.js xiaoyibao
 ```
 
 ---
@@ -95,7 +95,7 @@ node dist/cli/index.js doctor
 - `docs/PROJECT_USAGE_SIMPLE.md`：极简使用版
 - `docs/PROJECT_USAGE.md`：完整使用手册
 - `config/sources.registry.yaml`：source 配置入口
-- `node dist/cli/index.js doctor --fix`：最常用安装命令
+- `node dist/cli/index.js xiaoyibao --fix`：最常用安装命令
 
 ---
 
@@ -281,7 +281,7 @@ ASCO RSS requires specific headers. Currently disabled in config. To enable:
 
 ## 🔎 自动部署清单新增：openclaw-grok-search
 
-当前项目已将 `openclaw-grok-search` 纳入 `config/deployment/dependency-catalog.json`，用于后续 `digest doctor --fix` / `digest install-source openclaw_grok_search` 自动生成安装计划。
+当前项目已将 `openclaw-grok-search` 纳入 `config/deployment/dependency-catalog.json`，用于后续 `digest xiaoyibao --fix` / `digest install-source openclaw_grok_search` 自动生成安装计划。
 
 推荐标准流程：
 
@@ -292,7 +292,7 @@ ASCO RSS requires specific headers. Currently disabled in config. To enable:
 对应命令：
 
 ```bash
-digest doctor --fix
+digest xiaoyibao --fix
 ```
 
 当前行为为：
@@ -335,7 +335,7 @@ npx skills add https://github.com/stemmaker/openclaw-grok-search --skill opencla
 
 这样更适合：
 
-- `digest doctor --fix`
+- `digest xiaoyibao --fix`
 - 自动化部署
 - MCP 网关配置
 - 后续版本升级

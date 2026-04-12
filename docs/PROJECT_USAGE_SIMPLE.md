@@ -11,8 +11,8 @@ git clone https://github.com/xtra-care-skillhub/pancreatic-cancer-dailynews-skil
 cd pancreatic-cancer-dailynews-skill
 npm install
 npm run build
-node dist/cli/index.js doctor
-node dist/cli/index.js doctor --fix
+node dist/cli/index.js xiaoyibao
+node dist/cli/index.js xiaoyibao --fix
 ```
 
 如果提示继续安装，输入：
@@ -44,13 +44,13 @@ config/sources.registry.yaml
 ```bash
 npm run build
 npm run sync:sources
-node dist/cli/index.js doctor
+node dist/cli/index.js xiaoyibao
 ```
 
 如果需要安装缺失依赖：
 
 ```bash
-node dist/cli/index.js doctor --fix
+node dist/cli/index.js xiaoyibao --fix
 ```
 
 ---
@@ -60,13 +60,13 @@ node dist/cli/index.js doctor --fix
 ### 检查依赖
 
 ```bash
-node dist/cli/index.js doctor
+node dist/cli/index.js xiaoyibao
 ```
 
 ### 自动安装依赖
 
 ```bash
-node dist/cli/index.js doctor --fix
+node dist/cli/index.js xiaoyibao --fix
 ```
 
 ### 同步 source 配置
@@ -92,7 +92,6 @@ npm run build
 ```text
 改 config/sources.registry.yaml
 -> npm run sync:sources
--> doctor 检查
--> doctor --fix 安装
+-> xiaoyibao 检查
+-> xiaoyibao --fix 安装
 ```
-

@@ -10,7 +10,8 @@
     "build": "tsc -p tsconfig.json",
     "test": "vitest run",
     "test:typecheck": "tsc -p tsconfig.test.json",
-    "doctor": "node dist/cli/index.js doctor",
+    "doctor": "node dist/cli/index.js xiaoyibao",
+    "xiaoyibao": "node dist/cli/index.js xiaoyibao",
     "sync:sources": "node dist/cli/index.js sync-sources"
   },
   "devDependencies": {

@@ -13,7 +13,7 @@
 - 完成项目评估与 v5 设计收敛
 - 完成单一声明源方案：`config/sources.registry.yaml`
 - 完成 source 配置同步：`digest sync-sources`
-- 完成依赖检查与安装闭环：`doctor -> report -> confirm -> install -> config guidance`
+- 完成依赖检查与安装闭环：`xiaoyibao -> report -> confirm -> install -> config guidance`
 - 完成 MCP / skills / tools 的统一纳入
 - 完成文档整理：README、完整使用手册、极简使用手册
 - 完成 GitHub 新仓库推送与收口
@@ -55,8 +55,8 @@ npm run sync:sources
 命令：
 
 ```bash
-node dist/cli/index.js doctor
-node dist/cli/index.js doctor --fix
+node dist/cli/index.js xiaoyibao
+node dist/cli/index.js xiaoyibao --fix
 ```
 
 已支持：
@@ -122,7 +122,7 @@ npm run build
 
 1. 简化 `sources.registry.yaml v2` 字段
 2. 增加 `sync-sources --dry-run`
-3. 增强 doctor 的 smoke check
+3. 增强 xiaoyibao 的 smoke check
 4. 清理 README 历史遗留段落
 5. 增加 `digest list-deps`
 6. 视情况用成熟 YAML 库替换轻量 parser
@@ -137,7 +137,6 @@ npm run build
 改 config/sources.registry.yaml
 -> npm run build
 -> npm run sync:sources
--> doctor 检查
--> doctor --fix 安装
+-> xiaoyibao 检查
+-> xiaoyibao --fix 安装
 ```
-

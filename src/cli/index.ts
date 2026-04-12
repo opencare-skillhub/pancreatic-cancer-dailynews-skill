@@ -88,6 +88,11 @@ export function parseArgs(argv: string[]): ParsedArgs {
       continue
     }
 
+    if (current === 'xiaoyibao' || current === 'doctor') {
+      command = 'xiaoyibao'
+      continue
+    }
+
     if (current.startsWith('--')) {
       continue
     }
@@ -191,7 +196,7 @@ export async function main(argv = process.argv.slice(2), deps: CliDeps = {}): Pr
   const parsed = parseArgs(argv)
   const log = deps.log ?? console.log
 
-  if (parsed.command === 'doctor') {
+  if (parsed.command === 'xiaoyibao') {
     const catalog = await loadDependencyCatalog()
     const report = await runDoctor(parsed, catalog)
     log(formatDoctorReport(report, parsed.fix))

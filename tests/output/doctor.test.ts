@@ -26,7 +26,7 @@ const catalog = dependencyCatalogSchema.parse({
 describe('doctor', () => {
   it('filters to skills only', async () => {
     const report = await runDoctor(
-      { command: 'doctor', skillsOnly: true },
+      { command: 'xiaoyibao', skillsOnly: true },
       catalog,
       {
         skillExists: vi.fn().mockResolvedValue(true),
@@ -39,7 +39,7 @@ describe('doctor', () => {
 
   it('includes environment and source checks by default', async () => {
     const report = await runDoctor(
-      { command: 'doctor' },
+      { command: 'xiaoyibao' },
       catalog,
       {
         commandExists: vi.fn().mockResolvedValue(true),

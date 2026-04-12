@@ -4,7 +4,7 @@
 
 - 新机器首次部署
 - 日常维护 source / skill / MCP
-- 用 `doctor` / `sync-sources` 管理依赖
+- 用 `xiaoyibao` / `sync-sources` 管理依赖
 
 ---
 
@@ -27,25 +27,25 @@ npm run build
 ### 1.3 检查当前环境
 
 ```bash
-node dist/cli/index.js doctor
+node dist/cli/index.js xiaoyibao
 ```
 
 只看 skills：
 
 ```bash
-node dist/cli/index.js doctor --skills
+node dist/cli/index.js xiaoyibao --skills
 ```
 
 只看 MCP / source：
 
 ```bash
-node dist/cli/index.js doctor --sources
+node dist/cli/index.js xiaoyibao --sources
 ```
 
 ### 1.4 自动安装缺失依赖
 
 ```bash
-node dist/cli/index.js doctor --fix
+node dist/cli/index.js xiaoyibao --fix
 ```
 
 标准流程：
@@ -60,7 +60,7 @@ node dist/cli/index.js doctor --fix
 无人值守模式：
 
 ```bash
-node dist/cli/index.js doctor --fix --yes
+node dist/cli/index.js xiaoyibao --fix --yes
 ```
 
 ### 1.5 配置本地变量
@@ -97,7 +97,7 @@ config/sources.registry.yaml
 1. 编辑 `config/sources.registry.yaml`
 2. 增加一条 source 配置
 3. 执行同步命令
-4. 执行 doctor 检查
+4. 执行 xiaoyibao 检查
 
 ### 2.2 例子：新增一个 skill
 
@@ -140,7 +140,7 @@ npm run sync:sources
 ### 2.4 检查并安装
 
 ```bash
-node dist/cli/index.js doctor --fix
+node dist/cli/index.js xiaoyibao --fix
 ```
 
 ---
@@ -166,13 +166,13 @@ config/sources.registry.yaml
 ```bash
 npm run build
 npm run sync:sources
-node dist/cli/index.js doctor
+node dist/cli/index.js xiaoyibao
 ```
 
 如果需要补装：
 
 ```bash
-node dist/cli/index.js doctor --fix
+node dist/cli/index.js xiaoyibao --fix
 ```
 
 ---
@@ -201,16 +201,16 @@ npm run sync:sources
 ### 检查依赖
 
 ```bash
-node dist/cli/index.js doctor
-node dist/cli/index.js doctor --skills
-node dist/cli/index.js doctor --sources
+node dist/cli/index.js xiaoyibao
+node dist/cli/index.js xiaoyibao --skills
+node dist/cli/index.js xiaoyibao --sources
 ```
 
 ### 自动修复/安装
 
 ```bash
-node dist/cli/index.js doctor --fix
-node dist/cli/index.js doctor --fix --yes
+node dist/cli/index.js xiaoyibao --fix
+node dist/cli/index.js xiaoyibao --fix --yes
 ```
 
 ### 查看单个 source 的安装计划
@@ -228,8 +228,8 @@ node dist/cli/index.js install-source openclaw_grok_search
 ```bash
 npm install
 npm run build
-node dist/cli/index.js doctor
-node dist/cli/index.js doctor --fix
+node dist/cli/index.js xiaoyibao
+node dist/cli/index.js xiaoyibao --fix
 ```
 
 ### 场景 B：新增/更新 source
@@ -238,7 +238,7 @@ node dist/cli/index.js doctor --fix
 # 1. 修改 config/sources.registry.yaml
 npm run build
 npm run sync:sources
-node dist/cli/index.js doctor
+node dist/cli/index.js xiaoyibao
 ```
 
 ### 场景 C：准备提交前
@@ -257,7 +257,7 @@ npm run build
 
 - source registry 管理
 - skills / MCP / 工具安装流程
-- `doctor --fix` 检查与安装闭环
+- `xiaoyibao --fix` 检查与安装闭环
 - `sync-sources` 派生生成
 
 当前最适合把它作为：
@@ -265,4 +265,3 @@ npm run build
 - 日报系统的依赖管理层
 - source 接入与维护层
 - MCP / skills 编排底座
-

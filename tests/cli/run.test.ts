@@ -14,11 +14,17 @@ describe('cli parseArgs', () => {
     expect(result.profile).toBe('daily-v5')
   })
 
-  it('supports doctor command flags', () => {
-    const result = parseArgs(['doctor', '--skills', '--fix'])
-    expect(result.command).toBe('doctor')
+  it('supports xiaoyibao command flags', () => {
+    const result = parseArgs(['xiaoyibao', '--skills', '--fix'])
+    expect(result.command).toBe('xiaoyibao')
     expect(result.skillsOnly).toBe(true)
     expect(result.fix).toBe(true)
+  })
+
+  it('keeps doctor as backward-compatible alias', () => {
+    const result = parseArgs(['doctor', '--skills'])
+    expect(result.command).toBe('xiaoyibao')
+    expect(result.skillsOnly).toBe(true)
   })
 
   it('supports install-source target', () => {
@@ -33,7 +39,7 @@ describe('cli parseArgs', () => {
   })
 
   it('supports yes flag', () => {
-    const result = parseArgs(['doctor', '--fix', '--yes'])
+    const result = parseArgs(['xiaoyibao', '--fix', '--yes'])
     expect(result.yes).toBe(true)
   })
 
@@ -41,7 +47,7 @@ describe('cli parseArgs', () => {
     expect(() => parseArgs(['run', '--profile'])).toThrow('--profile requires a value')
   })
 
-  it('runs doctor fix installs after confirmation', async () => {
+  it('runs xiaoyibao fix installs after confirmation', async () => {
     const logs: string[] = []
     const confirm = vi.fn().mockResolvedValue(true)
     const runInstallCommand = vi.fn().mockImplementation(async (command: string) => ({
@@ -51,7 +57,7 @@ describe('cli parseArgs', () => {
       exitCode: 0,
     }))
 
-    await main(['doctor', '--fix', '--skills'], {
+    await main(['xiaoyibao', '--fix', '--skills'], {
       confirm,
       runInstallCommand,
       ensureConfigTemplate: vi.fn().mockResolvedValue('Created config file from template: .env.test.local'),
