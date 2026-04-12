@@ -2,72 +2,100 @@
 
 每日自动化聚合胰腺癌治疗新技术、临床试验、医学新闻的智能订阅服务。
 
-## 🎯 核心特性
+## ⚡ 3 分钟上手
 
-- ✅ **多源聚合** - ClinicalTrials.gov, PubMed, RSS, 微信公众号
-- ✅ **智能去重** - 追踪已发布项目，避免重复推送
-- ✅ **优先级排序** - 按试验阶段、研究类型、相关性智能排序（Phase 3 > Phase 2 > Phase 1）
-- ✅ **患者友好摘要** - 自动生成通俗易懂的内容摘要
-- ✅ **标签系统** - #Phase3 #KRAS #免疫治疗 #化疗 等自动标注
-- ✅ **多格式输出** - 本地 Markdown + 飞书 Wiki + 群聊摘要
-- ✅ **定时自动化** - 支持 Cron 定时执行，增量更新
-- ✅ **智能缓存** - 6小时缓存机制，尊重 API 限流
+### 这个项目现在最适合用来做什么
+
+- 管理日报项目的 `skills / MCP / tools`
+- 统一维护 source 配置：`config/sources.registry.yaml`
+- 自动生成部署清单、变量示例、README 区块
+- 通过 `doctor --fix` 完成检查 → 报告 → 确认安装 → 配置提醒
+
+### 第 1 步：安装
+
+```bash
+git clone https://github.com/xtra-care-skillhub/pancreatic-cancer-dailynews-skill.git
+cd pancreatic-cancer-dailynews-skill
+npm install
+npm run build
+```
+
+### 第 2 步：检查环境
+
+```bash
+node dist/cli/index.js doctor
+```
+
+常用变体：
+
+```bash
+node dist/cli/index.js doctor --skills
+node dist/cli/index.js doctor --sources
+```
+
+### 第 3 步：自动安装缺失依赖
+
+```bash
+node dist/cli/index.js doctor --fix
+```
+
+你会看到：
+
+1. 当前环境检查结果
+2. 缺失依赖清单
+3. 安装队列
+4. `Continue? [y/N]`
+5. 安装结果
+6. 变量文件提示
+
+无人值守模式：
+
+```bash
+node dist/cli/index.js doctor --fix --yes
+```
+
+### 第 4 步：配置变量文件
+
+如果项目生成了 `.env.*.example`，复制成 `.local` 再填真实值：
+
+```bash
+cp .env.openclaw-grok-search.example .env.openclaw-grok-search.local
+```
+
+> `.env*.local` 已被 `.gitignore` 忽略。
+
+### 第 5 步：新增或修改 source
+
+只改这个文件：
+
+```bash
+config/sources.registry.yaml
+```
+
+改完后同步：
+
+```bash
+npm run build
+npm run sync:sources
+node dist/cli/index.js doctor
+```
 
 ---
 
-## 🚀 Quick Start
+## 🎯 核心特性
 
-### 1. Install Dependencies
+- ✅ **单一声明源** - 用 `config/sources.registry.yaml` 统一维护 MCP / skills / tools
+- ✅ **自动派生** - 自动生成 deployment catalog、`.env.*.example`、README 区块
+- ✅ **交互式安装** - 检查、报告、确认、安装、配置提示一条龙
+- ✅ **多源聚合基础** - ClinicalTrials、PubMed、ChiCTR、微信搜索、网页搜索
+- ✅ **可扩展** - 后续可继续接入更多医学搜索、社区内容与远程 MCP
 
-```bash
-cd /home/gem/workspace/agent/workspace/skills/pancreatic-cancer-news-digest
-./quick-start.sh install
-```
+## 📚 推荐入口
 
-### 2. Test Fetch (Dry-run)
-
-```bash
-./quick-start.sh test
-```
-
-This will fetch today's news and print a preview **without publishing**.
-
-**Expected output**:
-```
-📊 Total fetched: 79 items
-  - ClinicalTrials.gov: 50 trials
-  - PubMed: 19 articles
-  - RSS: 10 items
-✅ Deduplication: 79 → 79 new items
-📈 Prioritized 79 items
-```
-
-### 3. Generate Report Locally
-
-```bash
-./quick-start.sh run
-```
-
-This creates:
-- Full digest: `data/reports/digest-YYYY-MM-DD.md`
-- Updates history: `data/history.json`
-
-### 4. Publish to Feishu (Manual)
-
-After verifying the local report, publish to Feishu:
-
-**a) Wiki Document**:
-```bash
-# In OpenClaw session, use feishu_create_doc tool
-# Read the generated digest file and pass its content:
-feishu_create_doc title="胰腺癌医学日报 2026-04-09" markdown="$(cat data/reports/digest-2026-04-09.md)" wiki_space="QtIXwuGf4iAfVskGfj8cjxfYnmf"
-```
-
-**b) Group Chat Highlights**:
-```bash
-# Post to group chat (oc_8c0644c53e832ebb2c578294686fed96)
-feishu_im_user_message send --receive_id_type chat_id --receive_id oc_8c0644c53e832ebb2c578294686fed96 --msg_type text --content '{"text":"📊 今日胰腺癌医学新闻摘要 (前5条):\n1. [NCT04858334] BRCA/Olaparib试验...\n🔗 完整报告: [链接]"}'
-```
+- `docs/PROJECT_USAGE_SIMPLE.md`：极简使用版
+- `docs/PROJECT_USAGE.md`：完整使用手册
+- `config/sources.registry.yaml`：source 配置入口
+- `node dist/cli/index.js doctor --fix`：最常用安装命令
 
 ---
 
